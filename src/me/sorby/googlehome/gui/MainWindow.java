@@ -229,7 +229,8 @@ public class MainWindow extends JFrame implements ListSelectionListener, Receive
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            mediaControlPanel.setVisible(false);
+            if(!receiver.isAppRunning())
+                mediaControlPanel.setVisible(false);
             if(deviceConnection.getMedia() != null)
                 deviceConnection.addMediaMessageListener("INFO_READY", this);
         }else if(application.equals("Media") && type.equals("INFO_READY")){

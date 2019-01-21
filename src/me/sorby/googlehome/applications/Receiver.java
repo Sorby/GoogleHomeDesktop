@@ -14,6 +14,7 @@ public class Receiver implements ContextualChannelMessageListener {
     private boolean muted;
     private String statusText = "";
     private String appIconUrl = "";
+    private boolean appRunning = false;
 
     public Receiver(TransportConnection tc){
         channel = new CastChannel(tc);
@@ -54,6 +55,10 @@ public class Receiver implements ContextualChannelMessageListener {
         return appIconUrl;
     }
 
+    public boolean isAppRunning() {
+        return appRunning;
+    }
+
     @Override
     public void messageReceived(CastChannel channel, String namespace, JSONObject payload) {
         ReceiverMessageDispatcher.getInstance(this).dispatch(this.getClass().getSimpleName(), payload.get("type").toString(), payload);
@@ -62,7 +67,8 @@ public class Receiver implements ContextualChannelMessageListener {
             JSONObject volumeJSON = (JSONObject) statusJSON.get("volume");
             volumeLevel = new Float(volumeJSON.get("level").toString());
             muted = volumeJSON.get("muted").toString().equals("true");
-            if(statusJSON.containsKey("applications")){
+            appRunning = statusJSON.containsKey("applications");
+            if(appRunning){
                 JSONArray applicationsJSON = (JSONArray) statusJSON.get("applications");
                 JSONObject appJSON = (JSONObject) applicationsJSON.get(0);
                 statusText = (appJSON.containsKey("statusText") ? appJSON.get("statusText").toString() : "");
