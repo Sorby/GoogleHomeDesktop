@@ -7,34 +7,34 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 public class Receiver implements ContextualChannelMessageListener {
-    private CastChannel channel;
-    private int msgId=0;
     public final String namespace = "urn:x-cast:com.google.cast.receiver";
+    private CastChannel channel;
+    private int msgId = 0;
     private float volumeLevel;
     private boolean muted;
     private String statusText = "";
     private String appIconUrl = "";
     private boolean appRunning = false;
 
-    public Receiver(TransportConnection tc){
+    public Receiver(TransportConnection tc) {
         channel = new CastChannel(tc);
         channel.setName("Receiver");
         channel.addMessageListener(namespace, this);
     }
 
-    public void connect(){
+    public void connect() {
         channel.openVirtualConnection();
-        channel.keepAlive();
+        channel.keepAlive(); //Send keep-alive pings on heartbeat namespace
     }
 
-    public void requestStatus(){
+    public void requestStatus() {
         JSONObject msg = new JSONObject();
         msg.put("type", "GET_STATUS");
         msg.put("requestId", ++msgId);
         channel.send(namespace, msg);
     }
 
-    public void close(){
+    public void close() {
         channel.closeVirtualConnection();
     }
 
@@ -61,22 +61,26 @@ public class Receiver implements ContextualChannelMessageListener {
 
     @Override
     public void messageReceived(CastChannel channel, String namespace, JSONObject payload) {
+        //Send every Contextual (L2) (namespace+channel based) event to the Media dispatcher (L3)
         ReceiverMessageDispatcher.getInstance(this).dispatch(this.getClass().getSimpleName(), payload.get("type").toString(), payload);
-        if(payload.get("type").toString().equals("RECEIVER_STATUS") && payload.containsKey("status")){
+
+        //Update instance fields when receiving RECEIVER_STATUS
+        if (payload.get("type").toString().equals("RECEIVER_STATUS") && payload.containsKey("status")) {
             JSONObject statusJSON = (JSONObject) payload.get("status");
             JSONObject volumeJSON = (JSONObject) statusJSON.get("volume");
             volumeLevel = new Float(volumeJSON.get("level").toString());
             muted = volumeJSON.get("muted").toString().equals("true");
             appRunning = statusJSON.containsKey("applications");
-            if(appRunning){
+            if (appRunning) {
                 JSONArray applicationsJSON = (JSONArray) statusJSON.get("applications");
                 JSONObject appJSON = (JSONObject) applicationsJSON.get(0);
                 statusText = (appJSON.containsKey("statusText") ? appJSON.get("statusText").toString() : "");
                 appIconUrl = (appJSON.containsKey("iconUrl") ? appJSON.get("iconUrl").toString() : "https://lh3.googleusercontent.com/LB5CRdhftEGo2emsHOyHz6NWSfLVD5NC45y6auOqYoyrv7BC5mdDm66vPDCEAJjcDA=w360");
-            }else{
+            } else {
                 statusText = "Ready to cast";
                 appIconUrl = "https://lh3.googleusercontent.com/LB5CRdhftEGo2emsHOyHz6NWSfLVD5NC45y6auOqYoyrv7BC5mdDm66vPDCEAJjcDA=w360";
             }
+            //Custom event sent when updating receiver info fields
             ReceiverMessageDispatcher.getInstance(this).dispatch(this.getClass().getSimpleName(), "INFO_READY", new JSONObject());
         }
     }

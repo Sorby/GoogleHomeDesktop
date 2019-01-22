@@ -20,10 +20,10 @@ public class DevicesDiscovery {
 
     private List<CastDevice> devices = new ArrayList<>();
 
-    public DevicesDiscovery(){
+    public DevicesDiscovery() {
         try {
-            Service service = Service.fromName("_googlecast._tcp");
-            Query query = Query.createFor(service, Domain.LOCAL);
+            Service service = Service.fromName("_googlecast._tcp"); //mDNS query
+            Query query = Query.createWithTimeout(service, Domain.LOCAL, 1500);
             Set<Instance> instances = query.runOnce();
 
             for (Instance i : instances)

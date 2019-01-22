@@ -13,12 +13,11 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class CastChannel implements ChannelMessageListener {
+    private final static Logger logger = LoggerFactory.getLogger(CastChannel.class);
     private TransportConnection socket;
     private String sourceId;
     private String destinationId;
     private String name;
-    private final static Logger logger = LoggerFactory.getLogger(ChannelMessageListener.class);
-    private ContextualChannelMessageDispatcher messagesDispatcher;
     private Timer pingTimer;
 
     public CastChannel(TransportConnection socket, String sourceId, String destinationId) {
@@ -26,12 +25,12 @@ public class CastChannel implements ChannelMessageListener {
         this.sourceId = sourceId;
         this.destinationId = destinationId;
         this.name = sourceId;
+
         ChannelMessageDispatcher.getInstance(socket).addMessageListener(sourceId, this);
-        messagesDispatcher = ContextualChannelMessageDispatcher.getInstance(this);
     }
 
     public CastChannel(TransportConnection socket, String destinationId) {
-        this(socket, "sender-"+Utils.randomString(8), destinationId);
+        this(socket, "sender-" + Utils.randomString(8), destinationId);
     }
 
     public CastChannel(TransportConnection socket) {
@@ -46,7 +45,7 @@ public class CastChannel implements ChannelMessageListener {
         this.name = name;
     }
 
-    private void send(CastChannelProto.CastMessage msg){
+    private void send(CastChannelProto.CastMessage msg) {
         try {
             byte[] bmsg = Arrays.copyOf(Utils.toArrayLE(msg.getSerializedSize()), msg.toByteArray().length + 4);
             System.arraycopy(msg.toByteArray(), 0, bmsg, 4, msg.toByteArray().length);
@@ -57,7 +56,7 @@ public class CastChannel implements ChannelMessageListener {
 
     }
 
-    public void send(String namespace, JSONObject payload){
+    public void send(String namespace, JSONObject payload) {
         CastChannelProto.CastMessage msg = CastChannelProto.CastMessage.newBuilder()
                 .setProtocolVersion(CastChannelProto.CastMessage.ProtocolVersion.CASTV2_1_0)
                 .setSourceId(sourceId)
@@ -69,21 +68,22 @@ public class CastChannel implements ChannelMessageListener {
         send(msg);
     }
 
-    public void openVirtualConnection(){
+    public void openVirtualConnection() {
         JSONObject connectPayload = new JSONObject();
         connectPayload.put("type", "CONNECT");
         send("urn:x-cast:com.google.cast.tp.connection", connectPayload);
     }
 
-    public void closeVirtualConnection(){
+    public void closeVirtualConnection() {
         JSONObject connectPayload = new JSONObject();
         connectPayload.put("type", "CLOSE");
         send("urn:x-cast:com.google.cast.tp.connection", connectPayload);
-        if(pingTimer != null)
+        if (pingTimer != null)
             pingTimer.cancel();
     }
 
-    public void keepAlive(){
+    //keep-alive pinger on heartbeat namespace (only one for each transport connection)
+    public void keepAlive() {
         pingTimer = new Timer();
         pingTimer.schedule(new TimerTask() {
             @Override
@@ -92,18 +92,20 @@ public class CastChannel implements ChannelMessageListener {
                 connectPayload.put("type", "PING");
                 send("urn:x-cast:com.google.cast.tp.heartbeat", connectPayload);
             }
-        }, 0, 5000);
+        }, 0, 5000); //repeat every 5000ms
     }
 
-    public void addMessageListener(String namespace, ContextualChannelMessageListener listener){
-        messagesDispatcher.addMessageListener(namespace, listener);
+    //Conveninence method for adding Contextual message listener (L2)
+    public void addMessageListener(String namespace, ContextualChannelMessageListener listener) {
+        ContextualChannelMessageDispatcher.getInstance(this).addMessageListener(namespace, listener);
     }
 
     @Override
     public void messageReceived(CastChannelProto.CastMessage msg) {
         try {
             JSONObject msgJSON = (JSONObject) new JSONParser().parse(msg.getPayloadUtf8());
-            messagesDispatcher.dispatch(msg.getNamespace(), msgJSON);
+            //Send every virtual channel (L1) to the the contextual dispatcher (L2)
+            ContextualChannelMessageDispatcher.getInstance(this).dispatch(msg.getNamespace(), msgJSON);
         } catch (ParseException e) {
             logger.error("ParseException: ", e);
         }

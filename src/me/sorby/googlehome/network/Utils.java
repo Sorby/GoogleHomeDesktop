@@ -4,11 +4,11 @@ import java.util.Random;
 
 public class Utils {
     static byte[] toArrayLE(int value) {
-        return new byte[] {
+        return new byte[]{
                 (byte) (value >> 24),
                 (byte) (value >> 16),
                 (byte) (value >> 8),
-                (byte) value };
+                (byte) value};
     }
 
     static int fromArrayLE(byte[] payload) {

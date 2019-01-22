@@ -14,10 +14,10 @@ public class TransportConnection {
     private InputStream inputStream;
     private OutputStream outputStream;
 
-    public TransportConnection(String ip, int port){
+    public TransportConnection(String ip, int port) {
 
         try {
-            TrustManager[] trustManager = new TrustManager[] {new X509TrustAllCerts()};
+            TrustManager[] trustManager = new TrustManager[]{new X509TrustAllCerts()};
             SSLContext sc = SSLContext.getInstance("SSL");
             sc.init(null, trustManager, new java.security.SecureRandom());
             sslsocket = (SSLSocket) sc.getSocketFactory().createSocket(ip, port);
@@ -33,15 +33,15 @@ public class TransportConnection {
 
     }
 
-    public void write(int b) throws IOException{
+    public void write(int b) throws IOException {
         outputStream.write(b);
     }
 
-    public void write(byte[] b) throws IOException{
+    public void write(byte[] b) throws IOException {
         outputStream.write(b);
     }
 
-    public int read() throws IOException{
+    public int read() throws IOException {
         return inputStream.read();
     }
 
@@ -49,11 +49,11 @@ public class TransportConnection {
         return inputStream.read(b, off, len);
     }
 
-    public boolean isClosed(){
+    public boolean isClosed() {
         return sslsocket.isClosed();
     }
 
-    public void close(){
+    public void close() {
         try {
             inputStream.close();
             outputStream.close();
@@ -71,6 +71,5 @@ public class TransportConnection {
     protected void finalize() throws Throwable {
         super.finalize();
         close();
-        System.out.println("Fine!");
     }
 }

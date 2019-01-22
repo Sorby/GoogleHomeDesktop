@@ -1,15 +1,12 @@
 package me.sorby.googlehome.gui;
 
-import com.sun.webkit.dom.RectImpl;
-import jdk.nashorn.internal.runtime.events.RecompilationEvent;
-import me.sorby.googlehome.applications.Media;
-import me.sorby.googlehome.applications.MediaMessageListener;
-import me.sorby.googlehome.applications.Receiver;
-import me.sorby.googlehome.applications.ReceiverMessageListener;
+import me.sorby.googlehome.applications.*;
 import me.sorby.googlehome.devices.CastDevice;
 import me.sorby.googlehome.network.DeviceConnection;
 import me.sorby.googlehome.network.DevicesDiscovery;
 import org.json.simple.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -37,6 +34,7 @@ public class MainWindow extends JFrame implements ListSelectionListener, Receive
     private JLabel mediaArtist;
     private JLabel mediaAlbum;
     private JLabel mediaImage;
+    private final static Logger logger = LoggerFactory.getLogger(MainWindow.class);
 
     public MainWindow() {
         initFrame();
@@ -45,8 +43,8 @@ public class MainWindow extends JFrame implements ListSelectionListener, Receive
     private void initFrame() {
         setTitle("Google Home Desktop");
         setSize(800, 500);
-        setDefaultCloseOperation(EXIT_ON_CLOSE); //termina il programma quando si chiude la finestra
-        //centerWindow();
+        setDefaultCloseOperation(EXIT_ON_CLOSE); //exit the program when closing his window
+        centerWindow();
         initMainPanel();
         setVisible(true);
         populateDevicesList();
@@ -64,8 +62,8 @@ public class MainWindow extends JFrame implements ListSelectionListener, Receive
         mainPanel.setLayout(new BorderLayout());
         mainSplitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT);
         mainSplitPane.setResizeWeight(0.5);
-        mainSplitPane.setEnabled(false);
-        mainSplitPane.setDividerSize(0);
+        mainSplitPane.setEnabled(false); //User can't resize the split pane
+        mainSplitPane.setDividerSize(0); //Hide the divider
         mainPanel.add(mainSplitPane, BorderLayout.CENTER);
         initDevicesList();
         initActionPanel();
@@ -93,14 +91,14 @@ public class MainWindow extends JFrame implements ListSelectionListener, Receive
         deviceAddress = new JLabel("");
         deviceAddress.setFont(getFont("Calibri", Font.PLAIN, 12, deviceAddress.getFont()));
         gbc.gridy++;
-        gbc.fill=GridBagConstraints.NORTH;
-        gbc.weighty=0.15;
+        gbc.fill = GridBagConstraints.NORTH;
+        gbc.weighty = 0.15;
         actionPanel.add(deviceAddress, gbc);
-        gbc.weighty=0;
-        gbc.fill=GridBagConstraints.NONE;
+        gbc.weighty = 0;
+        gbc.fill = GridBagConstraints.NONE;
         try {
             gbc.gridy++;
-            BufferedImage appPic = ImageIO.read(new File("unknown.png"));
+            BufferedImage appPic = ImageIO.read(new File("resources/unknown.png"));
             appPicLab = new JLabel(getScaledImageIcon(new ImageIcon(appPic), 64, 64));
             appPicLab.setVisible(false);
             actionPanel.add(appPicLab, gbc);
@@ -118,7 +116,7 @@ public class MainWindow extends JFrame implements ListSelectionListener, Receive
         mainSplitPane.add(actionPanel);
     }
 
-    private void initMediaControlPanel(){
+    private void initMediaControlPanel() {
         mediaControlPanel = new JPanel();
         mediaControlPanel.setLayout(new GridBagLayout());
         mediaControlPanel.setBackground(Color.getHSBColor(1, 0, 0.97f));
@@ -158,14 +156,14 @@ public class MainWindow extends JFrame implements ListSelectionListener, Receive
     }
 
     private void populateDevicesList() {
-        List<CastDevice> devices = new DevicesDiscovery().getDevices();
+        List<CastDevice> devices = new DevicesDiscovery().getDevices(); //mDNS devices discovery
         DefaultListModel<CastDevice> listModel = new DefaultListModel<>();
         for (CastDevice cd : devices)
             listModel.addElement(cd);
-        devicesList.setModel(listModel);
+        devicesList.setModel(listModel); //Custom model for CastDevices
     }
 
-
+    //Convenience method for changing labels font/style/size
     private Font getFont(String fontName, int style, int size, Font currentFont) {
         if (currentFont == null) return null;
         String resultName;
@@ -182,6 +180,7 @@ public class MainWindow extends JFrame implements ListSelectionListener, Receive
         return new Font(resultName, style >= 0 ? style : currentFont.getStyle(), size >= 0 ? size : currentFont.getSize());
     }
 
+    //Convenience method for scaling ImageIcon
     private ImageIcon getScaledImageIcon(ImageIcon srcImg, int w, int h) {
         BufferedImage resizedImg = new BufferedImage(w, h, BufferedImage.TYPE_INT_ARGB);
         Graphics2D g2 = resizedImg.createGraphics();
@@ -198,19 +197,15 @@ public class MainWindow extends JFrame implements ListSelectionListener, Receive
         if (deviceConnection != null)
             deviceConnection.closeConnection();
         deviceConnection = new DeviceConnection(selectedDevice);
-        deviceConnection.addReceiverMessageListener("INFO_READY", this);
+        deviceConnection.addReceiverMessageListener("INFO_READY", this); //update receiver text when informations (from Receiver class) are ready
         deviceName.setText(selectedDevice.getName());
         deviceAddress.setText(selectedDevice.getIp());
-        statusText.setText("");
-        appPicLab.setVisible(false);
-    }
-
-    public static void main(String[] args) {
-        //System.setProperty("org.slf4j.simpleLogger.defaultLogLevel", "trace");
-        new MainWindow();
+        statusText.setText(""); //While we don't have any information...
+        appPicLab.setVisible(false); // ^
     }
 
     @Override
+    //JList devices list changes listener
     public void valueChanged(ListSelectionEvent e) {
         if (!devicesList.getValueIsAdjusting()) {
             castDeviceSelected(devicesList.getSelectedValue());
@@ -218,8 +213,10 @@ public class MainWindow extends JFrame implements ListSelectionListener, Receive
     }
 
     @Override
+    //Receiver and Media message listener (L3)
     public void messageReceived(String application, String type, JSONObject payload) {
-        if(application.equals("Receiver") && type.equals("INFO_READY")){
+        if (application.equals("Receiver") && type.equals("INFO_READY")) { //Receiver info fields ready
+            //Update labels...
             Receiver receiver = deviceConnection.getReceiver();
             statusText.setText(receiver.getStatusText());
             try {
@@ -229,31 +226,32 @@ public class MainWindow extends JFrame implements ListSelectionListener, Receive
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            if(!receiver.isAppRunning())
+            if (!receiver.isAppRunning()) //if there isn't any app running, hide the media control panel
                 mediaControlPanel.setVisible(false);
-            if(deviceConnection.getMedia() != null)
+            if (deviceConnection.getMedia() != null) //If we have a media connection, we can add a listener for Media info fields
                 deviceConnection.addMediaMessageListener("INFO_READY", this);
-        }else if(application.equals("Media") && type.equals("INFO_READY")){
+        } else if (application.equals("Media") && type.equals("INFO_READY")) { //Media info fields ready
+            //Update labels...
             mediaControlPanel.setVisible(true);
             Media media = deviceConnection.getMedia();
             mediaTitle.setText(media.getTitle());
             mediaArtist.setText(media.getArtist());
             mediaAlbum.setText(media.getAlbumName());
             try {
-                if(!media.getImageURL().equals("")){
+                if (!media.getImageURL().equals("")) {
                     URL imgFile = new URL(media.getImageURL());
                     BufferedImage appPic = ImageIO.read(imgFile);
-                    if(appPic == null)
+                    if (appPic == null) //Sometimes Google (specially with Google Play Music) send us some invalid image file
                         throw new IOException("Cannot load Image");
                     ImageIcon originalImg = new ImageIcon(appPic);
                     ImageIcon img = getScaledImageIcon(originalImg, 128, 128);
                     mediaImage.setIcon(img);
-                    mediaImage.setVisible(true);
-                }else
-                    mediaImage.setVisible(false);
+                    mediaImage.setVisible(true); //Show image if we have one
+                } else
+                    mediaImage.setVisible(false); //Hide image if no imageUrl received
             } catch (IOException e) {
-                mediaImage.setVisible(false);
-                e.printStackTrace();
+                mediaImage.setVisible(false); //Hide image if load failed
+                logger.debug("No event listener for namespace " + type); //Just as debug, because it could happend and it isn't a problem
             }
         }
     }

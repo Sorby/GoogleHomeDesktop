@@ -4,2012 +4,1772 @@
 package extensions.api.cast_channel;
 
 public final class CastChannelProto {
-  private CastChannelProto() {}
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistryLite registry) {
-  }
-  /**
-   * Protobuf enum {@code extensions.api.cast_channel.SignatureAlgorithm}
-   */
-  public enum SignatureAlgorithm
-      implements com.google.protobuf.Internal.EnumLite {
-    /**
-     * <code>UNSPECIFIED = 0;</code>
-     */
-    UNSPECIFIED(0),
-    /**
-     * <code>RSASSA_PKCS1v15 = 1;</code>
-     */
-    RSASSA_PKCS1v15(1),
-    /**
-     * <code>RSASSA_PSS = 2;</code>
-     */
-    RSASSA_PSS(2),
-    ;
-
-    /**
-     * <code>UNSPECIFIED = 0;</code>
-     */
-    public static final int UNSPECIFIED_VALUE = 0;
-    /**
-     * <code>RSASSA_PKCS1v15 = 1;</code>
-     */
-    public static final int RSASSA_PKCS1v15_VALUE = 1;
-    /**
-     * <code>RSASSA_PSS = 2;</code>
-     */
-    public static final int RSASSA_PSS_VALUE = 2;
-
-
-    @Override
-    public final int getNumber() {
-      return value;
+    private CastChannelProto() {}
+    public static void registerAllExtensions(
+            com.google.protobuf.ExtensionRegistryLite registry) {
     }
-
     /**
-     * @deprecated Use {@link #forNumber(int)} instead.
+     * Protobuf enum {@code extensions.api.cast_channel.SignatureAlgorithm}
      */
-    @Deprecated
-    public static SignatureAlgorithm valueOf(int value) {
-      return forNumber(value);
-    }
+    public enum SignatureAlgorithm
+            implements com.google.protobuf.Internal.EnumLite {
+        /**
+         * <code>UNSPECIFIED = 0;</code>
+         */
+        UNSPECIFIED(0),
+        /**
+         * <code>RSASSA_PKCS1v15 = 1;</code>
+         */
+        RSASSA_PKCS1v15(1),
+        /**
+         * <code>RSASSA_PSS = 2;</code>
+         */
+        RSASSA_PSS(2),
+        ;
 
-    public static SignatureAlgorithm forNumber(int value) {
-      switch (value) {
-        case 0: return UNSPECIFIED;
-        case 1: return RSASSA_PKCS1v15;
-        case 2: return RSASSA_PSS;
-        default: return null;
-      }
-    }
+        /**
+         * <code>UNSPECIFIED = 0;</code>
+         */
+        public static final int UNSPECIFIED_VALUE = 0;
+        /**
+         * <code>RSASSA_PKCS1v15 = 1;</code>
+         */
+        public static final int RSASSA_PKCS1v15_VALUE = 1;
+        /**
+         * <code>RSASSA_PSS = 2;</code>
+         */
+        public static final int RSASSA_PSS_VALUE = 2;
 
-    public static com.google.protobuf.Internal.EnumLiteMap<SignatureAlgorithm>
-        internalGetValueMap() {
-      return internalValueMap;
-    }
-    private static final com.google.protobuf.Internal.EnumLiteMap<
-        SignatureAlgorithm> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<SignatureAlgorithm>() {
-            @Override
-            public SignatureAlgorithm findValueByNumber(int number) {
-              return SignatureAlgorithm.forNumber(number);
+
+        @Override
+        public final int getNumber() {
+            return value;
+        }
+
+        /**
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @Deprecated
+        public static SignatureAlgorithm valueOf(int value) {
+            return forNumber(value);
+        }
+
+        public static SignatureAlgorithm forNumber(int value) {
+            switch (value) {
+                case 0: return UNSPECIFIED;
+                case 1: return RSASSA_PKCS1v15;
+                case 2: return RSASSA_PSS;
+                default: return null;
             }
-          };
+        }
 
-    private final int value;
-
-    SignatureAlgorithm(int value) {
-      this.value = value;
-    }
-
-    // @@protoc_insertion_point(enum_scope:extensions.api.cast_channel.SignatureAlgorithm)
-  }
-
-  /**
-   * Protobuf enum {@code extensions.api.cast_channel.HashAlgorithm}
-   */
-  public enum HashAlgorithm
-      implements com.google.protobuf.Internal.EnumLite {
-    /**
-     * <code>SHA1 = 0;</code>
-     */
-    SHA1(0),
-    /**
-     * <code>SHA256 = 1;</code>
-     */
-    SHA256(1),
-    ;
-
-    /**
-     * <code>SHA1 = 0;</code>
-     */
-    public static final int SHA1_VALUE = 0;
-    /**
-     * <code>SHA256 = 1;</code>
-     */
-    public static final int SHA256_VALUE = 1;
-
-
-    @Override
-    public final int getNumber() {
-      return value;
-    }
-
-    /**
-     * @deprecated Use {@link #forNumber(int)} instead.
-     */
-    @Deprecated
-    public static HashAlgorithm valueOf(int value) {
-      return forNumber(value);
-    }
-
-    public static HashAlgorithm forNumber(int value) {
-      switch (value) {
-        case 0: return SHA1;
-        case 1: return SHA256;
-        default: return null;
-      }
-    }
-
-    public static com.google.protobuf.Internal.EnumLiteMap<HashAlgorithm>
+        public static com.google.protobuf.Internal.EnumLiteMap<SignatureAlgorithm>
         internalGetValueMap() {
-      return internalValueMap;
+            return internalValueMap;
+        }
+        private static final com.google.protobuf.Internal.EnumLiteMap<
+                SignatureAlgorithm> internalValueMap =
+                new com.google.protobuf.Internal.EnumLiteMap<SignatureAlgorithm>() {
+                    @Override
+                    public SignatureAlgorithm findValueByNumber(int number) {
+                        return SignatureAlgorithm.forNumber(number);
+                    }
+                };
+
+        private final int value;
+
+        SignatureAlgorithm(int value) {
+            this.value = value;
+        }
+
+        // @@protoc_insertion_point(enum_scope:extensions.api.cast_channel.SignatureAlgorithm)
     }
-    private static final com.google.protobuf.Internal.EnumLiteMap<
-        HashAlgorithm> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<HashAlgorithm>() {
-            @Override
-            public HashAlgorithm findValueByNumber(int number) {
-              return HashAlgorithm.forNumber(number);
+
+    /**
+     * Protobuf enum {@code extensions.api.cast_channel.HashAlgorithm}
+     */
+    public enum HashAlgorithm
+            implements com.google.protobuf.Internal.EnumLite {
+        /**
+         * <code>SHA1 = 0;</code>
+         */
+        SHA1(0),
+        /**
+         * <code>SHA256 = 1;</code>
+         */
+        SHA256(1),
+        ;
+
+        /**
+         * <code>SHA1 = 0;</code>
+         */
+        public static final int SHA1_VALUE = 0;
+        /**
+         * <code>SHA256 = 1;</code>
+         */
+        public static final int SHA256_VALUE = 1;
+
+
+        @Override
+        public final int getNumber() {
+            return value;
+        }
+
+        /**
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @Deprecated
+        public static HashAlgorithm valueOf(int value) {
+            return forNumber(value);
+        }
+
+        public static HashAlgorithm forNumber(int value) {
+            switch (value) {
+                case 0: return SHA1;
+                case 1: return SHA256;
+                default: return null;
             }
-          };
+        }
 
-    private final int value;
+        public static com.google.protobuf.Internal.EnumLiteMap<HashAlgorithm>
+        internalGetValueMap() {
+            return internalValueMap;
+        }
+        private static final com.google.protobuf.Internal.EnumLiteMap<
+                HashAlgorithm> internalValueMap =
+                new com.google.protobuf.Internal.EnumLiteMap<HashAlgorithm>() {
+                    @Override
+                    public HashAlgorithm findValueByNumber(int number) {
+                        return HashAlgorithm.forNumber(number);
+                    }
+                };
 
-    HashAlgorithm(int value) {
-      this.value = value;
+        private final int value;
+
+        HashAlgorithm(int value) {
+            this.value = value;
+        }
+
+        // @@protoc_insertion_point(enum_scope:extensions.api.cast_channel.HashAlgorithm)
     }
 
-    // @@protoc_insertion_point(enum_scope:extensions.api.cast_channel.HashAlgorithm)
-  }
+    public interface CastMessageOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:extensions.api.cast_channel.CastMessage)
+            com.google.protobuf.MessageLiteOrBuilder {
 
-  public interface CastMessageOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:extensions.api.cast_channel.CastMessage)
-      com.google.protobuf.MessageLiteOrBuilder {
+        /**
+         * <code>required .extensions.api.cast_channel.CastMessage.ProtocolVersion protocol_version = 1;</code>
+         */
+        boolean hasProtocolVersion();
+        /**
+         * <code>required .extensions.api.cast_channel.CastMessage.ProtocolVersion protocol_version = 1;</code>
+         */
+        CastChannelProto.CastMessage.ProtocolVersion getProtocolVersion();
 
-    /**
-     * <code>required .extensions.api.cast_channel.CastMessage.ProtocolVersion protocol_version = 1;</code>
-     */
-    boolean hasProtocolVersion();
-    /**
-     * <code>required .extensions.api.cast_channel.CastMessage.ProtocolVersion protocol_version = 1;</code>
-     */
-    CastChannelProto.CastMessage.ProtocolVersion getProtocolVersion();
-
-    /**
-     * <pre>
-     * source and destination ids identify the origin and destination of the
-     * message.  They are used to route messages between endpoints that share a
-     * device-to-device channel.
-     * For messages between applications:
-     *   - The sender application id is a unique identifier generated on behalf of
-     *     the sender application.
-     *   - The Receiver id is always the the session id for the application.
-     * For messages to or from the sender or Receiver platform, the special ids
-     * 'sender-0' and 'Receiver-0' can be used.
-     * For messages intended for all endpoints using a given channel, the
-     * wildcard destination_id '*' can be used.
-     * </pre>
-     *
-     * <code>required string source_id = 2;</code>
-     */
-    boolean hasSourceId();
-    /**
-     * <pre>
-     * source and destination ids identify the origin and destination of the
-     * message.  They are used to route messages between endpoints that share a
-     * device-to-device channel.
-     * For messages between applications:
-     *   - The sender application id is a unique identifier generated on behalf of
-     *     the sender application.
-     *   - The Receiver id is always the the session id for the application.
-     * For messages to or from the sender or Receiver platform, the special ids
-     * 'sender-0' and 'Receiver-0' can be used.
-     * For messages intended for all endpoints using a given channel, the
-     * wildcard destination_id '*' can be used.
-     * </pre>
-     *
-     * <code>required string source_id = 2;</code>
-     */
-    String getSourceId();
-    /**
-     * <pre>
-     * source and destination ids identify the origin and destination of the
-     * message.  They are used to route messages between endpoints that share a
-     * device-to-device channel.
-     * For messages between applications:
-     *   - The sender application id is a unique identifier generated on behalf of
-     *     the sender application.
-     *   - The Receiver id is always the the session id for the application.
-     * For messages to or from the sender or Receiver platform, the special ids
-     * 'sender-0' and 'Receiver-0' can be used.
-     * For messages intended for all endpoints using a given channel, the
-     * wildcard destination_id '*' can be used.
-     * </pre>
-     *
-     * <code>required string source_id = 2;</code>
-     */
-    com.google.protobuf.ByteString
+        /**
+         * <pre>
+         * source and destination ids identify the origin and destination of the
+         * message.  They are used to route messages between endpoints that share a
+         * device-to-device channel.
+         * For messages between applications:
+         *   - The sender application id is a unique identifier generated on behalf of
+         *     the sender application.
+         *   - The Receiver id is always the the session id for the application.
+         * For messages to or from the sender or Receiver platform, the special ids
+         * 'sender-0' and 'Receiver-0' can be used.
+         * For messages intended for all endpoints using a given channel, the
+         * wildcard destination_id '*' can be used.
+         * </pre>
+         *
+         * <code>required string source_id = 2;</code>
+         */
+        boolean hasSourceId();
+        /**
+         * <pre>
+         * source and destination ids identify the origin and destination of the
+         * message.  They are used to route messages between endpoints that share a
+         * device-to-device channel.
+         * For messages between applications:
+         *   - The sender application id is a unique identifier generated on behalf of
+         *     the sender application.
+         *   - The Receiver id is always the the session id for the application.
+         * For messages to or from the sender or Receiver platform, the special ids
+         * 'sender-0' and 'Receiver-0' can be used.
+         * For messages intended for all endpoints using a given channel, the
+         * wildcard destination_id '*' can be used.
+         * </pre>
+         *
+         * <code>required string source_id = 2;</code>
+         */
+        String getSourceId();
+        /**
+         * <pre>
+         * source and destination ids identify the origin and destination of the
+         * message.  They are used to route messages between endpoints that share a
+         * device-to-device channel.
+         * For messages between applications:
+         *   - The sender application id is a unique identifier generated on behalf of
+         *     the sender application.
+         *   - The Receiver id is always the the session id for the application.
+         * For messages to or from the sender or Receiver platform, the special ids
+         * 'sender-0' and 'Receiver-0' can be used.
+         * For messages intended for all endpoints using a given channel, the
+         * wildcard destination_id '*' can be used.
+         * </pre>
+         *
+         * <code>required string source_id = 2;</code>
+         */
+        com.google.protobuf.ByteString
         getSourceIdBytes();
 
-    /**
-     * <code>required string destination_id = 3;</code>
-     */
-    boolean hasDestinationId();
-    /**
-     * <code>required string destination_id = 3;</code>
-     */
-    String getDestinationId();
-    /**
-     * <code>required string destination_id = 3;</code>
-     */
-    com.google.protobuf.ByteString
+        /**
+         * <code>required string destination_id = 3;</code>
+         */
+        boolean hasDestinationId();
+        /**
+         * <code>required string destination_id = 3;</code>
+         */
+        String getDestinationId();
+        /**
+         * <code>required string destination_id = 3;</code>
+         */
+        com.google.protobuf.ByteString
         getDestinationIdBytes();
 
-    /**
-     * <pre>
-     * This is the core multiplexing key.  All messages are sent on a namespace
-     * and endpoints sharing a channel listen on one or more namespaces.  The
-     * namespace defines the protocol and semantics of the message.
-     * </pre>
-     *
-     * <code>required string namespace = 4;</code>
-     */
-    boolean hasNamespace();
-    /**
-     * <pre>
-     * This is the core multiplexing key.  All messages are sent on a namespace
-     * and endpoints sharing a channel listen on one or more namespaces.  The
-     * namespace defines the protocol and semantics of the message.
-     * </pre>
-     *
-     * <code>required string namespace = 4;</code>
-     */
-    String getNamespace();
-    /**
-     * <pre>
-     * This is the core multiplexing key.  All messages are sent on a namespace
-     * and endpoints sharing a channel listen on one or more namespaces.  The
-     * namespace defines the protocol and semantics of the message.
-     * </pre>
-     *
-     * <code>required string namespace = 4;</code>
-     */
-    com.google.protobuf.ByteString
+        /**
+         * <pre>
+         * This is the core multiplexing key.  All messages are sent on a namespace
+         * and endpoints sharing a channel listen on one or more namespaces.  The
+         * namespace defines the protocol and semantics of the message.
+         * </pre>
+         *
+         * <code>required string namespace = 4;</code>
+         */
+        boolean hasNamespace();
+        /**
+         * <pre>
+         * This is the core multiplexing key.  All messages are sent on a namespace
+         * and endpoints sharing a channel listen on one or more namespaces.  The
+         * namespace defines the protocol and semantics of the message.
+         * </pre>
+         *
+         * <code>required string namespace = 4;</code>
+         */
+        String getNamespace();
+        /**
+         * <pre>
+         * This is the core multiplexing key.  All messages are sent on a namespace
+         * and endpoints sharing a channel listen on one or more namespaces.  The
+         * namespace defines the protocol and semantics of the message.
+         * </pre>
+         *
+         * <code>required string namespace = 4;</code>
+         */
+        com.google.protobuf.ByteString
         getNamespaceBytes();
 
-    /**
-     * <code>required .extensions.api.cast_channel.CastMessage.PayloadType payload_type = 5;</code>
-     */
-    boolean hasPayloadType();
-    /**
-     * <code>required .extensions.api.cast_channel.CastMessage.PayloadType payload_type = 5;</code>
-     */
-    CastChannelProto.CastMessage.PayloadType getPayloadType();
+        /**
+         * <code>required .extensions.api.cast_channel.CastMessage.PayloadType payload_type = 5;</code>
+         */
+        boolean hasPayloadType();
+        /**
+         * <code>required .extensions.api.cast_channel.CastMessage.PayloadType payload_type = 5;</code>
+         */
+        CastChannelProto.CastMessage.PayloadType getPayloadType();
 
-    /**
-     * <pre>
-     * Depending on payload_type, exactly one of the following optional fields
-     * will always be set.
-     * </pre>
-     *
-     * <code>optional string payload_utf8 = 6;</code>
-     */
-    boolean hasPayloadUtf8();
-    /**
-     * <pre>
-     * Depending on payload_type, exactly one of the following optional fields
-     * will always be set.
-     * </pre>
-     *
-     * <code>optional string payload_utf8 = 6;</code>
-     */
-    String getPayloadUtf8();
-    /**
-     * <pre>
-     * Depending on payload_type, exactly one of the following optional fields
-     * will always be set.
-     * </pre>
-     *
-     * <code>optional string payload_utf8 = 6;</code>
-     */
-    com.google.protobuf.ByteString
+        /**
+         * <pre>
+         * Depending on payload_type, exactly one of the following optional fields
+         * will always be set.
+         * </pre>
+         *
+         * <code>optional string payload_utf8 = 6;</code>
+         */
+        boolean hasPayloadUtf8();
+        /**
+         * <pre>
+         * Depending on payload_type, exactly one of the following optional fields
+         * will always be set.
+         * </pre>
+         *
+         * <code>optional string payload_utf8 = 6;</code>
+         */
+        String getPayloadUtf8();
+        /**
+         * <pre>
+         * Depending on payload_type, exactly one of the following optional fields
+         * will always be set.
+         * </pre>
+         *
+         * <code>optional string payload_utf8 = 6;</code>
+         */
+        com.google.protobuf.ByteString
         getPayloadUtf8Bytes();
 
-    /**
-     * <code>optional bytes payload_binary = 7;</code>
-     */
-    boolean hasPayloadBinary();
-    /**
-     * <code>optional bytes payload_binary = 7;</code>
-     */
-    com.google.protobuf.ByteString getPayloadBinary();
-  }
-  /**
-   * Protobuf type {@code extensions.api.cast_channel.CastMessage}
-   */
-  public  static final class CastMessage extends
-      com.google.protobuf.GeneratedMessageLite<
-          CastMessage, CastMessage.Builder> implements
-      // @@protoc_insertion_point(message_implements:extensions.api.cast_channel.CastMessage)
-      CastMessageOrBuilder {
-    private CastMessage() {
-      sourceId_ = "";
-      destinationId_ = "";
-      namespace_ = "";
-      payloadUtf8_ = "";
-      payloadBinary_ = com.google.protobuf.ByteString.EMPTY;
+        /**
+         * <code>optional bytes payload_binary = 7;</code>
+         */
+        boolean hasPayloadBinary();
+        /**
+         * <code>optional bytes payload_binary = 7;</code>
+         */
+        com.google.protobuf.ByteString getPayloadBinary();
     }
-    /**
-     * <pre>
-     * Always pass a version of the protocol for future compatibility
-     * requirements.
-     * </pre>
-     *
-     * Protobuf enum {@code extensions.api.cast_channel.CastMessage.ProtocolVersion}
-     */
-    public enum ProtocolVersion
-        implements com.google.protobuf.Internal.EnumLite {
-      /**
-       * <code>CASTV2_1_0 = 0;</code>
-       */
-      CASTV2_1_0(0),
-      ;
-
-      /**
-       * <code>CASTV2_1_0 = 0;</code>
-       */
-      public static final int CASTV2_1_0_VALUE = 0;
-
-
-      @Override
-      public final int getNumber() {
-        return value;
-      }
-
-      /**
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @Deprecated
-      public static ProtocolVersion valueOf(int value) {
-        return forNumber(value);
-      }
-
-      public static ProtocolVersion forNumber(int value) {
-        switch (value) {
-          case 0: return CASTV2_1_0;
-          default: return null;
-        }
-      }
-
-      public static com.google.protobuf.Internal.EnumLiteMap<ProtocolVersion>
-          internalGetValueMap() {
-        return internalValueMap;
-      }
-      private static final com.google.protobuf.Internal.EnumLiteMap<
-          ProtocolVersion> internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<ProtocolVersion>() {
-              @Override
-              public ProtocolVersion findValueByNumber(int number) {
-                return ProtocolVersion.forNumber(number);
-              }
-            };
-
-      private final int value;
-
-      ProtocolVersion(int value) {
-        this.value = value;
-      }
-
-      // @@protoc_insertion_point(enum_scope:extensions.api.cast_channel.CastMessage.ProtocolVersion)
-    }
-
-    /**
-     * <pre>
-     * What type of data do we have in this message.
-     * </pre>
-     *
-     * Protobuf enum {@code extensions.api.cast_channel.CastMessage.PayloadType}
-     */
-    public enum PayloadType
-        implements com.google.protobuf.Internal.EnumLite {
-      /**
-       * <code>STRING = 0;</code>
-       */
-      STRING(0),
-      /**
-       * <code>BINARY = 1;</code>
-       */
-      BINARY(1),
-      ;
-
-      /**
-       * <code>STRING = 0;</code>
-       */
-      public static final int STRING_VALUE = 0;
-      /**
-       * <code>BINARY = 1;</code>
-       */
-      public static final int BINARY_VALUE = 1;
-
-
-      @Override
-      public final int getNumber() {
-        return value;
-      }
-
-      /**
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @Deprecated
-      public static PayloadType valueOf(int value) {
-        return forNumber(value);
-      }
-
-      public static PayloadType forNumber(int value) {
-        switch (value) {
-          case 0: return STRING;
-          case 1: return BINARY;
-          default: return null;
-        }
-      }
-
-      public static com.google.protobuf.Internal.EnumLiteMap<PayloadType>
-          internalGetValueMap() {
-        return internalValueMap;
-      }
-      private static final com.google.protobuf.Internal.EnumLiteMap<
-          PayloadType> internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<PayloadType>() {
-              @Override
-              public PayloadType findValueByNumber(int number) {
-                return PayloadType.forNumber(number);
-              }
-            };
-
-      private final int value;
-
-      PayloadType(int value) {
-        this.value = value;
-      }
-
-      // @@protoc_insertion_point(enum_scope:extensions.api.cast_channel.CastMessage.PayloadType)
-    }
-
-    private int bitField0_;
-    public static final int PROTOCOL_VERSION_FIELD_NUMBER = 1;
-    private int protocolVersion_;
-    /**
-     * <code>required .extensions.api.cast_channel.CastMessage.ProtocolVersion protocol_version = 1;</code>
-     */
-    @Override
-    public boolean hasProtocolVersion() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>required .extensions.api.cast_channel.CastMessage.ProtocolVersion protocol_version = 1;</code>
-     */
-    @Override
-    public CastChannelProto.CastMessage.ProtocolVersion getProtocolVersion() {
-      CastChannelProto.CastMessage.ProtocolVersion result = CastChannelProto.CastMessage.ProtocolVersion.forNumber(protocolVersion_);
-      return result == null ? CastChannelProto.CastMessage.ProtocolVersion.CASTV2_1_0 : result;
-    }
-    /**
-     * <code>required .extensions.api.cast_channel.CastMessage.ProtocolVersion protocol_version = 1;</code>
-     */
-    private void setProtocolVersion(CastChannelProto.CastMessage.ProtocolVersion value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      bitField0_ |= 0x00000001;
-      protocolVersion_ = value.getNumber();
-    }
-    /**
-     * <code>required .extensions.api.cast_channel.CastMessage.ProtocolVersion protocol_version = 1;</code>
-     */
-    private void clearProtocolVersion() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      protocolVersion_ = 0;
-    }
-
-    public static final int SOURCE_ID_FIELD_NUMBER = 2;
-    private String sourceId_;
-    /**
-     * <pre>
-     * source and destination ids identify the origin and destination of the
-     * message.  They are used to route messages between endpoints that share a
-     * device-to-device channel.
-     * For messages between applications:
-     *   - The sender application id is a unique identifier generated on behalf of
-     *     the sender application.
-     *   - The Receiver id is always the the session id for the application.
-     * For messages to or from the sender or Receiver platform, the special ids
-     * 'sender-0' and 'Receiver-0' can be used.
-     * For messages intended for all endpoints using a given channel, the
-     * wildcard destination_id '*' can be used.
-     * </pre>
-     *
-     * <code>required string source_id = 2;</code>
-     */
-    @Override
-    public boolean hasSourceId() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <pre>
-     * source and destination ids identify the origin and destination of the
-     * message.  They are used to route messages between endpoints that share a
-     * device-to-device channel.
-     * For messages between applications:
-     *   - The sender application id is a unique identifier generated on behalf of
-     *     the sender application.
-     *   - The Receiver id is always the the session id for the application.
-     * For messages to or from the sender or Receiver platform, the special ids
-     * 'sender-0' and 'Receiver-0' can be used.
-     * For messages intended for all endpoints using a given channel, the
-     * wildcard destination_id '*' can be used.
-     * </pre>
-     *
-     * <code>required string source_id = 2;</code>
-     */
-    @Override
-    public String getSourceId() {
-      return sourceId_;
-    }
-    /**
-     * <pre>
-     * source and destination ids identify the origin and destination of the
-     * message.  They are used to route messages between endpoints that share a
-     * device-to-device channel.
-     * For messages between applications:
-     *   - The sender application id is a unique identifier generated on behalf of
-     *     the sender application.
-     *   - The Receiver id is always the the session id for the application.
-     * For messages to or from the sender or Receiver platform, the special ids
-     * 'sender-0' and 'Receiver-0' can be used.
-     * For messages intended for all endpoints using a given channel, the
-     * wildcard destination_id '*' can be used.
-     * </pre>
-     *
-     * <code>required string source_id = 2;</code>
-     */
-    @Override
-    public com.google.protobuf.ByteString
-        getSourceIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(sourceId_);
-    }
-    /**
-     * <pre>
-     * source and destination ids identify the origin and destination of the
-     * message.  They are used to route messages between endpoints that share a
-     * device-to-device channel.
-     * For messages between applications:
-     *   - The sender application id is a unique identifier generated on behalf of
-     *     the sender application.
-     *   - The Receiver id is always the the session id for the application.
-     * For messages to or from the sender or Receiver platform, the special ids
-     * 'sender-0' and 'Receiver-0' can be used.
-     * For messages intended for all endpoints using a given channel, the
-     * wildcard destination_id '*' can be used.
-     * </pre>
-     *
-     * <code>required string source_id = 2;</code>
-     */
-    private void setSourceId(
-        String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-      sourceId_ = value;
-    }
-    /**
-     * <pre>
-     * source and destination ids identify the origin and destination of the
-     * message.  They are used to route messages between endpoints that share a
-     * device-to-device channel.
-     * For messages between applications:
-     *   - The sender application id is a unique identifier generated on behalf of
-     *     the sender application.
-     *   - The Receiver id is always the the session id for the application.
-     * For messages to or from the sender or Receiver platform, the special ids
-     * 'sender-0' and 'Receiver-0' can be used.
-     * For messages intended for all endpoints using a given channel, the
-     * wildcard destination_id '*' can be used.
-     * </pre>
-     *
-     * <code>required string source_id = 2;</code>
-     */
-    private void clearSourceId() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      sourceId_ = getDefaultInstance().getSourceId();
-    }
-    /**
-     * <pre>
-     * source and destination ids identify the origin and destination of the
-     * message.  They are used to route messages between endpoints that share a
-     * device-to-device channel.
-     * For messages between applications:
-     *   - The sender application id is a unique identifier generated on behalf of
-     *     the sender application.
-     *   - The Receiver id is always the the session id for the application.
-     * For messages to or from the sender or Receiver platform, the special ids
-     * 'sender-0' and 'Receiver-0' can be used.
-     * For messages intended for all endpoints using a given channel, the
-     * wildcard destination_id '*' can be used.
-     * </pre>
-     *
-     * <code>required string source_id = 2;</code>
-     */
-    private void setSourceIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-      sourceId_ = value.toStringUtf8();
-    }
-
-    public static final int DESTINATION_ID_FIELD_NUMBER = 3;
-    private String destinationId_;
-    /**
-     * <code>required string destination_id = 3;</code>
-     */
-    @Override
-    public boolean hasDestinationId() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
-    }
-    /**
-     * <code>required string destination_id = 3;</code>
-     */
-    @Override
-    public String getDestinationId() {
-      return destinationId_;
-    }
-    /**
-     * <code>required string destination_id = 3;</code>
-     */
-    @Override
-    public com.google.protobuf.ByteString
-        getDestinationIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(destinationId_);
-    }
-    /**
-     * <code>required string destination_id = 3;</code>
-     */
-    private void setDestinationId(
-        String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-      destinationId_ = value;
-    }
-    /**
-     * <code>required string destination_id = 3;</code>
-     */
-    private void clearDestinationId() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      destinationId_ = getDefaultInstance().getDestinationId();
-    }
-    /**
-     * <code>required string destination_id = 3;</code>
-     */
-    private void setDestinationIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-      destinationId_ = value.toStringUtf8();
-    }
-
-    public static final int NAMESPACE_FIELD_NUMBER = 4;
-    private String namespace_;
-    /**
-     * <pre>
-     * This is the core multiplexing key.  All messages are sent on a namespace
-     * and endpoints sharing a channel listen on one or more namespaces.  The
-     * namespace defines the protocol and semantics of the message.
-     * </pre>
-     *
-     * <code>required string namespace = 4;</code>
-     */
-    @Override
-    public boolean hasNamespace() {
-      return ((bitField0_ & 0x00000008) == 0x00000008);
-    }
-    /**
-     * <pre>
-     * This is the core multiplexing key.  All messages are sent on a namespace
-     * and endpoints sharing a channel listen on one or more namespaces.  The
-     * namespace defines the protocol and semantics of the message.
-     * </pre>
-     *
-     * <code>required string namespace = 4;</code>
-     */
-    @Override
-    public String getNamespace() {
-      return namespace_;
-    }
-    /**
-     * <pre>
-     * This is the core multiplexing key.  All messages are sent on a namespace
-     * and endpoints sharing a channel listen on one or more namespaces.  The
-     * namespace defines the protocol and semantics of the message.
-     * </pre>
-     *
-     * <code>required string namespace = 4;</code>
-     */
-    @Override
-    public com.google.protobuf.ByteString
-        getNamespaceBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(namespace_);
-    }
-    /**
-     * <pre>
-     * This is the core multiplexing key.  All messages are sent on a namespace
-     * and endpoints sharing a channel listen on one or more namespaces.  The
-     * namespace defines the protocol and semantics of the message.
-     * </pre>
-     *
-     * <code>required string namespace = 4;</code>
-     */
-    private void setNamespace(
-        String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
-      namespace_ = value;
-    }
-    /**
-     * <pre>
-     * This is the core multiplexing key.  All messages are sent on a namespace
-     * and endpoints sharing a channel listen on one or more namespaces.  The
-     * namespace defines the protocol and semantics of the message.
-     * </pre>
-     *
-     * <code>required string namespace = 4;</code>
-     */
-    private void clearNamespace() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      namespace_ = getDefaultInstance().getNamespace();
-    }
-    /**
-     * <pre>
-     * This is the core multiplexing key.  All messages are sent on a namespace
-     * and endpoints sharing a channel listen on one or more namespaces.  The
-     * namespace defines the protocol and semantics of the message.
-     * </pre>
-     *
-     * <code>required string namespace = 4;</code>
-     */
-    private void setNamespaceBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
-      namespace_ = value.toStringUtf8();
-    }
-
-    public static final int PAYLOAD_TYPE_FIELD_NUMBER = 5;
-    private int payloadType_;
-    /**
-     * <code>required .extensions.api.cast_channel.CastMessage.PayloadType payload_type = 5;</code>
-     */
-    @Override
-    public boolean hasPayloadType() {
-      return ((bitField0_ & 0x00000010) == 0x00000010);
-    }
-    /**
-     * <code>required .extensions.api.cast_channel.CastMessage.PayloadType payload_type = 5;</code>
-     */
-    @Override
-    public CastChannelProto.CastMessage.PayloadType getPayloadType() {
-      CastChannelProto.CastMessage.PayloadType result = CastChannelProto.CastMessage.PayloadType.forNumber(payloadType_);
-      return result == null ? CastChannelProto.CastMessage.PayloadType.STRING : result;
-    }
-    /**
-     * <code>required .extensions.api.cast_channel.CastMessage.PayloadType payload_type = 5;</code>
-     */
-    private void setPayloadType(CastChannelProto.CastMessage.PayloadType value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      bitField0_ |= 0x00000010;
-      payloadType_ = value.getNumber();
-    }
-    /**
-     * <code>required .extensions.api.cast_channel.CastMessage.PayloadType payload_type = 5;</code>
-     */
-    private void clearPayloadType() {
-      bitField0_ = (bitField0_ & ~0x00000010);
-      payloadType_ = 0;
-    }
-
-    public static final int PAYLOAD_UTF8_FIELD_NUMBER = 6;
-    private String payloadUtf8_;
-    /**
-     * <pre>
-     * Depending on payload_type, exactly one of the following optional fields
-     * will always be set.
-     * </pre>
-     *
-     * <code>optional string payload_utf8 = 6;</code>
-     */
-    @Override
-    public boolean hasPayloadUtf8() {
-      return ((bitField0_ & 0x00000020) == 0x00000020);
-    }
-    /**
-     * <pre>
-     * Depending on payload_type, exactly one of the following optional fields
-     * will always be set.
-     * </pre>
-     *
-     * <code>optional string payload_utf8 = 6;</code>
-     */
-    @Override
-    public String getPayloadUtf8() {
-      return payloadUtf8_;
-    }
-    /**
-     * <pre>
-     * Depending on payload_type, exactly one of the following optional fields
-     * will always be set.
-     * </pre>
-     *
-     * <code>optional string payload_utf8 = 6;</code>
-     */
-    @Override
-    public com.google.protobuf.ByteString
-        getPayloadUtf8Bytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(payloadUtf8_);
-    }
-    /**
-     * <pre>
-     * Depending on payload_type, exactly one of the following optional fields
-     * will always be set.
-     * </pre>
-     *
-     * <code>optional string payload_utf8 = 6;</code>
-     */
-    private void setPayloadUtf8(
-        String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000020;
-      payloadUtf8_ = value;
-    }
-    /**
-     * <pre>
-     * Depending on payload_type, exactly one of the following optional fields
-     * will always be set.
-     * </pre>
-     *
-     * <code>optional string payload_utf8 = 6;</code>
-     */
-    private void clearPayloadUtf8() {
-      bitField0_ = (bitField0_ & ~0x00000020);
-      payloadUtf8_ = getDefaultInstance().getPayloadUtf8();
-    }
-    /**
-     * <pre>
-     * Depending on payload_type, exactly one of the following optional fields
-     * will always be set.
-     * </pre>
-     *
-     * <code>optional string payload_utf8 = 6;</code>
-     */
-    private void setPayloadUtf8Bytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000020;
-      payloadUtf8_ = value.toStringUtf8();
-    }
-
-    public static final int PAYLOAD_BINARY_FIELD_NUMBER = 7;
-    private com.google.protobuf.ByteString payloadBinary_;
-    /**
-     * <code>optional bytes payload_binary = 7;</code>
-     */
-    @Override
-    public boolean hasPayloadBinary() {
-      return ((bitField0_ & 0x00000040) == 0x00000040);
-    }
-    /**
-     * <code>optional bytes payload_binary = 7;</code>
-     */
-    @Override
-    public com.google.protobuf.ByteString getPayloadBinary() {
-      return payloadBinary_;
-    }
-    /**
-     * <code>optional bytes payload_binary = 7;</code>
-     */
-    private void setPayloadBinary(com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000040;
-      payloadBinary_ = value;
-    }
-    /**
-     * <code>optional bytes payload_binary = 7;</code>
-     */
-    private void clearPayloadBinary() {
-      bitField0_ = (bitField0_ & ~0x00000040);
-      payloadBinary_ = getDefaultInstance().getPayloadBinary();
-    }
-
-    @Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeEnum(1, protocolVersion_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeString(2, getSourceId());
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeString(3, getDestinationId());
-      }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeString(4, getNamespace());
-      }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        output.writeEnum(5, payloadType_);
-      }
-      if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        output.writeString(6, getPayloadUtf8());
-      }
-      if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        output.writeBytes(7, payloadBinary_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @Override
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, protocolVersion_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeStringSize(2, getSourceId());
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeStringSize(3, getDestinationId());
-      }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeStringSize(4, getNamespace());
-      }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(5, payloadType_);
-      }
-      if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeStringSize(6, getPayloadUtf8());
-      }
-      if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(7, payloadBinary_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    public static CastChannelProto.CastMessage parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static CastChannelProto.CastMessage parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static CastChannelProto.CastMessage parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static CastChannelProto.CastMessage parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static CastChannelProto.CastMessage parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static CastChannelProto.CastMessage parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static CastChannelProto.CastMessage parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static CastChannelProto.CastMessage parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static CastChannelProto.CastMessage parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
-    }
-    public static CastChannelProto.CastMessage parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static CastChannelProto.CastMessage parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static CastChannelProto.CastMessage parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() {
-      return (Builder) DEFAULT_INSTANCE.createBuilder();
-    }
-    public static Builder newBuilder(CastChannelProto.CastMessage prototype) {
-      return DEFAULT_INSTANCE.createBuilder(prototype);
-    }
-
     /**
      * Protobuf type {@code extensions.api.cast_channel.CastMessage}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageLite.Builder<
-          CastChannelProto.CastMessage, Builder> implements
-        // @@protoc_insertion_point(builder_implements:extensions.api.cast_channel.CastMessage)
-        CastChannelProto.CastMessageOrBuilder {
-      // Construct using extensions.api.cast_channel.CastChannelProto.CastMessage.newBuilder()
-      private Builder() {
-        super(DEFAULT_INSTANCE);
-      }
-
-
-      /**
-       * <code>required .extensions.api.cast_channel.CastMessage.ProtocolVersion protocol_version = 1;</code>
-       */
-      @Override
-      public boolean hasProtocolVersion() {
-        return instance.hasProtocolVersion();
-      }
-      /**
-       * <code>required .extensions.api.cast_channel.CastMessage.ProtocolVersion protocol_version = 1;</code>
-       */
-      @Override
-      public CastChannelProto.CastMessage.ProtocolVersion getProtocolVersion() {
-        return instance.getProtocolVersion();
-      }
-      /**
-       * <code>required .extensions.api.cast_channel.CastMessage.ProtocolVersion protocol_version = 1;</code>
-       */
-      public Builder setProtocolVersion(CastChannelProto.CastMessage.ProtocolVersion value) {
-        copyOnWrite();
-        instance.setProtocolVersion(value);
-        return this;
-      }
-      /**
-       * <code>required .extensions.api.cast_channel.CastMessage.ProtocolVersion protocol_version = 1;</code>
-       */
-      public Builder clearProtocolVersion() {
-        copyOnWrite();
-        instance.clearProtocolVersion();
-        return this;
-      }
-
-      /**
-       * <pre>
-       * source and destination ids identify the origin and destination of the
-       * message.  They are used to route messages between endpoints that share a
-       * device-to-device channel.
-       * For messages between applications:
-       *   - The sender application id is a unique identifier generated on behalf of
-       *     the sender application.
-       *   - The Receiver id is always the the session id for the application.
-       * For messages to or from the sender or Receiver platform, the special ids
-       * 'sender-0' and 'Receiver-0' can be used.
-       * For messages intended for all endpoints using a given channel, the
-       * wildcard destination_id '*' can be used.
-       * </pre>
-       *
-       * <code>required string source_id = 2;</code>
-       */
-      @Override
-      public boolean hasSourceId() {
-        return instance.hasSourceId();
-      }
-      /**
-       * <pre>
-       * source and destination ids identify the origin and destination of the
-       * message.  They are used to route messages between endpoints that share a
-       * device-to-device channel.
-       * For messages between applications:
-       *   - The sender application id is a unique identifier generated on behalf of
-       *     the sender application.
-       *   - The Receiver id is always the the session id for the application.
-       * For messages to or from the sender or Receiver platform, the special ids
-       * 'sender-0' and 'Receiver-0' can be used.
-       * For messages intended for all endpoints using a given channel, the
-       * wildcard destination_id '*' can be used.
-       * </pre>
-       *
-       * <code>required string source_id = 2;</code>
-       */
-      @Override
-      public String getSourceId() {
-        return instance.getSourceId();
-      }
-      /**
-       * <pre>
-       * source and destination ids identify the origin and destination of the
-       * message.  They are used to route messages between endpoints that share a
-       * device-to-device channel.
-       * For messages between applications:
-       *   - The sender application id is a unique identifier generated on behalf of
-       *     the sender application.
-       *   - The Receiver id is always the the session id for the application.
-       * For messages to or from the sender or Receiver platform, the special ids
-       * 'sender-0' and 'Receiver-0' can be used.
-       * For messages intended for all endpoints using a given channel, the
-       * wildcard destination_id '*' can be used.
-       * </pre>
-       *
-       * <code>required string source_id = 2;</code>
-       */
-      @Override
-      public com.google.protobuf.ByteString
-          getSourceIdBytes() {
-        return instance.getSourceIdBytes();
-      }
-      /**
-       * <pre>
-       * source and destination ids identify the origin and destination of the
-       * message.  They are used to route messages between endpoints that share a
-       * device-to-device channel.
-       * For messages between applications:
-       *   - The sender application id is a unique identifier generated on behalf of
-       *     the sender application.
-       *   - The Receiver id is always the the session id for the application.
-       * For messages to or from the sender or Receiver platform, the special ids
-       * 'sender-0' and 'Receiver-0' can be used.
-       * For messages intended for all endpoints using a given channel, the
-       * wildcard destination_id '*' can be used.
-       * </pre>
-       *
-       * <code>required string source_id = 2;</code>
-       */
-      public Builder setSourceId(
-          String value) {
-        copyOnWrite();
-        instance.setSourceId(value);
-        return this;
-      }
-      /**
-       * <pre>
-       * source and destination ids identify the origin and destination of the
-       * message.  They are used to route messages between endpoints that share a
-       * device-to-device channel.
-       * For messages between applications:
-       *   - The sender application id is a unique identifier generated on behalf of
-       *     the sender application.
-       *   - The Receiver id is always the the session id for the application.
-       * For messages to or from the sender or Receiver platform, the special ids
-       * 'sender-0' and 'Receiver-0' can be used.
-       * For messages intended for all endpoints using a given channel, the
-       * wildcard destination_id '*' can be used.
-       * </pre>
-       *
-       * <code>required string source_id = 2;</code>
-       */
-      public Builder clearSourceId() {
-        copyOnWrite();
-        instance.clearSourceId();
-        return this;
-      }
-      /**
-       * <pre>
-       * source and destination ids identify the origin and destination of the
-       * message.  They are used to route messages between endpoints that share a
-       * device-to-device channel.
-       * For messages between applications:
-       *   - The sender application id is a unique identifier generated on behalf of
-       *     the sender application.
-       *   - The Receiver id is always the the session id for the application.
-       * For messages to or from the sender or Receiver platform, the special ids
-       * 'sender-0' and 'Receiver-0' can be used.
-       * For messages intended for all endpoints using a given channel, the
-       * wildcard destination_id '*' can be used.
-       * </pre>
-       *
-       * <code>required string source_id = 2;</code>
-       */
-      public Builder setSourceIdBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setSourceIdBytes(value);
-        return this;
-      }
-
-      /**
-       * <code>required string destination_id = 3;</code>
-       */
-      @Override
-      public boolean hasDestinationId() {
-        return instance.hasDestinationId();
-      }
-      /**
-       * <code>required string destination_id = 3;</code>
-       */
-      @Override
-      public String getDestinationId() {
-        return instance.getDestinationId();
-      }
-      /**
-       * <code>required string destination_id = 3;</code>
-       */
-      @Override
-      public com.google.protobuf.ByteString
-          getDestinationIdBytes() {
-        return instance.getDestinationIdBytes();
-      }
-      /**
-       * <code>required string destination_id = 3;</code>
-       */
-      public Builder setDestinationId(
-          String value) {
-        copyOnWrite();
-        instance.setDestinationId(value);
-        return this;
-      }
-      /**
-       * <code>required string destination_id = 3;</code>
-       */
-      public Builder clearDestinationId() {
-        copyOnWrite();
-        instance.clearDestinationId();
-        return this;
-      }
-      /**
-       * <code>required string destination_id = 3;</code>
-       */
-      public Builder setDestinationIdBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setDestinationIdBytes(value);
-        return this;
-      }
-
-      /**
-       * <pre>
-       * This is the core multiplexing key.  All messages are sent on a namespace
-       * and endpoints sharing a channel listen on one or more namespaces.  The
-       * namespace defines the protocol and semantics of the message.
-       * </pre>
-       *
-       * <code>required string namespace = 4;</code>
-       */
-      @Override
-      public boolean hasNamespace() {
-        return instance.hasNamespace();
-      }
-      /**
-       * <pre>
-       * This is the core multiplexing key.  All messages are sent on a namespace
-       * and endpoints sharing a channel listen on one or more namespaces.  The
-       * namespace defines the protocol and semantics of the message.
-       * </pre>
-       *
-       * <code>required string namespace = 4;</code>
-       */
-      @Override
-      public String getNamespace() {
-        return instance.getNamespace();
-      }
-      /**
-       * <pre>
-       * This is the core multiplexing key.  All messages are sent on a namespace
-       * and endpoints sharing a channel listen on one or more namespaces.  The
-       * namespace defines the protocol and semantics of the message.
-       * </pre>
-       *
-       * <code>required string namespace = 4;</code>
-       */
-      @Override
-      public com.google.protobuf.ByteString
-          getNamespaceBytes() {
-        return instance.getNamespaceBytes();
-      }
-      /**
-       * <pre>
-       * This is the core multiplexing key.  All messages are sent on a namespace
-       * and endpoints sharing a channel listen on one or more namespaces.  The
-       * namespace defines the protocol and semantics of the message.
-       * </pre>
-       *
-       * <code>required string namespace = 4;</code>
-       */
-      public Builder setNamespace(
-          String value) {
-        copyOnWrite();
-        instance.setNamespace(value);
-        return this;
-      }
-      /**
-       * <pre>
-       * This is the core multiplexing key.  All messages are sent on a namespace
-       * and endpoints sharing a channel listen on one or more namespaces.  The
-       * namespace defines the protocol and semantics of the message.
-       * </pre>
-       *
-       * <code>required string namespace = 4;</code>
-       */
-      public Builder clearNamespace() {
-        copyOnWrite();
-        instance.clearNamespace();
-        return this;
-      }
-      /**
-       * <pre>
-       * This is the core multiplexing key.  All messages are sent on a namespace
-       * and endpoints sharing a channel listen on one or more namespaces.  The
-       * namespace defines the protocol and semantics of the message.
-       * </pre>
-       *
-       * <code>required string namespace = 4;</code>
-       */
-      public Builder setNamespaceBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setNamespaceBytes(value);
-        return this;
-      }
-
-      /**
-       * <code>required .extensions.api.cast_channel.CastMessage.PayloadType payload_type = 5;</code>
-       */
-      @Override
-      public boolean hasPayloadType() {
-        return instance.hasPayloadType();
-      }
-      /**
-       * <code>required .extensions.api.cast_channel.CastMessage.PayloadType payload_type = 5;</code>
-       */
-      @Override
-      public CastChannelProto.CastMessage.PayloadType getPayloadType() {
-        return instance.getPayloadType();
-      }
-      /**
-       * <code>required .extensions.api.cast_channel.CastMessage.PayloadType payload_type = 5;</code>
-       */
-      public Builder setPayloadType(CastChannelProto.CastMessage.PayloadType value) {
-        copyOnWrite();
-        instance.setPayloadType(value);
-        return this;
-      }
-      /**
-       * <code>required .extensions.api.cast_channel.CastMessage.PayloadType payload_type = 5;</code>
-       */
-      public Builder clearPayloadType() {
-        copyOnWrite();
-        instance.clearPayloadType();
-        return this;
-      }
-
-      /**
-       * <pre>
-       * Depending on payload_type, exactly one of the following optional fields
-       * will always be set.
-       * </pre>
-       *
-       * <code>optional string payload_utf8 = 6;</code>
-       */
-      @Override
-      public boolean hasPayloadUtf8() {
-        return instance.hasPayloadUtf8();
-      }
-      /**
-       * <pre>
-       * Depending on payload_type, exactly one of the following optional fields
-       * will always be set.
-       * </pre>
-       *
-       * <code>optional string payload_utf8 = 6;</code>
-       */
-      @Override
-      public String getPayloadUtf8() {
-        return instance.getPayloadUtf8();
-      }
-      /**
-       * <pre>
-       * Depending on payload_type, exactly one of the following optional fields
-       * will always be set.
-       * </pre>
-       *
-       * <code>optional string payload_utf8 = 6;</code>
-       */
-      @Override
-      public com.google.protobuf.ByteString
-          getPayloadUtf8Bytes() {
-        return instance.getPayloadUtf8Bytes();
-      }
-      /**
-       * <pre>
-       * Depending on payload_type, exactly one of the following optional fields
-       * will always be set.
-       * </pre>
-       *
-       * <code>optional string payload_utf8 = 6;</code>
-       */
-      public Builder setPayloadUtf8(
-          String value) {
-        copyOnWrite();
-        instance.setPayloadUtf8(value);
-        return this;
-      }
-      /**
-       * <pre>
-       * Depending on payload_type, exactly one of the following optional fields
-       * will always be set.
-       * </pre>
-       *
-       * <code>optional string payload_utf8 = 6;</code>
-       */
-      public Builder clearPayloadUtf8() {
-        copyOnWrite();
-        instance.clearPayloadUtf8();
-        return this;
-      }
-      /**
-       * <pre>
-       * Depending on payload_type, exactly one of the following optional fields
-       * will always be set.
-       * </pre>
-       *
-       * <code>optional string payload_utf8 = 6;</code>
-       */
-      public Builder setPayloadUtf8Bytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setPayloadUtf8Bytes(value);
-        return this;
-      }
-
-      /**
-       * <code>optional bytes payload_binary = 7;</code>
-       */
-      @Override
-      public boolean hasPayloadBinary() {
-        return instance.hasPayloadBinary();
-      }
-      /**
-       * <code>optional bytes payload_binary = 7;</code>
-       */
-      @Override
-      public com.google.protobuf.ByteString getPayloadBinary() {
-        return instance.getPayloadBinary();
-      }
-      /**
-       * <code>optional bytes payload_binary = 7;</code>
-       */
-      public Builder setPayloadBinary(com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setPayloadBinary(value);
-        return this;
-      }
-      /**
-       * <code>optional bytes payload_binary = 7;</code>
-       */
-      public Builder clearPayloadBinary() {
-        copyOnWrite();
-        instance.clearPayloadBinary();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:extensions.api.cast_channel.CastMessage)
-    }
-    private byte memoizedIsInitialized = 2;
-    @Override
-    @SuppressWarnings({"unchecked", "fallthrough"})
-    protected final Object dynamicMethod(
-        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
-        Object arg0, Object arg1) {
-      switch (method) {
-        case NEW_MUTABLE_INSTANCE: {
-          return new CastChannelProto.CastMessage();
+    public  static final class CastMessage extends
+            com.google.protobuf.GeneratedMessageLite<
+                    CastMessage, CastMessage.Builder> implements
+            // @@protoc_insertion_point(message_implements:extensions.api.cast_channel.CastMessage)
+            CastMessageOrBuilder {
+        private CastMessage() {
+            sourceId_ = "";
+            destinationId_ = "";
+            namespace_ = "";
+            payloadUtf8_ = "";
+            payloadBinary_ = com.google.protobuf.ByteString.EMPTY;
         }
-        case NEW_BUILDER: {
-          return new Builder();
-        }
-        case IS_INITIALIZED: {
-          byte isInitialized = memoizedIsInitialized;
-          if (isInitialized == 1) return DEFAULT_INSTANCE;
-          if (isInitialized == 0) return null;
+        /**
+         * <pre>
+         * Always pass a version of the protocol for future compatibility
+         * requirements.
+         * </pre>
+         *
+         * Protobuf enum {@code extensions.api.cast_channel.CastMessage.ProtocolVersion}
+         */
+        public enum ProtocolVersion
+                implements com.google.protobuf.Internal.EnumLite {
+            /**
+             * <code>CASTV2_1_0 = 0;</code>
+             */
+            CASTV2_1_0(0),
+            ;
 
-          boolean shouldMemoize = ((Boolean) arg0).booleanValue();
-          if (!hasProtocolVersion()) {
-            return null;
-          }
-          if (!hasSourceId()) {
-            return null;
-          }
-          if (!hasDestinationId()) {
-            return null;
-          }
-          if (!hasNamespace()) {
-            return null;
-          }
-          if (!hasPayloadType()) {
-            return null;
-          }
-          return DEFAULT_INSTANCE;
+            /**
+             * <code>CASTV2_1_0 = 0;</code>
+             */
+            public static final int CASTV2_1_0_VALUE = 0;
 
-        }
-        case MAKE_IMMUTABLE: {
-          return null;
-        }
-        case VISIT: {
-          Visitor visitor = (Visitor) arg0;
-          CastChannelProto.CastMessage other = (CastChannelProto.CastMessage) arg1;
-          protocolVersion_ = visitor.visitInt(hasProtocolVersion(), protocolVersion_,
-              other.hasProtocolVersion(), other.protocolVersion_);
-          sourceId_ = visitor.visitString(
-              hasSourceId(), sourceId_,
-              other.hasSourceId(), other.sourceId_);
-          destinationId_ = visitor.visitString(
-              hasDestinationId(), destinationId_,
-              other.hasDestinationId(), other.destinationId_);
-          namespace_ = visitor.visitString(
-              hasNamespace(), namespace_,
-              other.hasNamespace(), other.namespace_);
-          payloadType_ = visitor.visitInt(hasPayloadType(), payloadType_,
-              other.hasPayloadType(), other.payloadType_);
-          payloadUtf8_ = visitor.visitString(
-              hasPayloadUtf8(), payloadUtf8_,
-              other.hasPayloadUtf8(), other.payloadUtf8_);
-          payloadBinary_ = visitor.visitByteString(
-              hasPayloadBinary(), payloadBinary_,
-              other.hasPayloadBinary(), other.payloadBinary_);
-          if (visitor == com.google.protobuf.GeneratedMessageLite.MergeFromVisitor
-              .INSTANCE) {
-            bitField0_ |= other.bitField0_;
-          }
-          return this;
-        }
-        case MERGE_FROM_STREAM: {
-          com.google.protobuf.CodedInputStream input =
-              (com.google.protobuf.CodedInputStream) arg0;
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry =
-              (com.google.protobuf.ExtensionRegistryLite) arg1;
-          if (extensionRegistry == null) {
-            throw new NullPointerException();
-          }
-          try {
-            boolean done = false;
-            while (!done) {
-              int tag = input.readTag();
-              switch (tag) {
-                case 0:
-                  done = true;
-                  break;
-                case 8: {
-                  int rawValue = input.readEnum();
-                  CastChannelProto.CastMessage.ProtocolVersion value = CastChannelProto.CastMessage.ProtocolVersion.forNumber(rawValue);
-                  if (value == null) {
-                    super.mergeVarintField(1, rawValue);
-                  } else {
-                    bitField0_ |= 0x00000001;
-                    protocolVersion_ = rawValue;
-                  }
-                  break;
-                }
-                case 18: {
-                  String s = input.readString();
-                  bitField0_ |= 0x00000002;
-                  sourceId_ = s;
-                  break;
-                }
-                case 26: {
-                  String s = input.readString();
-                  bitField0_ |= 0x00000004;
-                  destinationId_ = s;
-                  break;
-                }
-                case 34: {
-                  String s = input.readString();
-                  bitField0_ |= 0x00000008;
-                  namespace_ = s;
-                  break;
-                }
-                case 40: {
-                  int rawValue = input.readEnum();
-                  CastChannelProto.CastMessage.PayloadType value = CastChannelProto.CastMessage.PayloadType.forNumber(rawValue);
-                  if (value == null) {
-                    super.mergeVarintField(5, rawValue);
-                  } else {
-                    bitField0_ |= 0x00000010;
-                    payloadType_ = rawValue;
-                  }
-                  break;
-                }
-                case 50: {
-                  String s = input.readString();
-                  bitField0_ |= 0x00000020;
-                  payloadUtf8_ = s;
-                  break;
-                }
-                case 58: {
-                  bitField0_ |= 0x00000040;
-                  payloadBinary_ = input.readBytes();
-                  break;
-                }
-                default: {
-                  if (!parseUnknownField(tag, input)) {
-                    done = true;
-                  }
-                  break;
-                }
-              }
+
+            @Override
+            public final int getNumber() {
+                return value;
             }
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw new RuntimeException(e.setUnfinishedMessage(this));
-          } catch (java.io.IOException e) {
-            throw new RuntimeException(
-                new com.google.protobuf.InvalidProtocolBufferException(
-                    e.getMessage()).setUnfinishedMessage(this));
-          } finally {
-          }
-        }
-        // fall through
-        case GET_DEFAULT_INSTANCE: {
-          return DEFAULT_INSTANCE;
-        }
-        case GET_PARSER: {
-          com.google.protobuf.Parser<CastChannelProto.CastMessage> parser = PARSER;
-          if (parser == null) {
-            synchronized (CastChannelProto.CastMessage.class) {
-              parser = PARSER;
-              if (parser == null) {
-                parser = new DefaultInstanceBasedParser(DEFAULT_INSTANCE);
-                PARSER = parser;
-              }
+
+            /**
+             * @deprecated Use {@link #forNumber(int)} instead.
+             */
+            @Deprecated
+            public static ProtocolVersion valueOf(int value) {
+                return forNumber(value);
             }
-          }
-          return parser;
-      }
-      case GET_MEMOIZED_IS_INITIALIZED: {
-        return memoizedIsInitialized;
-      }
-      case SET_MEMOIZED_IS_INITIALIZED: {
-        memoizedIsInitialized = (byte) (arg0 == null ? 0 : 1);
-        return null;
-      }
-      }
-      throw new UnsupportedOperationException();
-    }
+
+            public static ProtocolVersion forNumber(int value) {
+                switch (value) {
+                    case 0: return CASTV2_1_0;
+                    default: return null;
+                }
+            }
+
+            public static com.google.protobuf.Internal.EnumLiteMap<ProtocolVersion>
+            internalGetValueMap() {
+                return internalValueMap;
+            }
+            private static final com.google.protobuf.Internal.EnumLiteMap<
+                    ProtocolVersion> internalValueMap =
+                    new com.google.protobuf.Internal.EnumLiteMap<ProtocolVersion>() {
+                        @Override
+                        public ProtocolVersion findValueByNumber(int number) {
+                            return ProtocolVersion.forNumber(number);
+                        }
+                    };
+
+            private final int value;
+
+            ProtocolVersion(int value) {
+                this.value = value;
+            }
+
+            // @@protoc_insertion_point(enum_scope:extensions.api.cast_channel.CastMessage.ProtocolVersion)
+        }
+
+        /**
+         * <pre>
+         * What type of data do we have in this message.
+         * </pre>
+         *
+         * Protobuf enum {@code extensions.api.cast_channel.CastMessage.PayloadType}
+         */
+        public enum PayloadType
+                implements com.google.protobuf.Internal.EnumLite {
+            /**
+             * <code>STRING = 0;</code>
+             */
+            STRING(0),
+            /**
+             * <code>BINARY = 1;</code>
+             */
+            BINARY(1),
+            ;
+
+            /**
+             * <code>STRING = 0;</code>
+             */
+            public static final int STRING_VALUE = 0;
+            /**
+             * <code>BINARY = 1;</code>
+             */
+            public static final int BINARY_VALUE = 1;
 
 
-    // @@protoc_insertion_point(class_scope:extensions.api.cast_channel.CastMessage)
-    private static final CastChannelProto.CastMessage DEFAULT_INSTANCE;
-    static {
-      // New instances are implicitly immutable so no need to make
-      // immutable.
-      DEFAULT_INSTANCE = new CastMessage();
+            @Override
+            public final int getNumber() {
+                return value;
+            }
+
+            /**
+             * @deprecated Use {@link #forNumber(int)} instead.
+             */
+            @Deprecated
+            public static PayloadType valueOf(int value) {
+                return forNumber(value);
+            }
+
+            public static PayloadType forNumber(int value) {
+                switch (value) {
+                    case 0: return STRING;
+                    case 1: return BINARY;
+                    default: return null;
+                }
+            }
+
+            public static com.google.protobuf.Internal.EnumLiteMap<PayloadType>
+            internalGetValueMap() {
+                return internalValueMap;
+            }
+            private static final com.google.protobuf.Internal.EnumLiteMap<
+                    PayloadType> internalValueMap =
+                    new com.google.protobuf.Internal.EnumLiteMap<PayloadType>() {
+                        @Override
+                        public PayloadType findValueByNumber(int number) {
+                            return PayloadType.forNumber(number);
+                        }
+                    };
+
+            private final int value;
+
+            PayloadType(int value) {
+                this.value = value;
+            }
+
+            // @@protoc_insertion_point(enum_scope:extensions.api.cast_channel.CastMessage.PayloadType)
+        }
+
+        private int bitField0_;
+        public static final int PROTOCOL_VERSION_FIELD_NUMBER = 1;
+        private int protocolVersion_;
+        /**
+         * <code>required .extensions.api.cast_channel.CastMessage.ProtocolVersion protocol_version = 1;</code>
+         */
+        @Override
+        public boolean hasProtocolVersion() {
+            return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>required .extensions.api.cast_channel.CastMessage.ProtocolVersion protocol_version = 1;</code>
+         */
+        @Override
+        public CastChannelProto.CastMessage.ProtocolVersion getProtocolVersion() {
+            CastChannelProto.CastMessage.ProtocolVersion result = CastChannelProto.CastMessage.ProtocolVersion.forNumber(protocolVersion_);
+            return result == null ? CastChannelProto.CastMessage.ProtocolVersion.CASTV2_1_0 : result;
+        }
+        /**
+         * <code>required .extensions.api.cast_channel.CastMessage.ProtocolVersion protocol_version = 1;</code>
+         */
+        private void setProtocolVersion(CastChannelProto.CastMessage.ProtocolVersion value) {
+            if (value == null) {
+                throw new NullPointerException();
+            }
+            bitField0_ |= 0x00000001;
+            protocolVersion_ = value.getNumber();
+        }
+        /**
+         * <code>required .extensions.api.cast_channel.CastMessage.ProtocolVersion protocol_version = 1;</code>
+         */
+        private void clearProtocolVersion() {
+            bitField0_ = (bitField0_ & ~0x00000001);
+            protocolVersion_ = 0;
+        }
+
+        public static final int SOURCE_ID_FIELD_NUMBER = 2;
+        private String sourceId_;
+        /**
+         * <pre>
+         * source and destination ids identify the origin and destination of the
+         * message.  They are used to route messages between endpoints that share a
+         * device-to-device channel.
+         * For messages between applications:
+         *   - The sender application id is a unique identifier generated on behalf of
+         *     the sender application.
+         *   - The Receiver id is always the the session id for the application.
+         * For messages to or from the sender or Receiver platform, the special ids
+         * 'sender-0' and 'Receiver-0' can be used.
+         * For messages intended for all endpoints using a given channel, the
+         * wildcard destination_id '*' can be used.
+         * </pre>
+         *
+         * <code>required string source_id = 2;</code>
+         */
+        @Override
+        public boolean hasSourceId() {
+            return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+        /**
+         * <pre>
+         * source and destination ids identify the origin and destination of the
+         * message.  They are used to route messages between endpoints that share a
+         * device-to-device channel.
+         * For messages between applications:
+         *   - The sender application id is a unique identifier generated on behalf of
+         *     the sender application.
+         *   - The Receiver id is always the the session id for the application.
+         * For messages to or from the sender or Receiver platform, the special ids
+         * 'sender-0' and 'Receiver-0' can be used.
+         * For messages intended for all endpoints using a given channel, the
+         * wildcard destination_id '*' can be used.
+         * </pre>
+         *
+         * <code>required string source_id = 2;</code>
+         */
+        @Override
+        public String getSourceId() {
+            return sourceId_;
+        }
+        /**
+         * <pre>
+         * source and destination ids identify the origin and destination of the
+         * message.  They are used to route messages between endpoints that share a
+         * device-to-device channel.
+         * For messages between applications:
+         *   - The sender application id is a unique identifier generated on behalf of
+         *     the sender application.
+         *   - The Receiver id is always the the session id for the application.
+         * For messages to or from the sender or Receiver platform, the special ids
+         * 'sender-0' and 'Receiver-0' can be used.
+         * For messages intended for all endpoints using a given channel, the
+         * wildcard destination_id '*' can be used.
+         * </pre>
+         *
+         * <code>required string source_id = 2;</code>
+         */
+        @Override
+        public com.google.protobuf.ByteString
+        getSourceIdBytes() {
+            return com.google.protobuf.ByteString.copyFromUtf8(sourceId_);
+        }
+        /**
+         * <pre>
+         * source and destination ids identify the origin and destination of the
+         * message.  They are used to route messages between endpoints that share a
+         * device-to-device channel.
+         * For messages between applications:
+         *   - The sender application id is a unique identifier generated on behalf of
+         *     the sender application.
+         *   - The Receiver id is always the the session id for the application.
+         * For messages to or from the sender or Receiver platform, the special ids
+         * 'sender-0' and 'Receiver-0' can be used.
+         * For messages intended for all endpoints using a given channel, the
+         * wildcard destination_id '*' can be used.
+         * </pre>
+         *
+         * <code>required string source_id = 2;</code>
+         */
+        private void setSourceId(
+                String value) {
+            if (value == null) {
+                throw new NullPointerException();
+            }
+            bitField0_ |= 0x00000002;
+            sourceId_ = value;
+        }
+        /**
+         * <pre>
+         * source and destination ids identify the origin and destination of the
+         * message.  They are used to route messages between endpoints that share a
+         * device-to-device channel.
+         * For messages between applications:
+         *   - The sender application id is a unique identifier generated on behalf of
+         *     the sender application.
+         *   - The Receiver id is always the the session id for the application.
+         * For messages to or from the sender or Receiver platform, the special ids
+         * 'sender-0' and 'Receiver-0' can be used.
+         * For messages intended for all endpoints using a given channel, the
+         * wildcard destination_id '*' can be used.
+         * </pre>
+         *
+         * <code>required string source_id = 2;</code>
+         */
+        private void clearSourceId() {
+            bitField0_ = (bitField0_ & ~0x00000002);
+            sourceId_ = getDefaultInstance().getSourceId();
+        }
+        /**
+         * <pre>
+         * source and destination ids identify the origin and destination of the
+         * message.  They are used to route messages between endpoints that share a
+         * device-to-device channel.
+         * For messages between applications:
+         *   - The sender application id is a unique identifier generated on behalf of
+         *     the sender application.
+         *   - The Receiver id is always the the session id for the application.
+         * For messages to or from the sender or Receiver platform, the special ids
+         * 'sender-0' and 'Receiver-0' can be used.
+         * For messages intended for all endpoints using a given channel, the
+         * wildcard destination_id '*' can be used.
+         * </pre>
+         *
+         * <code>required string source_id = 2;</code>
+         */
+        private void setSourceIdBytes(
+                com.google.protobuf.ByteString value) {
+            if (value == null) {
+                throw new NullPointerException();
+            }
+            bitField0_ |= 0x00000002;
+            sourceId_ = value.toStringUtf8();
+        }
+
+        public static final int DESTINATION_ID_FIELD_NUMBER = 3;
+        private String destinationId_;
+        /**
+         * <code>required string destination_id = 3;</code>
+         */
+        @Override
+        public boolean hasDestinationId() {
+            return ((bitField0_ & 0x00000004) == 0x00000004);
+        }
+        /**
+         * <code>required string destination_id = 3;</code>
+         */
+        @Override
+        public String getDestinationId() {
+            return destinationId_;
+        }
+        /**
+         * <code>required string destination_id = 3;</code>
+         */
+        @Override
+        public com.google.protobuf.ByteString
+        getDestinationIdBytes() {
+            return com.google.protobuf.ByteString.copyFromUtf8(destinationId_);
+        }
+        /**
+         * <code>required string destination_id = 3;</code>
+         */
+        private void setDestinationId(
+                String value) {
+            if (value == null) {
+                throw new NullPointerException();
+            }
+            bitField0_ |= 0x00000004;
+            destinationId_ = value;
+        }
+        /**
+         * <code>required string destination_id = 3;</code>
+         */
+        private void clearDestinationId() {
+            bitField0_ = (bitField0_ & ~0x00000004);
+            destinationId_ = getDefaultInstance().getDestinationId();
+        }
+        /**
+         * <code>required string destination_id = 3;</code>
+         */
+        private void setDestinationIdBytes(
+                com.google.protobuf.ByteString value) {
+            if (value == null) {
+                throw new NullPointerException();
+            }
+            bitField0_ |= 0x00000004;
+            destinationId_ = value.toStringUtf8();
+        }
+
+        public static final int NAMESPACE_FIELD_NUMBER = 4;
+        private String namespace_;
+        /**
+         * <pre>
+         * This is the core multiplexing key.  All messages are sent on a namespace
+         * and endpoints sharing a channel listen on one or more namespaces.  The
+         * namespace defines the protocol and semantics of the message.
+         * </pre>
+         *
+         * <code>required string namespace = 4;</code>
+         */
+        @Override
+        public boolean hasNamespace() {
+            return ((bitField0_ & 0x00000008) == 0x00000008);
+        }
+        /**
+         * <pre>
+         * This is the core multiplexing key.  All messages are sent on a namespace
+         * and endpoints sharing a channel listen on one or more namespaces.  The
+         * namespace defines the protocol and semantics of the message.
+         * </pre>
+         *
+         * <code>required string namespace = 4;</code>
+         */
+        @Override
+        public String getNamespace() {
+            return namespace_;
+        }
+        /**
+         * <pre>
+         * This is the core multiplexing key.  All messages are sent on a namespace
+         * and endpoints sharing a channel listen on one or more namespaces.  The
+         * namespace defines the protocol and semantics of the message.
+         * </pre>
+         *
+         * <code>required string namespace = 4;</code>
+         */
+        @Override
+        public com.google.protobuf.ByteString
+        getNamespaceBytes() {
+            return com.google.protobuf.ByteString.copyFromUtf8(namespace_);
+        }
+        /**
+         * <pre>
+         * This is the core multiplexing key.  All messages are sent on a namespace
+         * and endpoints sharing a channel listen on one or more namespaces.  The
+         * namespace defines the protocol and semantics of the message.
+         * </pre>
+         *
+         * <code>required string namespace = 4;</code>
+         */
+        private void setNamespace(
+                String value) {
+            if (value == null) {
+                throw new NullPointerException();
+            }
+            bitField0_ |= 0x00000008;
+            namespace_ = value;
+        }
+        /**
+         * <pre>
+         * This is the core multiplexing key.  All messages are sent on a namespace
+         * and endpoints sharing a channel listen on one or more namespaces.  The
+         * namespace defines the protocol and semantics of the message.
+         * </pre>
+         *
+         * <code>required string namespace = 4;</code>
+         */
+        private void clearNamespace() {
+            bitField0_ = (bitField0_ & ~0x00000008);
+            namespace_ = getDefaultInstance().getNamespace();
+        }
+        /**
+         * <pre>
+         * This is the core multiplexing key.  All messages are sent on a namespace
+         * and endpoints sharing a channel listen on one or more namespaces.  The
+         * namespace defines the protocol and semantics of the message.
+         * </pre>
+         *
+         * <code>required string namespace = 4;</code>
+         */
+        private void setNamespaceBytes(
+                com.google.protobuf.ByteString value) {
+            if (value == null) {
+                throw new NullPointerException();
+            }
+            bitField0_ |= 0x00000008;
+            namespace_ = value.toStringUtf8();
+        }
+
+        public static final int PAYLOAD_TYPE_FIELD_NUMBER = 5;
+        private int payloadType_;
+        /**
+         * <code>required .extensions.api.cast_channel.CastMessage.PayloadType payload_type = 5;</code>
+         */
+        @Override
+        public boolean hasPayloadType() {
+            return ((bitField0_ & 0x00000010) == 0x00000010);
+        }
+        /**
+         * <code>required .extensions.api.cast_channel.CastMessage.PayloadType payload_type = 5;</code>
+         */
+        @Override
+        public CastChannelProto.CastMessage.PayloadType getPayloadType() {
+            CastChannelProto.CastMessage.PayloadType result = CastChannelProto.CastMessage.PayloadType.forNumber(payloadType_);
+            return result == null ? CastChannelProto.CastMessage.PayloadType.STRING : result;
+        }
+        /**
+         * <code>required .extensions.api.cast_channel.CastMessage.PayloadType payload_type = 5;</code>
+         */
+        private void setPayloadType(CastChannelProto.CastMessage.PayloadType value) {
+            if (value == null) {
+                throw new NullPointerException();
+            }
+            bitField0_ |= 0x00000010;
+            payloadType_ = value.getNumber();
+        }
+        /**
+         * <code>required .extensions.api.cast_channel.CastMessage.PayloadType payload_type = 5;</code>
+         */
+        private void clearPayloadType() {
+            bitField0_ = (bitField0_ & ~0x00000010);
+            payloadType_ = 0;
+        }
+
+        public static final int PAYLOAD_UTF8_FIELD_NUMBER = 6;
+        private String payloadUtf8_;
+        /**
+         * <pre>
+         * Depending on payload_type, exactly one of the following optional fields
+         * will always be set.
+         * </pre>
+         *
+         * <code>optional string payload_utf8 = 6;</code>
+         */
+        @Override
+        public boolean hasPayloadUtf8() {
+            return ((bitField0_ & 0x00000020) == 0x00000020);
+        }
+        /**
+         * <pre>
+         * Depending on payload_type, exactly one of the following optional fields
+         * will always be set.
+         * </pre>
+         *
+         * <code>optional string payload_utf8 = 6;</code>
+         */
+        @Override
+        public String getPayloadUtf8() {
+            return payloadUtf8_;
+        }
+        /**
+         * <pre>
+         * Depending on payload_type, exactly one of the following optional fields
+         * will always be set.
+         * </pre>
+         *
+         * <code>optional string payload_utf8 = 6;</code>
+         */
+        @Override
+        public com.google.protobuf.ByteString
+        getPayloadUtf8Bytes() {
+            return com.google.protobuf.ByteString.copyFromUtf8(payloadUtf8_);
+        }
+        /**
+         * <pre>
+         * Depending on payload_type, exactly one of the following optional fields
+         * will always be set.
+         * </pre>
+         *
+         * <code>optional string payload_utf8 = 6;</code>
+         */
+        private void setPayloadUtf8(
+                String value) {
+            if (value == null) {
+                throw new NullPointerException();
+            }
+            bitField0_ |= 0x00000020;
+            payloadUtf8_ = value;
+        }
+        /**
+         * <pre>
+         * Depending on payload_type, exactly one of the following optional fields
+         * will always be set.
+         * </pre>
+         *
+         * <code>optional string payload_utf8 = 6;</code>
+         */
+        private void clearPayloadUtf8() {
+            bitField0_ = (bitField0_ & ~0x00000020);
+            payloadUtf8_ = getDefaultInstance().getPayloadUtf8();
+        }
+        /**
+         * <pre>
+         * Depending on payload_type, exactly one of the following optional fields
+         * will always be set.
+         * </pre>
+         *
+         * <code>optional string payload_utf8 = 6;</code>
+         */
+        private void setPayloadUtf8Bytes(
+                com.google.protobuf.ByteString value) {
+            if (value == null) {
+                throw new NullPointerException();
+            }
+            bitField0_ |= 0x00000020;
+            payloadUtf8_ = value.toStringUtf8();
+        }
+
+        public static final int PAYLOAD_BINARY_FIELD_NUMBER = 7;
+        private com.google.protobuf.ByteString payloadBinary_;
+        /**
+         * <code>optional bytes payload_binary = 7;</code>
+         */
+        @Override
+        public boolean hasPayloadBinary() {
+            return ((bitField0_ & 0x00000040) == 0x00000040);
+        }
+        /**
+         * <code>optional bytes payload_binary = 7;</code>
+         */
+        @Override
+        public com.google.protobuf.ByteString getPayloadBinary() {
+            return payloadBinary_;
+        }
+        /**
+         * <code>optional bytes payload_binary = 7;</code>
+         */
+        private void setPayloadBinary(com.google.protobuf.ByteString value) {
+            if (value == null) {
+                throw new NullPointerException();
+            }
+            bitField0_ |= 0x00000040;
+            payloadBinary_ = value;
+        }
+        /**
+         * <code>optional bytes payload_binary = 7;</code>
+         */
+        private void clearPayloadBinary() {
+            bitField0_ = (bitField0_ & ~0x00000040);
+            payloadBinary_ = getDefaultInstance().getPayloadBinary();
+        }
+
+        @Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                throws java.io.IOException {
+            if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                output.writeEnum(1, protocolVersion_);
+            }
+            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                output.writeString(2, getSourceId());
+            }
+            if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                output.writeString(3, getDestinationId());
+            }
+            if (((bitField0_ & 0x00000008) == 0x00000008)) {
+                output.writeString(4, getNamespace());
+            }
+            if (((bitField0_ & 0x00000010) == 0x00000010)) {
+                output.writeEnum(5, payloadType_);
+            }
+            if (((bitField0_ & 0x00000020) == 0x00000020)) {
+                output.writeString(6, getPayloadUtf8());
+            }
+            if (((bitField0_ & 0x00000040) == 0x00000040)) {
+                output.writeBytes(7, payloadBinary_);
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @Override
+        public int getSerializedSize() {
+            int size = memoizedSerializedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeEnumSize(1, protocolVersion_);
+            }
+            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeStringSize(2, getSourceId());
+            }
+            if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeStringSize(3, getDestinationId());
+            }
+            if (((bitField0_ & 0x00000008) == 0x00000008)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeStringSize(4, getNamespace());
+            }
+            if (((bitField0_ & 0x00000010) == 0x00000010)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeEnumSize(5, payloadType_);
+            }
+            if (((bitField0_ & 0x00000020) == 0x00000020)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeStringSize(6, getPayloadUtf8());
+            }
+            if (((bitField0_ & 0x00000040) == 0x00000040)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeBytesSize(7, payloadBinary_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSerializedSize = size;
+            return size;
+        }
+
+        public static CastChannelProto.CastMessage parseFrom(
+                java.nio.ByteBuffer data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, data);
+        }
+        public static CastChannelProto.CastMessage parseFrom(
+                java.nio.ByteBuffer data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, data, extensionRegistry);
+        }
+        public static CastChannelProto.CastMessage parseFrom(
+                com.google.protobuf.ByteString data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, data);
+        }
+        public static CastChannelProto.CastMessage parseFrom(
+                com.google.protobuf.ByteString data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, data, extensionRegistry);
+        }
+        public static CastChannelProto.CastMessage parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, data);
+        }
+        public static CastChannelProto.CastMessage parseFrom(
+                byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, data, extensionRegistry);
+        }
+        public static CastChannelProto.CastMessage parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, input);
+        }
+        public static CastChannelProto.CastMessage parseFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, input, extensionRegistry);
+        }
+        public static CastChannelProto.CastMessage parseDelimitedFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+        }
+        public static CastChannelProto.CastMessage parseDelimitedFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+        }
+        public static CastChannelProto.CastMessage parseFrom(
+                com.google.protobuf.CodedInputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, input);
+        }
+        public static CastChannelProto.CastMessage parseFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, input, extensionRegistry);
+        }
+
+        public static Builder newBuilder() {
+            return (Builder) DEFAULT_INSTANCE.createBuilder();
+        }
+        public static Builder newBuilder(CastChannelProto.CastMessage prototype) {
+            return DEFAULT_INSTANCE.createBuilder(prototype);
+        }
+
+        /**
+         * Protobuf type {@code extensions.api.cast_channel.CastMessage}
+         */
+        public static final class Builder extends
+                com.google.protobuf.GeneratedMessageLite.Builder<
+                        CastChannelProto.CastMessage, Builder> implements
+                // @@protoc_insertion_point(builder_implements:extensions.api.cast_channel.CastMessage)
+                CastChannelProto.CastMessageOrBuilder {
+            // Construct using extensions.api.cast_channel.CastChannelProto.CastMessage.newBuilder()
+            private Builder() {
+                super(DEFAULT_INSTANCE);
+            }
+
+
+            /**
+             * <code>required .extensions.api.cast_channel.CastMessage.ProtocolVersion protocol_version = 1;</code>
+             */
+            @Override
+            public boolean hasProtocolVersion() {
+                return instance.hasProtocolVersion();
+            }
+            /**
+             * <code>required .extensions.api.cast_channel.CastMessage.ProtocolVersion protocol_version = 1;</code>
+             */
+            @Override
+            public CastChannelProto.CastMessage.ProtocolVersion getProtocolVersion() {
+                return instance.getProtocolVersion();
+            }
+            /**
+             * <code>required .extensions.api.cast_channel.CastMessage.ProtocolVersion protocol_version = 1;</code>
+             */
+            public Builder setProtocolVersion(CastChannelProto.CastMessage.ProtocolVersion value) {
+                copyOnWrite();
+                instance.setProtocolVersion(value);
+                return this;
+            }
+            /**
+             * <code>required .extensions.api.cast_channel.CastMessage.ProtocolVersion protocol_version = 1;</code>
+             */
+            public Builder clearProtocolVersion() {
+                copyOnWrite();
+                instance.clearProtocolVersion();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * source and destination ids identify the origin and destination of the
+             * message.  They are used to route messages between endpoints that share a
+             * device-to-device channel.
+             * For messages between applications:
+             *   - The sender application id is a unique identifier generated on behalf of
+             *     the sender application.
+             *   - The Receiver id is always the the session id for the application.
+             * For messages to or from the sender or Receiver platform, the special ids
+             * 'sender-0' and 'Receiver-0' can be used.
+             * For messages intended for all endpoints using a given channel, the
+             * wildcard destination_id '*' can be used.
+             * </pre>
+             *
+             * <code>required string source_id = 2;</code>
+             */
+            @Override
+            public boolean hasSourceId() {
+                return instance.hasSourceId();
+            }
+            /**
+             * <pre>
+             * source and destination ids identify the origin and destination of the
+             * message.  They are used to route messages between endpoints that share a
+             * device-to-device channel.
+             * For messages between applications:
+             *   - The sender application id is a unique identifier generated on behalf of
+             *     the sender application.
+             *   - The Receiver id is always the the session id for the application.
+             * For messages to or from the sender or Receiver platform, the special ids
+             * 'sender-0' and 'Receiver-0' can be used.
+             * For messages intended for all endpoints using a given channel, the
+             * wildcard destination_id '*' can be used.
+             * </pre>
+             *
+             * <code>required string source_id = 2;</code>
+             */
+            @Override
+            public String getSourceId() {
+                return instance.getSourceId();
+            }
+            /**
+             * <pre>
+             * source and destination ids identify the origin and destination of the
+             * message.  They are used to route messages between endpoints that share a
+             * device-to-device channel.
+             * For messages between applications:
+             *   - The sender application id is a unique identifier generated on behalf of
+             *     the sender application.
+             *   - The Receiver id is always the the session id for the application.
+             * For messages to or from the sender or Receiver platform, the special ids
+             * 'sender-0' and 'Receiver-0' can be used.
+             * For messages intended for all endpoints using a given channel, the
+             * wildcard destination_id '*' can be used.
+             * </pre>
+             *
+             * <code>required string source_id = 2;</code>
+             */
+            @Override
+            public com.google.protobuf.ByteString
+            getSourceIdBytes() {
+                return instance.getSourceIdBytes();
+            }
+            /**
+             * <pre>
+             * source and destination ids identify the origin and destination of the
+             * message.  They are used to route messages between endpoints that share a
+             * device-to-device channel.
+             * For messages between applications:
+             *   - The sender application id is a unique identifier generated on behalf of
+             *     the sender application.
+             *   - The Receiver id is always the the session id for the application.
+             * For messages to or from the sender or Receiver platform, the special ids
+             * 'sender-0' and 'Receiver-0' can be used.
+             * For messages intended for all endpoints using a given channel, the
+             * wildcard destination_id '*' can be used.
+             * </pre>
+             *
+             * <code>required string source_id = 2;</code>
+             */
+            public Builder setSourceId(
+                    String value) {
+                copyOnWrite();
+                instance.setSourceId(value);
+                return this;
+            }
+            /**
+             * <pre>
+             * source and destination ids identify the origin and destination of the
+             * message.  They are used to route messages between endpoints that share a
+             * device-to-device channel.
+             * For messages between applications:
+             *   - The sender application id is a unique identifier generated on behalf of
+             *     the sender application.
+             *   - The Receiver id is always the the session id for the application.
+             * For messages to or from the sender or Receiver platform, the special ids
+             * 'sender-0' and 'Receiver-0' can be used.
+             * For messages intended for all endpoints using a given channel, the
+             * wildcard destination_id '*' can be used.
+             * </pre>
+             *
+             * <code>required string source_id = 2;</code>
+             */
+            public Builder clearSourceId() {
+                copyOnWrite();
+                instance.clearSourceId();
+                return this;
+            }
+            /**
+             * <pre>
+             * source and destination ids identify the origin and destination of the
+             * message.  They are used to route messages between endpoints that share a
+             * device-to-device channel.
+             * For messages between applications:
+             *   - The sender application id is a unique identifier generated on behalf of
+             *     the sender application.
+             *   - The Receiver id is always the the session id for the application.
+             * For messages to or from the sender or Receiver platform, the special ids
+             * 'sender-0' and 'Receiver-0' can be used.
+             * For messages intended for all endpoints using a given channel, the
+             * wildcard destination_id '*' can be used.
+             * </pre>
+             *
+             * <code>required string source_id = 2;</code>
+             */
+            public Builder setSourceIdBytes(
+                    com.google.protobuf.ByteString value) {
+                copyOnWrite();
+                instance.setSourceIdBytes(value);
+                return this;
+            }
+
+            /**
+             * <code>required string destination_id = 3;</code>
+             */
+            @Override
+            public boolean hasDestinationId() {
+                return instance.hasDestinationId();
+            }
+            /**
+             * <code>required string destination_id = 3;</code>
+             */
+            @Override
+            public String getDestinationId() {
+                return instance.getDestinationId();
+            }
+            /**
+             * <code>required string destination_id = 3;</code>
+             */
+            @Override
+            public com.google.protobuf.ByteString
+            getDestinationIdBytes() {
+                return instance.getDestinationIdBytes();
+            }
+            /**
+             * <code>required string destination_id = 3;</code>
+             */
+            public Builder setDestinationId(
+                    String value) {
+                copyOnWrite();
+                instance.setDestinationId(value);
+                return this;
+            }
+            /**
+             * <code>required string destination_id = 3;</code>
+             */
+            public Builder clearDestinationId() {
+                copyOnWrite();
+                instance.clearDestinationId();
+                return this;
+            }
+            /**
+             * <code>required string destination_id = 3;</code>
+             */
+            public Builder setDestinationIdBytes(
+                    com.google.protobuf.ByteString value) {
+                copyOnWrite();
+                instance.setDestinationIdBytes(value);
+                return this;
+            }
+
+            /**
+             * <pre>
+             * This is the core multiplexing key.  All messages are sent on a namespace
+             * and endpoints sharing a channel listen on one or more namespaces.  The
+             * namespace defines the protocol and semantics of the message.
+             * </pre>
+             *
+             * <code>required string namespace = 4;</code>
+             */
+            @Override
+            public boolean hasNamespace() {
+                return instance.hasNamespace();
+            }
+            /**
+             * <pre>
+             * This is the core multiplexing key.  All messages are sent on a namespace
+             * and endpoints sharing a channel listen on one or more namespaces.  The
+             * namespace defines the protocol and semantics of the message.
+             * </pre>
+             *
+             * <code>required string namespace = 4;</code>
+             */
+            @Override
+            public String getNamespace() {
+                return instance.getNamespace();
+            }
+            /**
+             * <pre>
+             * This is the core multiplexing key.  All messages are sent on a namespace
+             * and endpoints sharing a channel listen on one or more namespaces.  The
+             * namespace defines the protocol and semantics of the message.
+             * </pre>
+             *
+             * <code>required string namespace = 4;</code>
+             */
+            @Override
+            public com.google.protobuf.ByteString
+            getNamespaceBytes() {
+                return instance.getNamespaceBytes();
+            }
+            /**
+             * <pre>
+             * This is the core multiplexing key.  All messages are sent on a namespace
+             * and endpoints sharing a channel listen on one or more namespaces.  The
+             * namespace defines the protocol and semantics of the message.
+             * </pre>
+             *
+             * <code>required string namespace = 4;</code>
+             */
+            public Builder setNamespace(
+                    String value) {
+                copyOnWrite();
+                instance.setNamespace(value);
+                return this;
+            }
+            /**
+             * <pre>
+             * This is the core multiplexing key.  All messages are sent on a namespace
+             * and endpoints sharing a channel listen on one or more namespaces.  The
+             * namespace defines the protocol and semantics of the message.
+             * </pre>
+             *
+             * <code>required string namespace = 4;</code>
+             */
+            public Builder clearNamespace() {
+                copyOnWrite();
+                instance.clearNamespace();
+                return this;
+            }
+            /**
+             * <pre>
+             * This is the core multiplexing key.  All messages are sent on a namespace
+             * and endpoints sharing a channel listen on one or more namespaces.  The
+             * namespace defines the protocol and semantics of the message.
+             * </pre>
+             *
+             * <code>required string namespace = 4;</code>
+             */
+            public Builder setNamespaceBytes(
+                    com.google.protobuf.ByteString value) {
+                copyOnWrite();
+                instance.setNamespaceBytes(value);
+                return this;
+            }
+
+            /**
+             * <code>required .extensions.api.cast_channel.CastMessage.PayloadType payload_type = 5;</code>
+             */
+            @Override
+            public boolean hasPayloadType() {
+                return instance.hasPayloadType();
+            }
+            /**
+             * <code>required .extensions.api.cast_channel.CastMessage.PayloadType payload_type = 5;</code>
+             */
+            @Override
+            public CastChannelProto.CastMessage.PayloadType getPayloadType() {
+                return instance.getPayloadType();
+            }
+            /**
+             * <code>required .extensions.api.cast_channel.CastMessage.PayloadType payload_type = 5;</code>
+             */
+            public Builder setPayloadType(CastChannelProto.CastMessage.PayloadType value) {
+                copyOnWrite();
+                instance.setPayloadType(value);
+                return this;
+            }
+            /**
+             * <code>required .extensions.api.cast_channel.CastMessage.PayloadType payload_type = 5;</code>
+             */
+            public Builder clearPayloadType() {
+                copyOnWrite();
+                instance.clearPayloadType();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * Depending on payload_type, exactly one of the following optional fields
+             * will always be set.
+             * </pre>
+             *
+             * <code>optional string payload_utf8 = 6;</code>
+             */
+            @Override
+            public boolean hasPayloadUtf8() {
+                return instance.hasPayloadUtf8();
+            }
+            /**
+             * <pre>
+             * Depending on payload_type, exactly one of the following optional fields
+             * will always be set.
+             * </pre>
+             *
+             * <code>optional string payload_utf8 = 6;</code>
+             */
+            @Override
+            public String getPayloadUtf8() {
+                return instance.getPayloadUtf8();
+            }
+            /**
+             * <pre>
+             * Depending on payload_type, exactly one of the following optional fields
+             * will always be set.
+             * </pre>
+             *
+             * <code>optional string payload_utf8 = 6;</code>
+             */
+            @Override
+            public com.google.protobuf.ByteString
+            getPayloadUtf8Bytes() {
+                return instance.getPayloadUtf8Bytes();
+            }
+            /**
+             * <pre>
+             * Depending on payload_type, exactly one of the following optional fields
+             * will always be set.
+             * </pre>
+             *
+             * <code>optional string payload_utf8 = 6;</code>
+             */
+            public Builder setPayloadUtf8(
+                    String value) {
+                copyOnWrite();
+                instance.setPayloadUtf8(value);
+                return this;
+            }
+            /**
+             * <pre>
+             * Depending on payload_type, exactly one of the following optional fields
+             * will always be set.
+             * </pre>
+             *
+             * <code>optional string payload_utf8 = 6;</code>
+             */
+            public Builder clearPayloadUtf8() {
+                copyOnWrite();
+                instance.clearPayloadUtf8();
+                return this;
+            }
+            /**
+             * <pre>
+             * Depending on payload_type, exactly one of the following optional fields
+             * will always be set.
+             * </pre>
+             *
+             * <code>optional string payload_utf8 = 6;</code>
+             */
+            public Builder setPayloadUtf8Bytes(
+                    com.google.protobuf.ByteString value) {
+                copyOnWrite();
+                instance.setPayloadUtf8Bytes(value);
+                return this;
+            }
+
+            /**
+             * <code>optional bytes payload_binary = 7;</code>
+             */
+            @Override
+            public boolean hasPayloadBinary() {
+                return instance.hasPayloadBinary();
+            }
+            /**
+             * <code>optional bytes payload_binary = 7;</code>
+             */
+            @Override
+            public com.google.protobuf.ByteString getPayloadBinary() {
+                return instance.getPayloadBinary();
+            }
+            /**
+             * <code>optional bytes payload_binary = 7;</code>
+             */
+            public Builder setPayloadBinary(com.google.protobuf.ByteString value) {
+                copyOnWrite();
+                instance.setPayloadBinary(value);
+                return this;
+            }
+            /**
+             * <code>optional bytes payload_binary = 7;</code>
+             */
+            public Builder clearPayloadBinary() {
+                copyOnWrite();
+                instance.clearPayloadBinary();
+                return this;
+            }
+
+            // @@protoc_insertion_point(builder_scope:extensions.api.cast_channel.CastMessage)
+        }
+        private byte memoizedIsInitialized = 2;
+        @Override
+        @SuppressWarnings({"unchecked", "fallthrough"})
+        protected final Object dynamicMethod(
+                com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+                Object arg0, Object arg1) {
+            switch (method) {
+                case NEW_MUTABLE_INSTANCE: {
+                    return new CastChannelProto.CastMessage();
+                }
+                case NEW_BUILDER: {
+                    return new Builder();
+                }
+                case IS_INITIALIZED: {
+                    byte isInitialized = memoizedIsInitialized;
+                    if (isInitialized == 1) return DEFAULT_INSTANCE;
+                    if (isInitialized == 0) return null;
+
+                    boolean shouldMemoize = ((Boolean) arg0).booleanValue();
+                    if (!hasProtocolVersion()) {
+                        return null;
+                    }
+                    if (!hasSourceId()) {
+                        return null;
+                    }
+                    if (!hasDestinationId()) {
+                        return null;
+                    }
+                    if (!hasNamespace()) {
+                        return null;
+                    }
+                    if (!hasPayloadType()) {
+                        return null;
+                    }
+                    return DEFAULT_INSTANCE;
+
+                }
+                case MAKE_IMMUTABLE: {
+                    return null;
+                }
+                case VISIT: {
+                    Visitor visitor = (Visitor) arg0;
+                    CastChannelProto.CastMessage other = (CastChannelProto.CastMessage) arg1;
+                    protocolVersion_ = visitor.visitInt(hasProtocolVersion(), protocolVersion_,
+                            other.hasProtocolVersion(), other.protocolVersion_);
+                    sourceId_ = visitor.visitString(
+                            hasSourceId(), sourceId_,
+                            other.hasSourceId(), other.sourceId_);
+                    destinationId_ = visitor.visitString(
+                            hasDestinationId(), destinationId_,
+                            other.hasDestinationId(), other.destinationId_);
+                    namespace_ = visitor.visitString(
+                            hasNamespace(), namespace_,
+                            other.hasNamespace(), other.namespace_);
+                    payloadType_ = visitor.visitInt(hasPayloadType(), payloadType_,
+                            other.hasPayloadType(), other.payloadType_);
+                    payloadUtf8_ = visitor.visitString(
+                            hasPayloadUtf8(), payloadUtf8_,
+                            other.hasPayloadUtf8(), other.payloadUtf8_);
+                    payloadBinary_ = visitor.visitByteString(
+                            hasPayloadBinary(), payloadBinary_,
+                            other.hasPayloadBinary(), other.payloadBinary_);
+                    if (visitor == com.google.protobuf.GeneratedMessageLite.MergeFromVisitor
+                            .INSTANCE) {
+                        bitField0_ |= other.bitField0_;
+                    }
+                    return this;
+                }
+                case MERGE_FROM_STREAM: {
+                    com.google.protobuf.CodedInputStream input =
+                            (com.google.protobuf.CodedInputStream) arg0;
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry =
+                            (com.google.protobuf.ExtensionRegistryLite) arg1;
+                    if (extensionRegistry == null) {
+                        throw new NullPointerException();
+                    }
+                    try {
+                        boolean done = false;
+                        while (!done) {
+                            int tag = input.readTag();
+                            switch (tag) {
+                                case 0:
+                                    done = true;
+                                    break;
+                                case 8: {
+                                    int rawValue = input.readEnum();
+                                    CastChannelProto.CastMessage.ProtocolVersion value = CastChannelProto.CastMessage.ProtocolVersion.forNumber(rawValue);
+                                    if (value == null) {
+                                        super.mergeVarintField(1, rawValue);
+                                    } else {
+                                        bitField0_ |= 0x00000001;
+                                        protocolVersion_ = rawValue;
+                                    }
+                                    break;
+                                }
+                                case 18: {
+                                    String s = input.readString();
+                                    bitField0_ |= 0x00000002;
+                                    sourceId_ = s;
+                                    break;
+                                }
+                                case 26: {
+                                    String s = input.readString();
+                                    bitField0_ |= 0x00000004;
+                                    destinationId_ = s;
+                                    break;
+                                }
+                                case 34: {
+                                    String s = input.readString();
+                                    bitField0_ |= 0x00000008;
+                                    namespace_ = s;
+                                    break;
+                                }
+                                case 40: {
+                                    int rawValue = input.readEnum();
+                                    CastChannelProto.CastMessage.PayloadType value = CastChannelProto.CastMessage.PayloadType.forNumber(rawValue);
+                                    if (value == null) {
+                                        super.mergeVarintField(5, rawValue);
+                                    } else {
+                                        bitField0_ |= 0x00000010;
+                                        payloadType_ = rawValue;
+                                    }
+                                    break;
+                                }
+                                case 50: {
+                                    String s = input.readString();
+                                    bitField0_ |= 0x00000020;
+                                    payloadUtf8_ = s;
+                                    break;
+                                }
+                                case 58: {
+                                    bitField0_ |= 0x00000040;
+                                    payloadBinary_ = input.readBytes();
+                                    break;
+                                }
+                                default: {
+                                    if (!parseUnknownField(tag, input)) {
+                                        done = true;
+                                    }
+                                    break;
+                                }
+                            }
+                        }
+                    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                        throw new RuntimeException(e.setUnfinishedMessage(this));
+                    } catch (java.io.IOException e) {
+                        throw new RuntimeException(
+                                new com.google.protobuf.InvalidProtocolBufferException(
+                                        e.getMessage()).setUnfinishedMessage(this));
+                    } finally {
+                    }
+                }
+                // fall through
+                case GET_DEFAULT_INSTANCE: {
+                    return DEFAULT_INSTANCE;
+                }
+                case GET_PARSER: {
+                    com.google.protobuf.Parser<CastChannelProto.CastMessage> parser = PARSER;
+                    if (parser == null) {
+                        synchronized (CastChannelProto.CastMessage.class) {
+                            parser = PARSER;
+                            if (parser == null) {
+                                parser = new DefaultInstanceBasedParser(DEFAULT_INSTANCE);
+                                PARSER = parser;
+                            }
+                        }
+                    }
+                    return parser;
+                }
+                case GET_MEMOIZED_IS_INITIALIZED: {
+                    return memoizedIsInitialized;
+                }
+                case SET_MEMOIZED_IS_INITIALIZED: {
+                    memoizedIsInitialized = (byte) (arg0 == null ? 0 : 1);
+                    return null;
+                }
+            }
+            throw new UnsupportedOperationException();
+        }
+
+
+        // @@protoc_insertion_point(class_scope:extensions.api.cast_channel.CastMessage)
+        private static final CastChannelProto.CastMessage DEFAULT_INSTANCE;
+        static {
+            // New instances are implicitly immutable so no need to make
+            // immutable.
+            DEFAULT_INSTANCE = new CastMessage();
+        }
+
+        public static CastChannelProto.CastMessage getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static volatile com.google.protobuf.Parser<CastMessage> PARSER;
+
+        public static com.google.protobuf.Parser<CastMessage> parser() {
+            return DEFAULT_INSTANCE.getParserForType();
+        }
     }
 
-    public static CastChannelProto.CastMessage getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
+    public interface AuthChallengeOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:extensions.api.cast_channel.AuthChallenge)
+            com.google.protobuf.MessageLiteOrBuilder {
 
-    private static volatile com.google.protobuf.Parser<CastMessage> PARSER;
+        /**
+         * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 1 [default = RSASSA_PKCS1v15];</code>
+         */
+        boolean hasSignatureAlgorithm();
+        /**
+         * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 1 [default = RSASSA_PKCS1v15];</code>
+         */
+        CastChannelProto.SignatureAlgorithm getSignatureAlgorithm();
 
-    public static com.google.protobuf.Parser<CastMessage> parser() {
-      return DEFAULT_INSTANCE.getParserForType();
-    }
-  }
+        /**
+         * <code>optional bytes sender_nonce = 2;</code>
+         */
+        boolean hasSenderNonce();
+        /**
+         * <code>optional bytes sender_nonce = 2;</code>
+         */
+        com.google.protobuf.ByteString getSenderNonce();
 
-  public interface AuthChallengeOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:extensions.api.cast_channel.AuthChallenge)
-      com.google.protobuf.MessageLiteOrBuilder {
-
-    /**
-     * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 1 [default = RSASSA_PKCS1v15];</code>
-     */
-    boolean hasSignatureAlgorithm();
-    /**
-     * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 1 [default = RSASSA_PKCS1v15];</code>
-     */
-    CastChannelProto.SignatureAlgorithm getSignatureAlgorithm();
-
-    /**
-     * <code>optional bytes sender_nonce = 2;</code>
-     */
-    boolean hasSenderNonce();
-    /**
-     * <code>optional bytes sender_nonce = 2;</code>
-     */
-    com.google.protobuf.ByteString getSenderNonce();
-
-    /**
-     * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 3 [default = SHA1];</code>
-     */
-    boolean hasHashAlgorithm();
-    /**
-     * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 3 [default = SHA1];</code>
-     */
-    CastChannelProto.HashAlgorithm getHashAlgorithm();
-  }
-  /**
-   * <pre>
-   * Messages for authentication protocol between a sender and a Receiver.
-   * </pre>
-   *
-   * Protobuf type {@code extensions.api.cast_channel.AuthChallenge}
-   */
-  public  static final class AuthChallenge extends
-      com.google.protobuf.GeneratedMessageLite<
-          AuthChallenge, AuthChallenge.Builder> implements
-      // @@protoc_insertion_point(message_implements:extensions.api.cast_channel.AuthChallenge)
-      AuthChallengeOrBuilder {
-    private AuthChallenge() {
-      signatureAlgorithm_ = 1;
-      senderNonce_ = com.google.protobuf.ByteString.EMPTY;
+        /**
+         * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 3 [default = SHA1];</code>
+         */
+        boolean hasHashAlgorithm();
+        /**
+         * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 3 [default = SHA1];</code>
+         */
+        CastChannelProto.HashAlgorithm getHashAlgorithm();
     }
-    private int bitField0_;
-    public static final int SIGNATURE_ALGORITHM_FIELD_NUMBER = 1;
-    private int signatureAlgorithm_;
-    /**
-     * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 1 [default = RSASSA_PKCS1v15];</code>
-     */
-    @Override
-    public boolean hasSignatureAlgorithm() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 1 [default = RSASSA_PKCS1v15];</code>
-     */
-    @Override
-    public CastChannelProto.SignatureAlgorithm getSignatureAlgorithm() {
-      CastChannelProto.SignatureAlgorithm result = CastChannelProto.SignatureAlgorithm.forNumber(signatureAlgorithm_);
-      return result == null ? CastChannelProto.SignatureAlgorithm.RSASSA_PKCS1v15 : result;
-    }
-    /**
-     * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 1 [default = RSASSA_PKCS1v15];</code>
-     */
-    private void setSignatureAlgorithm(CastChannelProto.SignatureAlgorithm value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      bitField0_ |= 0x00000001;
-      signatureAlgorithm_ = value.getNumber();
-    }
-    /**
-     * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 1 [default = RSASSA_PKCS1v15];</code>
-     */
-    private void clearSignatureAlgorithm() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      signatureAlgorithm_ = 1;
-    }
-
-    public static final int SENDER_NONCE_FIELD_NUMBER = 2;
-    private com.google.protobuf.ByteString senderNonce_;
-    /**
-     * <code>optional bytes sender_nonce = 2;</code>
-     */
-    @Override
-    public boolean hasSenderNonce() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>optional bytes sender_nonce = 2;</code>
-     */
-    @Override
-    public com.google.protobuf.ByteString getSenderNonce() {
-      return senderNonce_;
-    }
-    /**
-     * <code>optional bytes sender_nonce = 2;</code>
-     */
-    private void setSenderNonce(com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-      senderNonce_ = value;
-    }
-    /**
-     * <code>optional bytes sender_nonce = 2;</code>
-     */
-    private void clearSenderNonce() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      senderNonce_ = getDefaultInstance().getSenderNonce();
-    }
-
-    public static final int HASH_ALGORITHM_FIELD_NUMBER = 3;
-    private int hashAlgorithm_;
-    /**
-     * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 3 [default = SHA1];</code>
-     */
-    @Override
-    public boolean hasHashAlgorithm() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
-    }
-    /**
-     * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 3 [default = SHA1];</code>
-     */
-    @Override
-    public CastChannelProto.HashAlgorithm getHashAlgorithm() {
-      CastChannelProto.HashAlgorithm result = CastChannelProto.HashAlgorithm.forNumber(hashAlgorithm_);
-      return result == null ? CastChannelProto.HashAlgorithm.SHA1 : result;
-    }
-    /**
-     * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 3 [default = SHA1];</code>
-     */
-    private void setHashAlgorithm(CastChannelProto.HashAlgorithm value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      bitField0_ |= 0x00000004;
-      hashAlgorithm_ = value.getNumber();
-    }
-    /**
-     * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 3 [default = SHA1];</code>
-     */
-    private void clearHashAlgorithm() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      hashAlgorithm_ = 0;
-    }
-
-    @Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeEnum(1, signatureAlgorithm_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeBytes(2, senderNonce_);
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeEnum(3, hashAlgorithm_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @Override
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, signatureAlgorithm_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, senderNonce_);
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(3, hashAlgorithm_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    public static CastChannelProto.AuthChallenge parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static CastChannelProto.AuthChallenge parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static CastChannelProto.AuthChallenge parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static CastChannelProto.AuthChallenge parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static CastChannelProto.AuthChallenge parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static CastChannelProto.AuthChallenge parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static CastChannelProto.AuthChallenge parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static CastChannelProto.AuthChallenge parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static CastChannelProto.AuthChallenge parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
-    }
-    public static CastChannelProto.AuthChallenge parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static CastChannelProto.AuthChallenge parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static CastChannelProto.AuthChallenge parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() {
-      return (Builder) DEFAULT_INSTANCE.createBuilder();
-    }
-    public static Builder newBuilder(CastChannelProto.AuthChallenge prototype) {
-      return DEFAULT_INSTANCE.createBuilder(prototype);
-    }
-
     /**
      * <pre>
      * Messages for authentication protocol between a sender and a Receiver.
@@ -2017,2416 +1777,2656 @@ public final class CastChannelProto {
      *
      * Protobuf type {@code extensions.api.cast_channel.AuthChallenge}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageLite.Builder<
-          CastChannelProto.AuthChallenge, Builder> implements
-        // @@protoc_insertion_point(builder_implements:extensions.api.cast_channel.AuthChallenge)
-        CastChannelProto.AuthChallengeOrBuilder {
-      // Construct using extensions.api.cast_channel.CastChannelProto.AuthChallenge.newBuilder()
-      private Builder() {
-        super(DEFAULT_INSTANCE);
-      }
-
-
-      /**
-       * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 1 [default = RSASSA_PKCS1v15];</code>
-       */
-      @Override
-      public boolean hasSignatureAlgorithm() {
-        return instance.hasSignatureAlgorithm();
-      }
-      /**
-       * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 1 [default = RSASSA_PKCS1v15];</code>
-       */
-      @Override
-      public CastChannelProto.SignatureAlgorithm getSignatureAlgorithm() {
-        return instance.getSignatureAlgorithm();
-      }
-      /**
-       * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 1 [default = RSASSA_PKCS1v15];</code>
-       */
-      public Builder setSignatureAlgorithm(CastChannelProto.SignatureAlgorithm value) {
-        copyOnWrite();
-        instance.setSignatureAlgorithm(value);
-        return this;
-      }
-      /**
-       * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 1 [default = RSASSA_PKCS1v15];</code>
-       */
-      public Builder clearSignatureAlgorithm() {
-        copyOnWrite();
-        instance.clearSignatureAlgorithm();
-        return this;
-      }
-
-      /**
-       * <code>optional bytes sender_nonce = 2;</code>
-       */
-      @Override
-      public boolean hasSenderNonce() {
-        return instance.hasSenderNonce();
-      }
-      /**
-       * <code>optional bytes sender_nonce = 2;</code>
-       */
-      @Override
-      public com.google.protobuf.ByteString getSenderNonce() {
-        return instance.getSenderNonce();
-      }
-      /**
-       * <code>optional bytes sender_nonce = 2;</code>
-       */
-      public Builder setSenderNonce(com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setSenderNonce(value);
-        return this;
-      }
-      /**
-       * <code>optional bytes sender_nonce = 2;</code>
-       */
-      public Builder clearSenderNonce() {
-        copyOnWrite();
-        instance.clearSenderNonce();
-        return this;
-      }
-
-      /**
-       * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 3 [default = SHA1];</code>
-       */
-      @Override
-      public boolean hasHashAlgorithm() {
-        return instance.hasHashAlgorithm();
-      }
-      /**
-       * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 3 [default = SHA1];</code>
-       */
-      @Override
-      public CastChannelProto.HashAlgorithm getHashAlgorithm() {
-        return instance.getHashAlgorithm();
-      }
-      /**
-       * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 3 [default = SHA1];</code>
-       */
-      public Builder setHashAlgorithm(CastChannelProto.HashAlgorithm value) {
-        copyOnWrite();
-        instance.setHashAlgorithm(value);
-        return this;
-      }
-      /**
-       * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 3 [default = SHA1];</code>
-       */
-      public Builder clearHashAlgorithm() {
-        copyOnWrite();
-        instance.clearHashAlgorithm();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:extensions.api.cast_channel.AuthChallenge)
-    }
-    @Override
-    @SuppressWarnings({"unchecked", "fallthrough"})
-    protected final Object dynamicMethod(
-        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
-        Object arg0, Object arg1) {
-      switch (method) {
-        case NEW_MUTABLE_INSTANCE: {
-          return new CastChannelProto.AuthChallenge();
+    public  static final class AuthChallenge extends
+            com.google.protobuf.GeneratedMessageLite<
+                    AuthChallenge, AuthChallenge.Builder> implements
+            // @@protoc_insertion_point(message_implements:extensions.api.cast_channel.AuthChallenge)
+            AuthChallengeOrBuilder {
+        private AuthChallenge() {
+            signatureAlgorithm_ = 1;
+            senderNonce_ = com.google.protobuf.ByteString.EMPTY;
         }
-        case NEW_BUILDER: {
-          return new Builder();
+        private int bitField0_;
+        public static final int SIGNATURE_ALGORITHM_FIELD_NUMBER = 1;
+        private int signatureAlgorithm_;
+        /**
+         * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 1 [default = RSASSA_PKCS1v15];</code>
+         */
+        @Override
+        public boolean hasSignatureAlgorithm() {
+            return ((bitField0_ & 0x00000001) == 0x00000001);
         }
-        case IS_INITIALIZED: {
-          return DEFAULT_INSTANCE;
+        /**
+         * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 1 [default = RSASSA_PKCS1v15];</code>
+         */
+        @Override
+        public CastChannelProto.SignatureAlgorithm getSignatureAlgorithm() {
+            CastChannelProto.SignatureAlgorithm result = CastChannelProto.SignatureAlgorithm.forNumber(signatureAlgorithm_);
+            return result == null ? CastChannelProto.SignatureAlgorithm.RSASSA_PKCS1v15 : result;
         }
-        case MAKE_IMMUTABLE: {
-          return null;
-        }
-        case VISIT: {
-          Visitor visitor = (Visitor) arg0;
-          CastChannelProto.AuthChallenge other = (CastChannelProto.AuthChallenge) arg1;
-          signatureAlgorithm_ = visitor.visitInt(hasSignatureAlgorithm(), signatureAlgorithm_,
-              other.hasSignatureAlgorithm(), other.signatureAlgorithm_);
-          senderNonce_ = visitor.visitByteString(
-              hasSenderNonce(), senderNonce_,
-              other.hasSenderNonce(), other.senderNonce_);
-          hashAlgorithm_ = visitor.visitInt(hasHashAlgorithm(), hashAlgorithm_,
-              other.hasHashAlgorithm(), other.hashAlgorithm_);
-          if (visitor == com.google.protobuf.GeneratedMessageLite.MergeFromVisitor
-              .INSTANCE) {
-            bitField0_ |= other.bitField0_;
-          }
-          return this;
-        }
-        case MERGE_FROM_STREAM: {
-          com.google.protobuf.CodedInputStream input =
-              (com.google.protobuf.CodedInputStream) arg0;
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry =
-              (com.google.protobuf.ExtensionRegistryLite) arg1;
-          if (extensionRegistry == null) {
-            throw new NullPointerException();
-          }
-          try {
-            boolean done = false;
-            while (!done) {
-              int tag = input.readTag();
-              switch (tag) {
-                case 0:
-                  done = true;
-                  break;
-                case 8: {
-                  int rawValue = input.readEnum();
-                  CastChannelProto.SignatureAlgorithm value = CastChannelProto.SignatureAlgorithm.forNumber(rawValue);
-                  if (value == null) {
-                    super.mergeVarintField(1, rawValue);
-                  } else {
-                    bitField0_ |= 0x00000001;
-                    signatureAlgorithm_ = rawValue;
-                  }
-                  break;
-                }
-                case 18: {
-                  bitField0_ |= 0x00000002;
-                  senderNonce_ = input.readBytes();
-                  break;
-                }
-                case 24: {
-                  int rawValue = input.readEnum();
-                  CastChannelProto.HashAlgorithm value = CastChannelProto.HashAlgorithm.forNumber(rawValue);
-                  if (value == null) {
-                    super.mergeVarintField(3, rawValue);
-                  } else {
-                    bitField0_ |= 0x00000004;
-                    hashAlgorithm_ = rawValue;
-                  }
-                  break;
-                }
-                default: {
-                  if (!parseUnknownField(tag, input)) {
-                    done = true;
-                  }
-                  break;
-                }
-              }
+        /**
+         * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 1 [default = RSASSA_PKCS1v15];</code>
+         */
+        private void setSignatureAlgorithm(CastChannelProto.SignatureAlgorithm value) {
+            if (value == null) {
+                throw new NullPointerException();
             }
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw new RuntimeException(e.setUnfinishedMessage(this));
-          } catch (java.io.IOException e) {
-            throw new RuntimeException(
-                new com.google.protobuf.InvalidProtocolBufferException(
-                    e.getMessage()).setUnfinishedMessage(this));
-          } finally {
-          }
+            bitField0_ |= 0x00000001;
+            signatureAlgorithm_ = value.getNumber();
         }
-        // fall through
-        case GET_DEFAULT_INSTANCE: {
-          return DEFAULT_INSTANCE;
+        /**
+         * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 1 [default = RSASSA_PKCS1v15];</code>
+         */
+        private void clearSignatureAlgorithm() {
+            bitField0_ = (bitField0_ & ~0x00000001);
+            signatureAlgorithm_ = 1;
         }
-        case GET_PARSER: {
-          com.google.protobuf.Parser<CastChannelProto.AuthChallenge> parser = PARSER;
-          if (parser == null) {
-            synchronized (CastChannelProto.AuthChallenge.class) {
-              parser = PARSER;
-              if (parser == null) {
-                parser = new DefaultInstanceBasedParser(DEFAULT_INSTANCE);
-                PARSER = parser;
-              }
+
+        public static final int SENDER_NONCE_FIELD_NUMBER = 2;
+        private com.google.protobuf.ByteString senderNonce_;
+        /**
+         * <code>optional bytes sender_nonce = 2;</code>
+         */
+        @Override
+        public boolean hasSenderNonce() {
+            return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+        /**
+         * <code>optional bytes sender_nonce = 2;</code>
+         */
+        @Override
+        public com.google.protobuf.ByteString getSenderNonce() {
+            return senderNonce_;
+        }
+        /**
+         * <code>optional bytes sender_nonce = 2;</code>
+         */
+        private void setSenderNonce(com.google.protobuf.ByteString value) {
+            if (value == null) {
+                throw new NullPointerException();
             }
-          }
-          return parser;
-      }
-      case GET_MEMOIZED_IS_INITIALIZED: {
-        return (byte) 1;
-      }
-      case SET_MEMOIZED_IS_INITIALIZED: {
-        return null;
-      }
-      }
-      throw new UnsupportedOperationException();
-    }
-
-
-    // @@protoc_insertion_point(class_scope:extensions.api.cast_channel.AuthChallenge)
-    private static final CastChannelProto.AuthChallenge DEFAULT_INSTANCE;
-    static {
-      // New instances are implicitly immutable so no need to make
-      // immutable.
-      DEFAULT_INSTANCE = new AuthChallenge();
-    }
-
-    public static CastChannelProto.AuthChallenge getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static volatile com.google.protobuf.Parser<AuthChallenge> PARSER;
-
-    public static com.google.protobuf.Parser<AuthChallenge> parser() {
-      return DEFAULT_INSTANCE.getParserForType();
-    }
-  }
-
-  public interface AuthResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:extensions.api.cast_channel.AuthResponse)
-      com.google.protobuf.MessageLiteOrBuilder {
-
-    /**
-     * <code>required bytes signature = 1;</code>
-     */
-    boolean hasSignature();
-    /**
-     * <code>required bytes signature = 1;</code>
-     */
-    com.google.protobuf.ByteString getSignature();
-
-    /**
-     * <code>required bytes client_auth_certificate = 2;</code>
-     */
-    boolean hasClientAuthCertificate();
-    /**
-     * <code>required bytes client_auth_certificate = 2;</code>
-     */
-    com.google.protobuf.ByteString getClientAuthCertificate();
-
-    /**
-     * <code>repeated bytes intermediate_certificate = 3;</code>
-     */
-    java.util.List<com.google.protobuf.ByteString> getIntermediateCertificateList();
-    /**
-     * <code>repeated bytes intermediate_certificate = 3;</code>
-     */
-    int getIntermediateCertificateCount();
-    /**
-     * <code>repeated bytes intermediate_certificate = 3;</code>
-     */
-    com.google.protobuf.ByteString getIntermediateCertificate(int index);
-
-    /**
-     * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 4 [default = RSASSA_PKCS1v15];</code>
-     */
-    boolean hasSignatureAlgorithm();
-    /**
-     * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 4 [default = RSASSA_PKCS1v15];</code>
-     */
-    CastChannelProto.SignatureAlgorithm getSignatureAlgorithm();
-
-    /**
-     * <code>optional bytes sender_nonce = 5;</code>
-     */
-    boolean hasSenderNonce();
-    /**
-     * <code>optional bytes sender_nonce = 5;</code>
-     */
-    com.google.protobuf.ByteString getSenderNonce();
-
-    /**
-     * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 6 [default = SHA1];</code>
-     */
-    boolean hasHashAlgorithm();
-    /**
-     * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 6 [default = SHA1];</code>
-     */
-    CastChannelProto.HashAlgorithm getHashAlgorithm();
-
-    /**
-     * <code>optional bytes crl = 7;</code>
-     */
-    boolean hasCrl();
-    /**
-     * <code>optional bytes crl = 7;</code>
-     */
-    com.google.protobuf.ByteString getCrl();
-  }
-  /**
-   * Protobuf type {@code extensions.api.cast_channel.AuthResponse}
-   */
-  public  static final class AuthResponse extends
-      com.google.protobuf.GeneratedMessageLite<
-          AuthResponse, AuthResponse.Builder> implements
-      // @@protoc_insertion_point(message_implements:extensions.api.cast_channel.AuthResponse)
-      AuthResponseOrBuilder {
-    private AuthResponse() {
-      signature_ = com.google.protobuf.ByteString.EMPTY;
-      clientAuthCertificate_ = com.google.protobuf.ByteString.EMPTY;
-      intermediateCertificate_ = emptyProtobufList();
-      signatureAlgorithm_ = 1;
-      senderNonce_ = com.google.protobuf.ByteString.EMPTY;
-      crl_ = com.google.protobuf.ByteString.EMPTY;
-    }
-    private int bitField0_;
-    public static final int SIGNATURE_FIELD_NUMBER = 1;
-    private com.google.protobuf.ByteString signature_;
-    /**
-     * <code>required bytes signature = 1;</code>
-     */
-    @Override
-    public boolean hasSignature() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>required bytes signature = 1;</code>
-     */
-    @Override
-    public com.google.protobuf.ByteString getSignature() {
-      return signature_;
-    }
-    /**
-     * <code>required bytes signature = 1;</code>
-     */
-    private void setSignature(com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-      signature_ = value;
-    }
-    /**
-     * <code>required bytes signature = 1;</code>
-     */
-    private void clearSignature() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      signature_ = getDefaultInstance().getSignature();
-    }
-
-    public static final int CLIENT_AUTH_CERTIFICATE_FIELD_NUMBER = 2;
-    private com.google.protobuf.ByteString clientAuthCertificate_;
-    /**
-     * <code>required bytes client_auth_certificate = 2;</code>
-     */
-    @Override
-    public boolean hasClientAuthCertificate() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>required bytes client_auth_certificate = 2;</code>
-     */
-    @Override
-    public com.google.protobuf.ByteString getClientAuthCertificate() {
-      return clientAuthCertificate_;
-    }
-    /**
-     * <code>required bytes client_auth_certificate = 2;</code>
-     */
-    private void setClientAuthCertificate(com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-      clientAuthCertificate_ = value;
-    }
-    /**
-     * <code>required bytes client_auth_certificate = 2;</code>
-     */
-    private void clearClientAuthCertificate() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      clientAuthCertificate_ = getDefaultInstance().getClientAuthCertificate();
-    }
-
-    public static final int INTERMEDIATE_CERTIFICATE_FIELD_NUMBER = 3;
-    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> intermediateCertificate_;
-    /**
-     * <code>repeated bytes intermediate_certificate = 3;</code>
-     */
-    @Override
-    public java.util.List<com.google.protobuf.ByteString>
-        getIntermediateCertificateList() {
-      return intermediateCertificate_;
-    }
-    /**
-     * <code>repeated bytes intermediate_certificate = 3;</code>
-     */
-    @Override
-    public int getIntermediateCertificateCount() {
-      return intermediateCertificate_.size();
-    }
-    /**
-     * <code>repeated bytes intermediate_certificate = 3;</code>
-     */
-    @Override
-    public com.google.protobuf.ByteString getIntermediateCertificate(int index) {
-      return intermediateCertificate_.get(index);
-    }
-    private void ensureIntermediateCertificateIsMutable() {
-      if (!intermediateCertificate_.isModifiable()) {
-        intermediateCertificate_ =
-            com.google.protobuf.GeneratedMessageLite.mutableCopy(intermediateCertificate_);
-       }
-    }
-    /**
-     * <code>repeated bytes intermediate_certificate = 3;</code>
-     */
-    private void setIntermediateCertificate(
-        int index, com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureIntermediateCertificateIsMutable();
-      intermediateCertificate_.set(index, value);
-    }
-    /**
-     * <code>repeated bytes intermediate_certificate = 3;</code>
-     */
-    private void addIntermediateCertificate(com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureIntermediateCertificateIsMutable();
-      intermediateCertificate_.add(value);
-    }
-    /**
-     * <code>repeated bytes intermediate_certificate = 3;</code>
-     */
-    private void addAllIntermediateCertificate(
-        Iterable<? extends com.google.protobuf.ByteString> values) {
-      ensureIntermediateCertificateIsMutable();
-      com.google.protobuf.AbstractMessageLite.addAll(
-          values, intermediateCertificate_);
-    }
-    /**
-     * <code>repeated bytes intermediate_certificate = 3;</code>
-     */
-    private void clearIntermediateCertificate() {
-      intermediateCertificate_ = emptyProtobufList();
-    }
-
-    public static final int SIGNATURE_ALGORITHM_FIELD_NUMBER = 4;
-    private int signatureAlgorithm_;
-    /**
-     * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 4 [default = RSASSA_PKCS1v15];</code>
-     */
-    @Override
-    public boolean hasSignatureAlgorithm() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
-    }
-    /**
-     * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 4 [default = RSASSA_PKCS1v15];</code>
-     */
-    @Override
-    public CastChannelProto.SignatureAlgorithm getSignatureAlgorithm() {
-      CastChannelProto.SignatureAlgorithm result = CastChannelProto.SignatureAlgorithm.forNumber(signatureAlgorithm_);
-      return result == null ? CastChannelProto.SignatureAlgorithm.RSASSA_PKCS1v15 : result;
-    }
-    /**
-     * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 4 [default = RSASSA_PKCS1v15];</code>
-     */
-    private void setSignatureAlgorithm(CastChannelProto.SignatureAlgorithm value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      bitField0_ |= 0x00000004;
-      signatureAlgorithm_ = value.getNumber();
-    }
-    /**
-     * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 4 [default = RSASSA_PKCS1v15];</code>
-     */
-    private void clearSignatureAlgorithm() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      signatureAlgorithm_ = 1;
-    }
-
-    public static final int SENDER_NONCE_FIELD_NUMBER = 5;
-    private com.google.protobuf.ByteString senderNonce_;
-    /**
-     * <code>optional bytes sender_nonce = 5;</code>
-     */
-    @Override
-    public boolean hasSenderNonce() {
-      return ((bitField0_ & 0x00000008) == 0x00000008);
-    }
-    /**
-     * <code>optional bytes sender_nonce = 5;</code>
-     */
-    @Override
-    public com.google.protobuf.ByteString getSenderNonce() {
-      return senderNonce_;
-    }
-    /**
-     * <code>optional bytes sender_nonce = 5;</code>
-     */
-    private void setSenderNonce(com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
-      senderNonce_ = value;
-    }
-    /**
-     * <code>optional bytes sender_nonce = 5;</code>
-     */
-    private void clearSenderNonce() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      senderNonce_ = getDefaultInstance().getSenderNonce();
-    }
-
-    public static final int HASH_ALGORITHM_FIELD_NUMBER = 6;
-    private int hashAlgorithm_;
-    /**
-     * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 6 [default = SHA1];</code>
-     */
-    @Override
-    public boolean hasHashAlgorithm() {
-      return ((bitField0_ & 0x00000010) == 0x00000010);
-    }
-    /**
-     * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 6 [default = SHA1];</code>
-     */
-    @Override
-    public CastChannelProto.HashAlgorithm getHashAlgorithm() {
-      CastChannelProto.HashAlgorithm result = CastChannelProto.HashAlgorithm.forNumber(hashAlgorithm_);
-      return result == null ? CastChannelProto.HashAlgorithm.SHA1 : result;
-    }
-    /**
-     * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 6 [default = SHA1];</code>
-     */
-    private void setHashAlgorithm(CastChannelProto.HashAlgorithm value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      bitField0_ |= 0x00000010;
-      hashAlgorithm_ = value.getNumber();
-    }
-    /**
-     * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 6 [default = SHA1];</code>
-     */
-    private void clearHashAlgorithm() {
-      bitField0_ = (bitField0_ & ~0x00000010);
-      hashAlgorithm_ = 0;
-    }
-
-    public static final int CRL_FIELD_NUMBER = 7;
-    private com.google.protobuf.ByteString crl_;
-    /**
-     * <code>optional bytes crl = 7;</code>
-     */
-    @Override
-    public boolean hasCrl() {
-      return ((bitField0_ & 0x00000020) == 0x00000020);
-    }
-    /**
-     * <code>optional bytes crl = 7;</code>
-     */
-    @Override
-    public com.google.protobuf.ByteString getCrl() {
-      return crl_;
-    }
-    /**
-     * <code>optional bytes crl = 7;</code>
-     */
-    private void setCrl(com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000020;
-      crl_ = value;
-    }
-    /**
-     * <code>optional bytes crl = 7;</code>
-     */
-    private void clearCrl() {
-      bitField0_ = (bitField0_ & ~0x00000020);
-      crl_ = getDefaultInstance().getCrl();
-    }
-
-    @Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeBytes(1, signature_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeBytes(2, clientAuthCertificate_);
-      }
-      for (int i = 0; i < intermediateCertificate_.size(); i++) {
-        output.writeBytes(3, intermediateCertificate_.get(i));
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeEnum(4, signatureAlgorithm_);
-      }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeBytes(5, senderNonce_);
-      }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        output.writeEnum(6, hashAlgorithm_);
-      }
-      if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        output.writeBytes(7, crl_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @Override
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, signature_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, clientAuthCertificate_);
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < intermediateCertificate_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeBytesSizeNoTag(intermediateCertificate_.get(i));
+            bitField0_ |= 0x00000002;
+            senderNonce_ = value;
         }
-        size += dataSize;
-        size += 1 * getIntermediateCertificateList().size();
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(4, signatureAlgorithm_);
-      }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(5, senderNonce_);
-      }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(6, hashAlgorithm_);
-      }
-      if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(7, crl_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
+        /**
+         * <code>optional bytes sender_nonce = 2;</code>
+         */
+        private void clearSenderNonce() {
+            bitField0_ = (bitField0_ & ~0x00000002);
+            senderNonce_ = getDefaultInstance().getSenderNonce();
+        }
+
+        public static final int HASH_ALGORITHM_FIELD_NUMBER = 3;
+        private int hashAlgorithm_;
+        /**
+         * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 3 [default = SHA1];</code>
+         */
+        @Override
+        public boolean hasHashAlgorithm() {
+            return ((bitField0_ & 0x00000004) == 0x00000004);
+        }
+        /**
+         * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 3 [default = SHA1];</code>
+         */
+        @Override
+        public CastChannelProto.HashAlgorithm getHashAlgorithm() {
+            CastChannelProto.HashAlgorithm result = CastChannelProto.HashAlgorithm.forNumber(hashAlgorithm_);
+            return result == null ? CastChannelProto.HashAlgorithm.SHA1 : result;
+        }
+        /**
+         * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 3 [default = SHA1];</code>
+         */
+        private void setHashAlgorithm(CastChannelProto.HashAlgorithm value) {
+            if (value == null) {
+                throw new NullPointerException();
+            }
+            bitField0_ |= 0x00000004;
+            hashAlgorithm_ = value.getNumber();
+        }
+        /**
+         * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 3 [default = SHA1];</code>
+         */
+        private void clearHashAlgorithm() {
+            bitField0_ = (bitField0_ & ~0x00000004);
+            hashAlgorithm_ = 0;
+        }
+
+        @Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                throws java.io.IOException {
+            if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                output.writeEnum(1, signatureAlgorithm_);
+            }
+            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                output.writeBytes(2, senderNonce_);
+            }
+            if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                output.writeEnum(3, hashAlgorithm_);
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @Override
+        public int getSerializedSize() {
+            int size = memoizedSerializedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeEnumSize(1, signatureAlgorithm_);
+            }
+            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeBytesSize(2, senderNonce_);
+            }
+            if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeEnumSize(3, hashAlgorithm_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSerializedSize = size;
+            return size;
+        }
+
+        public static CastChannelProto.AuthChallenge parseFrom(
+                java.nio.ByteBuffer data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, data);
+        }
+        public static CastChannelProto.AuthChallenge parseFrom(
+                java.nio.ByteBuffer data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, data, extensionRegistry);
+        }
+        public static CastChannelProto.AuthChallenge parseFrom(
+                com.google.protobuf.ByteString data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, data);
+        }
+        public static CastChannelProto.AuthChallenge parseFrom(
+                com.google.protobuf.ByteString data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, data, extensionRegistry);
+        }
+        public static CastChannelProto.AuthChallenge parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, data);
+        }
+        public static CastChannelProto.AuthChallenge parseFrom(
+                byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, data, extensionRegistry);
+        }
+        public static CastChannelProto.AuthChallenge parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, input);
+        }
+        public static CastChannelProto.AuthChallenge parseFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, input, extensionRegistry);
+        }
+        public static CastChannelProto.AuthChallenge parseDelimitedFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+        }
+        public static CastChannelProto.AuthChallenge parseDelimitedFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+        }
+        public static CastChannelProto.AuthChallenge parseFrom(
+                com.google.protobuf.CodedInputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, input);
+        }
+        public static CastChannelProto.AuthChallenge parseFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, input, extensionRegistry);
+        }
+
+        public static Builder newBuilder() {
+            return (Builder) DEFAULT_INSTANCE.createBuilder();
+        }
+        public static Builder newBuilder(CastChannelProto.AuthChallenge prototype) {
+            return DEFAULT_INSTANCE.createBuilder(prototype);
+        }
+
+        /**
+         * <pre>
+         * Messages for authentication protocol between a sender and a Receiver.
+         * </pre>
+         *
+         * Protobuf type {@code extensions.api.cast_channel.AuthChallenge}
+         */
+        public static final class Builder extends
+                com.google.protobuf.GeneratedMessageLite.Builder<
+                        CastChannelProto.AuthChallenge, Builder> implements
+                // @@protoc_insertion_point(builder_implements:extensions.api.cast_channel.AuthChallenge)
+                CastChannelProto.AuthChallengeOrBuilder {
+            // Construct using extensions.api.cast_channel.CastChannelProto.AuthChallenge.newBuilder()
+            private Builder() {
+                super(DEFAULT_INSTANCE);
+            }
+
+
+            /**
+             * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 1 [default = RSASSA_PKCS1v15];</code>
+             */
+            @Override
+            public boolean hasSignatureAlgorithm() {
+                return instance.hasSignatureAlgorithm();
+            }
+            /**
+             * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 1 [default = RSASSA_PKCS1v15];</code>
+             */
+            @Override
+            public CastChannelProto.SignatureAlgorithm getSignatureAlgorithm() {
+                return instance.getSignatureAlgorithm();
+            }
+            /**
+             * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 1 [default = RSASSA_PKCS1v15];</code>
+             */
+            public Builder setSignatureAlgorithm(CastChannelProto.SignatureAlgorithm value) {
+                copyOnWrite();
+                instance.setSignatureAlgorithm(value);
+                return this;
+            }
+            /**
+             * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 1 [default = RSASSA_PKCS1v15];</code>
+             */
+            public Builder clearSignatureAlgorithm() {
+                copyOnWrite();
+                instance.clearSignatureAlgorithm();
+                return this;
+            }
+
+            /**
+             * <code>optional bytes sender_nonce = 2;</code>
+             */
+            @Override
+            public boolean hasSenderNonce() {
+                return instance.hasSenderNonce();
+            }
+            /**
+             * <code>optional bytes sender_nonce = 2;</code>
+             */
+            @Override
+            public com.google.protobuf.ByteString getSenderNonce() {
+                return instance.getSenderNonce();
+            }
+            /**
+             * <code>optional bytes sender_nonce = 2;</code>
+             */
+            public Builder setSenderNonce(com.google.protobuf.ByteString value) {
+                copyOnWrite();
+                instance.setSenderNonce(value);
+                return this;
+            }
+            /**
+             * <code>optional bytes sender_nonce = 2;</code>
+             */
+            public Builder clearSenderNonce() {
+                copyOnWrite();
+                instance.clearSenderNonce();
+                return this;
+            }
+
+            /**
+             * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 3 [default = SHA1];</code>
+             */
+            @Override
+            public boolean hasHashAlgorithm() {
+                return instance.hasHashAlgorithm();
+            }
+            /**
+             * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 3 [default = SHA1];</code>
+             */
+            @Override
+            public CastChannelProto.HashAlgorithm getHashAlgorithm() {
+                return instance.getHashAlgorithm();
+            }
+            /**
+             * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 3 [default = SHA1];</code>
+             */
+            public Builder setHashAlgorithm(CastChannelProto.HashAlgorithm value) {
+                copyOnWrite();
+                instance.setHashAlgorithm(value);
+                return this;
+            }
+            /**
+             * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 3 [default = SHA1];</code>
+             */
+            public Builder clearHashAlgorithm() {
+                copyOnWrite();
+                instance.clearHashAlgorithm();
+                return this;
+            }
+
+            // @@protoc_insertion_point(builder_scope:extensions.api.cast_channel.AuthChallenge)
+        }
+        @Override
+        @SuppressWarnings({"unchecked", "fallthrough"})
+        protected final Object dynamicMethod(
+                com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+                Object arg0, Object arg1) {
+            switch (method) {
+                case NEW_MUTABLE_INSTANCE: {
+                    return new CastChannelProto.AuthChallenge();
+                }
+                case NEW_BUILDER: {
+                    return new Builder();
+                }
+                case IS_INITIALIZED: {
+                    return DEFAULT_INSTANCE;
+                }
+                case MAKE_IMMUTABLE: {
+                    return null;
+                }
+                case VISIT: {
+                    Visitor visitor = (Visitor) arg0;
+                    CastChannelProto.AuthChallenge other = (CastChannelProto.AuthChallenge) arg1;
+                    signatureAlgorithm_ = visitor.visitInt(hasSignatureAlgorithm(), signatureAlgorithm_,
+                            other.hasSignatureAlgorithm(), other.signatureAlgorithm_);
+                    senderNonce_ = visitor.visitByteString(
+                            hasSenderNonce(), senderNonce_,
+                            other.hasSenderNonce(), other.senderNonce_);
+                    hashAlgorithm_ = visitor.visitInt(hasHashAlgorithm(), hashAlgorithm_,
+                            other.hasHashAlgorithm(), other.hashAlgorithm_);
+                    if (visitor == com.google.protobuf.GeneratedMessageLite.MergeFromVisitor
+                            .INSTANCE) {
+                        bitField0_ |= other.bitField0_;
+                    }
+                    return this;
+                }
+                case MERGE_FROM_STREAM: {
+                    com.google.protobuf.CodedInputStream input =
+                            (com.google.protobuf.CodedInputStream) arg0;
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry =
+                            (com.google.protobuf.ExtensionRegistryLite) arg1;
+                    if (extensionRegistry == null) {
+                        throw new NullPointerException();
+                    }
+                    try {
+                        boolean done = false;
+                        while (!done) {
+                            int tag = input.readTag();
+                            switch (tag) {
+                                case 0:
+                                    done = true;
+                                    break;
+                                case 8: {
+                                    int rawValue = input.readEnum();
+                                    CastChannelProto.SignatureAlgorithm value = CastChannelProto.SignatureAlgorithm.forNumber(rawValue);
+                                    if (value == null) {
+                                        super.mergeVarintField(1, rawValue);
+                                    } else {
+                                        bitField0_ |= 0x00000001;
+                                        signatureAlgorithm_ = rawValue;
+                                    }
+                                    break;
+                                }
+                                case 18: {
+                                    bitField0_ |= 0x00000002;
+                                    senderNonce_ = input.readBytes();
+                                    break;
+                                }
+                                case 24: {
+                                    int rawValue = input.readEnum();
+                                    CastChannelProto.HashAlgorithm value = CastChannelProto.HashAlgorithm.forNumber(rawValue);
+                                    if (value == null) {
+                                        super.mergeVarintField(3, rawValue);
+                                    } else {
+                                        bitField0_ |= 0x00000004;
+                                        hashAlgorithm_ = rawValue;
+                                    }
+                                    break;
+                                }
+                                default: {
+                                    if (!parseUnknownField(tag, input)) {
+                                        done = true;
+                                    }
+                                    break;
+                                }
+                            }
+                        }
+                    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                        throw new RuntimeException(e.setUnfinishedMessage(this));
+                    } catch (java.io.IOException e) {
+                        throw new RuntimeException(
+                                new com.google.protobuf.InvalidProtocolBufferException(
+                                        e.getMessage()).setUnfinishedMessage(this));
+                    } finally {
+                    }
+                }
+                // fall through
+                case GET_DEFAULT_INSTANCE: {
+                    return DEFAULT_INSTANCE;
+                }
+                case GET_PARSER: {
+                    com.google.protobuf.Parser<CastChannelProto.AuthChallenge> parser = PARSER;
+                    if (parser == null) {
+                        synchronized (CastChannelProto.AuthChallenge.class) {
+                            parser = PARSER;
+                            if (parser == null) {
+                                parser = new DefaultInstanceBasedParser(DEFAULT_INSTANCE);
+                                PARSER = parser;
+                            }
+                        }
+                    }
+                    return parser;
+                }
+                case GET_MEMOIZED_IS_INITIALIZED: {
+                    return (byte) 1;
+                }
+                case SET_MEMOIZED_IS_INITIALIZED: {
+                    return null;
+                }
+            }
+            throw new UnsupportedOperationException();
+        }
+
+
+        // @@protoc_insertion_point(class_scope:extensions.api.cast_channel.AuthChallenge)
+        private static final CastChannelProto.AuthChallenge DEFAULT_INSTANCE;
+        static {
+            // New instances are implicitly immutable so no need to make
+            // immutable.
+            DEFAULT_INSTANCE = new AuthChallenge();
+        }
+
+        public static CastChannelProto.AuthChallenge getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static volatile com.google.protobuf.Parser<AuthChallenge> PARSER;
+
+        public static com.google.protobuf.Parser<AuthChallenge> parser() {
+            return DEFAULT_INSTANCE.getParserForType();
+        }
     }
 
-    public static CastChannelProto.AuthResponse parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static CastChannelProto.AuthResponse parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static CastChannelProto.AuthResponse parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static CastChannelProto.AuthResponse parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static CastChannelProto.AuthResponse parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static CastChannelProto.AuthResponse parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static CastChannelProto.AuthResponse parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static CastChannelProto.AuthResponse parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static CastChannelProto.AuthResponse parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
-    }
-    public static CastChannelProto.AuthResponse parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static CastChannelProto.AuthResponse parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static CastChannelProto.AuthResponse parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
+    public interface AuthResponseOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:extensions.api.cast_channel.AuthResponse)
+            com.google.protobuf.MessageLiteOrBuilder {
 
-    public static Builder newBuilder() {
-      return (Builder) DEFAULT_INSTANCE.createBuilder();
-    }
-    public static Builder newBuilder(CastChannelProto.AuthResponse prototype) {
-      return DEFAULT_INSTANCE.createBuilder(prototype);
-    }
+        /**
+         * <code>required bytes signature = 1;</code>
+         */
+        boolean hasSignature();
+        /**
+         * <code>required bytes signature = 1;</code>
+         */
+        com.google.protobuf.ByteString getSignature();
 
+        /**
+         * <code>required bytes client_auth_certificate = 2;</code>
+         */
+        boolean hasClientAuthCertificate();
+        /**
+         * <code>required bytes client_auth_certificate = 2;</code>
+         */
+        com.google.protobuf.ByteString getClientAuthCertificate();
+
+        /**
+         * <code>repeated bytes intermediate_certificate = 3;</code>
+         */
+        java.util.List<com.google.protobuf.ByteString> getIntermediateCertificateList();
+        /**
+         * <code>repeated bytes intermediate_certificate = 3;</code>
+         */
+        int getIntermediateCertificateCount();
+        /**
+         * <code>repeated bytes intermediate_certificate = 3;</code>
+         */
+        com.google.protobuf.ByteString getIntermediateCertificate(int index);
+
+        /**
+         * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 4 [default = RSASSA_PKCS1v15];</code>
+         */
+        boolean hasSignatureAlgorithm();
+        /**
+         * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 4 [default = RSASSA_PKCS1v15];</code>
+         */
+        CastChannelProto.SignatureAlgorithm getSignatureAlgorithm();
+
+        /**
+         * <code>optional bytes sender_nonce = 5;</code>
+         */
+        boolean hasSenderNonce();
+        /**
+         * <code>optional bytes sender_nonce = 5;</code>
+         */
+        com.google.protobuf.ByteString getSenderNonce();
+
+        /**
+         * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 6 [default = SHA1];</code>
+         */
+        boolean hasHashAlgorithm();
+        /**
+         * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 6 [default = SHA1];</code>
+         */
+        CastChannelProto.HashAlgorithm getHashAlgorithm();
+
+        /**
+         * <code>optional bytes crl = 7;</code>
+         */
+        boolean hasCrl();
+        /**
+         * <code>optional bytes crl = 7;</code>
+         */
+        com.google.protobuf.ByteString getCrl();
+    }
     /**
      * Protobuf type {@code extensions.api.cast_channel.AuthResponse}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageLite.Builder<
-          CastChannelProto.AuthResponse, Builder> implements
-        // @@protoc_insertion_point(builder_implements:extensions.api.cast_channel.AuthResponse)
-        CastChannelProto.AuthResponseOrBuilder {
-      // Construct using extensions.api.cast_channel.CastChannelProto.AuthResponse.newBuilder()
-      private Builder() {
-        super(DEFAULT_INSTANCE);
-      }
-
-
-      /**
-       * <code>required bytes signature = 1;</code>
-       */
-      @Override
-      public boolean hasSignature() {
-        return instance.hasSignature();
-      }
-      /**
-       * <code>required bytes signature = 1;</code>
-       */
-      @Override
-      public com.google.protobuf.ByteString getSignature() {
-        return instance.getSignature();
-      }
-      /**
-       * <code>required bytes signature = 1;</code>
-       */
-      public Builder setSignature(com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setSignature(value);
-        return this;
-      }
-      /**
-       * <code>required bytes signature = 1;</code>
-       */
-      public Builder clearSignature() {
-        copyOnWrite();
-        instance.clearSignature();
-        return this;
-      }
-
-      /**
-       * <code>required bytes client_auth_certificate = 2;</code>
-       */
-      @Override
-      public boolean hasClientAuthCertificate() {
-        return instance.hasClientAuthCertificate();
-      }
-      /**
-       * <code>required bytes client_auth_certificate = 2;</code>
-       */
-      @Override
-      public com.google.protobuf.ByteString getClientAuthCertificate() {
-        return instance.getClientAuthCertificate();
-      }
-      /**
-       * <code>required bytes client_auth_certificate = 2;</code>
-       */
-      public Builder setClientAuthCertificate(com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setClientAuthCertificate(value);
-        return this;
-      }
-      /**
-       * <code>required bytes client_auth_certificate = 2;</code>
-       */
-      public Builder clearClientAuthCertificate() {
-        copyOnWrite();
-        instance.clearClientAuthCertificate();
-        return this;
-      }
-
-      /**
-       * <code>repeated bytes intermediate_certificate = 3;</code>
-       */
-      @Override
-      public java.util.List<com.google.protobuf.ByteString>
-          getIntermediateCertificateList() {
-        return java.util.Collections.unmodifiableList(
-            instance.getIntermediateCertificateList());
-      }
-      /**
-       * <code>repeated bytes intermediate_certificate = 3;</code>
-       */
-      @Override
-      public int getIntermediateCertificateCount() {
-        return instance.getIntermediateCertificateCount();
-      }
-      /**
-       * <code>repeated bytes intermediate_certificate = 3;</code>
-       */
-      @Override
-      public com.google.protobuf.ByteString getIntermediateCertificate(int index) {
-        return instance.getIntermediateCertificate(index);
-      }
-      /**
-       * <code>repeated bytes intermediate_certificate = 3;</code>
-       */
-      public Builder setIntermediateCertificate(
-          int index, com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setIntermediateCertificate(index, value);
-        return this;
-      }
-      /**
-       * <code>repeated bytes intermediate_certificate = 3;</code>
-       */
-      public Builder addIntermediateCertificate(com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.addIntermediateCertificate(value);
-        return this;
-      }
-      /**
-       * <code>repeated bytes intermediate_certificate = 3;</code>
-       */
-      public Builder addAllIntermediateCertificate(
-          Iterable<? extends com.google.protobuf.ByteString> values) {
-        copyOnWrite();
-        instance.addAllIntermediateCertificate(values);
-        return this;
-      }
-      /**
-       * <code>repeated bytes intermediate_certificate = 3;</code>
-       */
-      public Builder clearIntermediateCertificate() {
-        copyOnWrite();
-        instance.clearIntermediateCertificate();
-        return this;
-      }
-
-      /**
-       * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 4 [default = RSASSA_PKCS1v15];</code>
-       */
-      @Override
-      public boolean hasSignatureAlgorithm() {
-        return instance.hasSignatureAlgorithm();
-      }
-      /**
-       * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 4 [default = RSASSA_PKCS1v15];</code>
-       */
-      @Override
-      public CastChannelProto.SignatureAlgorithm getSignatureAlgorithm() {
-        return instance.getSignatureAlgorithm();
-      }
-      /**
-       * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 4 [default = RSASSA_PKCS1v15];</code>
-       */
-      public Builder setSignatureAlgorithm(CastChannelProto.SignatureAlgorithm value) {
-        copyOnWrite();
-        instance.setSignatureAlgorithm(value);
-        return this;
-      }
-      /**
-       * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 4 [default = RSASSA_PKCS1v15];</code>
-       */
-      public Builder clearSignatureAlgorithm() {
-        copyOnWrite();
-        instance.clearSignatureAlgorithm();
-        return this;
-      }
-
-      /**
-       * <code>optional bytes sender_nonce = 5;</code>
-       */
-      @Override
-      public boolean hasSenderNonce() {
-        return instance.hasSenderNonce();
-      }
-      /**
-       * <code>optional bytes sender_nonce = 5;</code>
-       */
-      @Override
-      public com.google.protobuf.ByteString getSenderNonce() {
-        return instance.getSenderNonce();
-      }
-      /**
-       * <code>optional bytes sender_nonce = 5;</code>
-       */
-      public Builder setSenderNonce(com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setSenderNonce(value);
-        return this;
-      }
-      /**
-       * <code>optional bytes sender_nonce = 5;</code>
-       */
-      public Builder clearSenderNonce() {
-        copyOnWrite();
-        instance.clearSenderNonce();
-        return this;
-      }
-
-      /**
-       * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 6 [default = SHA1];</code>
-       */
-      @Override
-      public boolean hasHashAlgorithm() {
-        return instance.hasHashAlgorithm();
-      }
-      /**
-       * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 6 [default = SHA1];</code>
-       */
-      @Override
-      public CastChannelProto.HashAlgorithm getHashAlgorithm() {
-        return instance.getHashAlgorithm();
-      }
-      /**
-       * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 6 [default = SHA1];</code>
-       */
-      public Builder setHashAlgorithm(CastChannelProto.HashAlgorithm value) {
-        copyOnWrite();
-        instance.setHashAlgorithm(value);
-        return this;
-      }
-      /**
-       * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 6 [default = SHA1];</code>
-       */
-      public Builder clearHashAlgorithm() {
-        copyOnWrite();
-        instance.clearHashAlgorithm();
-        return this;
-      }
-
-      /**
-       * <code>optional bytes crl = 7;</code>
-       */
-      @Override
-      public boolean hasCrl() {
-        return instance.hasCrl();
-      }
-      /**
-       * <code>optional bytes crl = 7;</code>
-       */
-      @Override
-      public com.google.protobuf.ByteString getCrl() {
-        return instance.getCrl();
-      }
-      /**
-       * <code>optional bytes crl = 7;</code>
-       */
-      public Builder setCrl(com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setCrl(value);
-        return this;
-      }
-      /**
-       * <code>optional bytes crl = 7;</code>
-       */
-      public Builder clearCrl() {
-        copyOnWrite();
-        instance.clearCrl();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:extensions.api.cast_channel.AuthResponse)
-    }
-    private byte memoizedIsInitialized = 2;
-    @Override
-    @SuppressWarnings({"unchecked", "fallthrough"})
-    protected final Object dynamicMethod(
-        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
-        Object arg0, Object arg1) {
-      switch (method) {
-        case NEW_MUTABLE_INSTANCE: {
-          return new CastChannelProto.AuthResponse();
+    public  static final class AuthResponse extends
+            com.google.protobuf.GeneratedMessageLite<
+                    AuthResponse, AuthResponse.Builder> implements
+            // @@protoc_insertion_point(message_implements:extensions.api.cast_channel.AuthResponse)
+            AuthResponseOrBuilder {
+        private AuthResponse() {
+            signature_ = com.google.protobuf.ByteString.EMPTY;
+            clientAuthCertificate_ = com.google.protobuf.ByteString.EMPTY;
+            intermediateCertificate_ = emptyProtobufList();
+            signatureAlgorithm_ = 1;
+            senderNonce_ = com.google.protobuf.ByteString.EMPTY;
+            crl_ = com.google.protobuf.ByteString.EMPTY;
         }
-        case NEW_BUILDER: {
-          return new Builder();
+        private int bitField0_;
+        public static final int SIGNATURE_FIELD_NUMBER = 1;
+        private com.google.protobuf.ByteString signature_;
+        /**
+         * <code>required bytes signature = 1;</code>
+         */
+        @Override
+        public boolean hasSignature() {
+            return ((bitField0_ & 0x00000001) == 0x00000001);
         }
-        case IS_INITIALIZED: {
-          byte isInitialized = memoizedIsInitialized;
-          if (isInitialized == 1) return DEFAULT_INSTANCE;
-          if (isInitialized == 0) return null;
+        /**
+         * <code>required bytes signature = 1;</code>
+         */
+        @Override
+        public com.google.protobuf.ByteString getSignature() {
+            return signature_;
+        }
+        /**
+         * <code>required bytes signature = 1;</code>
+         */
+        private void setSignature(com.google.protobuf.ByteString value) {
+            if (value == null) {
+                throw new NullPointerException();
+            }
+            bitField0_ |= 0x00000001;
+            signature_ = value;
+        }
+        /**
+         * <code>required bytes signature = 1;</code>
+         */
+        private void clearSignature() {
+            bitField0_ = (bitField0_ & ~0x00000001);
+            signature_ = getDefaultInstance().getSignature();
+        }
 
-          boolean shouldMemoize = ((Boolean) arg0).booleanValue();
-          if (!hasSignature()) {
-            return null;
-          }
-          if (!hasClientAuthCertificate()) {
-            return null;
-          }
-          return DEFAULT_INSTANCE;
+        public static final int CLIENT_AUTH_CERTIFICATE_FIELD_NUMBER = 2;
+        private com.google.protobuf.ByteString clientAuthCertificate_;
+        /**
+         * <code>required bytes client_auth_certificate = 2;</code>
+         */
+        @Override
+        public boolean hasClientAuthCertificate() {
+            return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+        /**
+         * <code>required bytes client_auth_certificate = 2;</code>
+         */
+        @Override
+        public com.google.protobuf.ByteString getClientAuthCertificate() {
+            return clientAuthCertificate_;
+        }
+        /**
+         * <code>required bytes client_auth_certificate = 2;</code>
+         */
+        private void setClientAuthCertificate(com.google.protobuf.ByteString value) {
+            if (value == null) {
+                throw new NullPointerException();
+            }
+            bitField0_ |= 0x00000002;
+            clientAuthCertificate_ = value;
+        }
+        /**
+         * <code>required bytes client_auth_certificate = 2;</code>
+         */
+        private void clearClientAuthCertificate() {
+            bitField0_ = (bitField0_ & ~0x00000002);
+            clientAuthCertificate_ = getDefaultInstance().getClientAuthCertificate();
+        }
 
+        public static final int INTERMEDIATE_CERTIFICATE_FIELD_NUMBER = 3;
+        private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> intermediateCertificate_;
+        /**
+         * <code>repeated bytes intermediate_certificate = 3;</code>
+         */
+        @Override
+        public java.util.List<com.google.protobuf.ByteString>
+        getIntermediateCertificateList() {
+            return intermediateCertificate_;
         }
-        case MAKE_IMMUTABLE: {
-          intermediateCertificate_.makeImmutable();
-          return null;
+        /**
+         * <code>repeated bytes intermediate_certificate = 3;</code>
+         */
+        @Override
+        public int getIntermediateCertificateCount() {
+            return intermediateCertificate_.size();
         }
-        case VISIT: {
-          Visitor visitor = (Visitor) arg0;
-          CastChannelProto.AuthResponse other = (CastChannelProto.AuthResponse) arg1;
-          signature_ = visitor.visitByteString(
-              hasSignature(), signature_,
-              other.hasSignature(), other.signature_);
-          clientAuthCertificate_ = visitor.visitByteString(
-              hasClientAuthCertificate(), clientAuthCertificate_,
-              other.hasClientAuthCertificate(), other.clientAuthCertificate_);
-          intermediateCertificate_= visitor.visitList(intermediateCertificate_, other.intermediateCertificate_);
-          signatureAlgorithm_ = visitor.visitInt(hasSignatureAlgorithm(), signatureAlgorithm_,
-              other.hasSignatureAlgorithm(), other.signatureAlgorithm_);
-          senderNonce_ = visitor.visitByteString(
-              hasSenderNonce(), senderNonce_,
-              other.hasSenderNonce(), other.senderNonce_);
-          hashAlgorithm_ = visitor.visitInt(hasHashAlgorithm(), hashAlgorithm_,
-              other.hasHashAlgorithm(), other.hashAlgorithm_);
-          crl_ = visitor.visitByteString(
-              hasCrl(), crl_,
-              other.hasCrl(), other.crl_);
-          if (visitor == com.google.protobuf.GeneratedMessageLite.MergeFromVisitor
-              .INSTANCE) {
-            bitField0_ |= other.bitField0_;
-          }
-          return this;
+        /**
+         * <code>repeated bytes intermediate_certificate = 3;</code>
+         */
+        @Override
+        public com.google.protobuf.ByteString getIntermediateCertificate(int index) {
+            return intermediateCertificate_.get(index);
         }
-        case MERGE_FROM_STREAM: {
-          com.google.protobuf.CodedInputStream input =
-              (com.google.protobuf.CodedInputStream) arg0;
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry =
-              (com.google.protobuf.ExtensionRegistryLite) arg1;
-          if (extensionRegistry == null) {
-            throw new NullPointerException();
-          }
-          try {
-            boolean done = false;
-            while (!done) {
-              int tag = input.readTag();
-              switch (tag) {
-                case 0:
-                  done = true;
-                  break;
-                case 10: {
-                  bitField0_ |= 0x00000001;
-                  signature_ = input.readBytes();
-                  break;
-                }
-                case 18: {
-                  bitField0_ |= 0x00000002;
-                  clientAuthCertificate_ = input.readBytes();
-                  break;
-                }
-                case 26: {
-                  if (!intermediateCertificate_.isModifiable()) {
-                    intermediateCertificate_ =
+        private void ensureIntermediateCertificateIsMutable() {
+            if (!intermediateCertificate_.isModifiable()) {
+                intermediateCertificate_ =
                         com.google.protobuf.GeneratedMessageLite.mutableCopy(intermediateCertificate_);
-                  }
-                  intermediateCertificate_.add(input.readBytes());
-                  break;
-                }
-                case 32: {
-                  int rawValue = input.readEnum();
-                  CastChannelProto.SignatureAlgorithm value = CastChannelProto.SignatureAlgorithm.forNumber(rawValue);
-                  if (value == null) {
-                    super.mergeVarintField(4, rawValue);
-                  } else {
-                    bitField0_ |= 0x00000004;
-                    signatureAlgorithm_ = rawValue;
-                  }
-                  break;
-                }
-                case 42: {
-                  bitField0_ |= 0x00000008;
-                  senderNonce_ = input.readBytes();
-                  break;
-                }
-                case 48: {
-                  int rawValue = input.readEnum();
-                  CastChannelProto.HashAlgorithm value = CastChannelProto.HashAlgorithm.forNumber(rawValue);
-                  if (value == null) {
-                    super.mergeVarintField(6, rawValue);
-                  } else {
-                    bitField0_ |= 0x00000010;
-                    hashAlgorithm_ = rawValue;
-                  }
-                  break;
-                }
-                case 58: {
-                  bitField0_ |= 0x00000020;
-                  crl_ = input.readBytes();
-                  break;
-                }
-                default: {
-                  if (!parseUnknownField(tag, input)) {
-                    done = true;
-                  }
-                  break;
-                }
-              }
             }
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw new RuntimeException(e.setUnfinishedMessage(this));
-          } catch (java.io.IOException e) {
-            throw new RuntimeException(
-                new com.google.protobuf.InvalidProtocolBufferException(
-                    e.getMessage()).setUnfinishedMessage(this));
-          } finally {
-          }
         }
-        // fall through
-        case GET_DEFAULT_INSTANCE: {
-          return DEFAULT_INSTANCE;
-        }
-        case GET_PARSER: {
-          com.google.protobuf.Parser<CastChannelProto.AuthResponse> parser = PARSER;
-          if (parser == null) {
-            synchronized (CastChannelProto.AuthResponse.class) {
-              parser = PARSER;
-              if (parser == null) {
-                parser = new DefaultInstanceBasedParser(DEFAULT_INSTANCE);
-                PARSER = parser;
-              }
+        /**
+         * <code>repeated bytes intermediate_certificate = 3;</code>
+         */
+        private void setIntermediateCertificate(
+                int index, com.google.protobuf.ByteString value) {
+            if (value == null) {
+                throw new NullPointerException();
             }
-          }
-          return parser;
-      }
-      case GET_MEMOIZED_IS_INITIALIZED: {
-        return memoizedIsInitialized;
-      }
-      case SET_MEMOIZED_IS_INITIALIZED: {
-        memoizedIsInitialized = (byte) (arg0 == null ? 0 : 1);
-        return null;
-      }
-      }
-      throw new UnsupportedOperationException();
-    }
-
-
-    // @@protoc_insertion_point(class_scope:extensions.api.cast_channel.AuthResponse)
-    private static final CastChannelProto.AuthResponse DEFAULT_INSTANCE;
-    static {
-      // New instances are implicitly immutable so no need to make
-      // immutable.
-      DEFAULT_INSTANCE = new AuthResponse();
-    }
-
-    public static CastChannelProto.AuthResponse getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static volatile com.google.protobuf.Parser<AuthResponse> PARSER;
-
-    public static com.google.protobuf.Parser<AuthResponse> parser() {
-      return DEFAULT_INSTANCE.getParserForType();
-    }
-  }
-
-  public interface AuthErrorOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:extensions.api.cast_channel.AuthError)
-      com.google.protobuf.MessageLiteOrBuilder {
-
-    /**
-     * <code>required .extensions.api.cast_channel.AuthError.ErrorType error_type = 1;</code>
-     */
-    boolean hasErrorType();
-    /**
-     * <code>required .extensions.api.cast_channel.AuthError.ErrorType error_type = 1;</code>
-     */
-    CastChannelProto.AuthError.ErrorType getErrorType();
-  }
-  /**
-   * Protobuf type {@code extensions.api.cast_channel.AuthError}
-   */
-  public  static final class AuthError extends
-      com.google.protobuf.GeneratedMessageLite<
-          AuthError, AuthError.Builder> implements
-      // @@protoc_insertion_point(message_implements:extensions.api.cast_channel.AuthError)
-      AuthErrorOrBuilder {
-    private AuthError() {
-    }
-    /**
-     * Protobuf enum {@code extensions.api.cast_channel.AuthError.ErrorType}
-     */
-    public enum ErrorType
-        implements com.google.protobuf.Internal.EnumLite {
-      /**
-       * <code>INTERNAL_ERROR = 0;</code>
-       */
-      INTERNAL_ERROR(0),
-      /**
-       * <pre>
-       * The underlying connection is not TLS
-       * </pre>
-       *
-       * <code>NO_TLS = 1;</code>
-       */
-      NO_TLS(1),
-      /**
-       * <code>SIGNATURE_ALGORITHM_UNAVAILABLE = 2;</code>
-       */
-      SIGNATURE_ALGORITHM_UNAVAILABLE(2),
-      ;
-
-      /**
-       * <code>INTERNAL_ERROR = 0;</code>
-       */
-      public static final int INTERNAL_ERROR_VALUE = 0;
-      /**
-       * <pre>
-       * The underlying connection is not TLS
-       * </pre>
-       *
-       * <code>NO_TLS = 1;</code>
-       */
-      public static final int NO_TLS_VALUE = 1;
-      /**
-       * <code>SIGNATURE_ALGORITHM_UNAVAILABLE = 2;</code>
-       */
-      public static final int SIGNATURE_ALGORITHM_UNAVAILABLE_VALUE = 2;
-
-
-      @Override
-      public final int getNumber() {
-        return value;
-      }
-
-      /**
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @Deprecated
-      public static ErrorType valueOf(int value) {
-        return forNumber(value);
-      }
-
-      public static ErrorType forNumber(int value) {
-        switch (value) {
-          case 0: return INTERNAL_ERROR;
-          case 1: return NO_TLS;
-          case 2: return SIGNATURE_ALGORITHM_UNAVAILABLE;
-          default: return null;
+            ensureIntermediateCertificateIsMutable();
+            intermediateCertificate_.set(index, value);
         }
-      }
+        /**
+         * <code>repeated bytes intermediate_certificate = 3;</code>
+         */
+        private void addIntermediateCertificate(com.google.protobuf.ByteString value) {
+            if (value == null) {
+                throw new NullPointerException();
+            }
+            ensureIntermediateCertificateIsMutable();
+            intermediateCertificate_.add(value);
+        }
+        /**
+         * <code>repeated bytes intermediate_certificate = 3;</code>
+         */
+        private void addAllIntermediateCertificate(
+                Iterable<? extends com.google.protobuf.ByteString> values) {
+            ensureIntermediateCertificateIsMutable();
+            com.google.protobuf.AbstractMessageLite.addAll(
+                    values, intermediateCertificate_);
+        }
+        /**
+         * <code>repeated bytes intermediate_certificate = 3;</code>
+         */
+        private void clearIntermediateCertificate() {
+            intermediateCertificate_ = emptyProtobufList();
+        }
 
-      public static com.google.protobuf.Internal.EnumLiteMap<ErrorType>
-          internalGetValueMap() {
-        return internalValueMap;
-      }
-      private static final com.google.protobuf.Internal.EnumLiteMap<
-          ErrorType> internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<ErrorType>() {
-              @Override
-              public ErrorType findValueByNumber(int number) {
-                return ErrorType.forNumber(number);
-              }
-            };
+        public static final int SIGNATURE_ALGORITHM_FIELD_NUMBER = 4;
+        private int signatureAlgorithm_;
+        /**
+         * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 4 [default = RSASSA_PKCS1v15];</code>
+         */
+        @Override
+        public boolean hasSignatureAlgorithm() {
+            return ((bitField0_ & 0x00000004) == 0x00000004);
+        }
+        /**
+         * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 4 [default = RSASSA_PKCS1v15];</code>
+         */
+        @Override
+        public CastChannelProto.SignatureAlgorithm getSignatureAlgorithm() {
+            CastChannelProto.SignatureAlgorithm result = CastChannelProto.SignatureAlgorithm.forNumber(signatureAlgorithm_);
+            return result == null ? CastChannelProto.SignatureAlgorithm.RSASSA_PKCS1v15 : result;
+        }
+        /**
+         * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 4 [default = RSASSA_PKCS1v15];</code>
+         */
+        private void setSignatureAlgorithm(CastChannelProto.SignatureAlgorithm value) {
+            if (value == null) {
+                throw new NullPointerException();
+            }
+            bitField0_ |= 0x00000004;
+            signatureAlgorithm_ = value.getNumber();
+        }
+        /**
+         * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 4 [default = RSASSA_PKCS1v15];</code>
+         */
+        private void clearSignatureAlgorithm() {
+            bitField0_ = (bitField0_ & ~0x00000004);
+            signatureAlgorithm_ = 1;
+        }
 
-      private final int value;
+        public static final int SENDER_NONCE_FIELD_NUMBER = 5;
+        private com.google.protobuf.ByteString senderNonce_;
+        /**
+         * <code>optional bytes sender_nonce = 5;</code>
+         */
+        @Override
+        public boolean hasSenderNonce() {
+            return ((bitField0_ & 0x00000008) == 0x00000008);
+        }
+        /**
+         * <code>optional bytes sender_nonce = 5;</code>
+         */
+        @Override
+        public com.google.protobuf.ByteString getSenderNonce() {
+            return senderNonce_;
+        }
+        /**
+         * <code>optional bytes sender_nonce = 5;</code>
+         */
+        private void setSenderNonce(com.google.protobuf.ByteString value) {
+            if (value == null) {
+                throw new NullPointerException();
+            }
+            bitField0_ |= 0x00000008;
+            senderNonce_ = value;
+        }
+        /**
+         * <code>optional bytes sender_nonce = 5;</code>
+         */
+        private void clearSenderNonce() {
+            bitField0_ = (bitField0_ & ~0x00000008);
+            senderNonce_ = getDefaultInstance().getSenderNonce();
+        }
 
-      ErrorType(int value) {
-        this.value = value;
-      }
+        public static final int HASH_ALGORITHM_FIELD_NUMBER = 6;
+        private int hashAlgorithm_;
+        /**
+         * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 6 [default = SHA1];</code>
+         */
+        @Override
+        public boolean hasHashAlgorithm() {
+            return ((bitField0_ & 0x00000010) == 0x00000010);
+        }
+        /**
+         * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 6 [default = SHA1];</code>
+         */
+        @Override
+        public CastChannelProto.HashAlgorithm getHashAlgorithm() {
+            CastChannelProto.HashAlgorithm result = CastChannelProto.HashAlgorithm.forNumber(hashAlgorithm_);
+            return result == null ? CastChannelProto.HashAlgorithm.SHA1 : result;
+        }
+        /**
+         * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 6 [default = SHA1];</code>
+         */
+        private void setHashAlgorithm(CastChannelProto.HashAlgorithm value) {
+            if (value == null) {
+                throw new NullPointerException();
+            }
+            bitField0_ |= 0x00000010;
+            hashAlgorithm_ = value.getNumber();
+        }
+        /**
+         * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 6 [default = SHA1];</code>
+         */
+        private void clearHashAlgorithm() {
+            bitField0_ = (bitField0_ & ~0x00000010);
+            hashAlgorithm_ = 0;
+        }
 
-      // @@protoc_insertion_point(enum_scope:extensions.api.cast_channel.AuthError.ErrorType)
+        public static final int CRL_FIELD_NUMBER = 7;
+        private com.google.protobuf.ByteString crl_;
+        /**
+         * <code>optional bytes crl = 7;</code>
+         */
+        @Override
+        public boolean hasCrl() {
+            return ((bitField0_ & 0x00000020) == 0x00000020);
+        }
+        /**
+         * <code>optional bytes crl = 7;</code>
+         */
+        @Override
+        public com.google.protobuf.ByteString getCrl() {
+            return crl_;
+        }
+        /**
+         * <code>optional bytes crl = 7;</code>
+         */
+        private void setCrl(com.google.protobuf.ByteString value) {
+            if (value == null) {
+                throw new NullPointerException();
+            }
+            bitField0_ |= 0x00000020;
+            crl_ = value;
+        }
+        /**
+         * <code>optional bytes crl = 7;</code>
+         */
+        private void clearCrl() {
+            bitField0_ = (bitField0_ & ~0x00000020);
+            crl_ = getDefaultInstance().getCrl();
+        }
+
+        @Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                throws java.io.IOException {
+            if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                output.writeBytes(1, signature_);
+            }
+            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                output.writeBytes(2, clientAuthCertificate_);
+            }
+            for (int i = 0; i < intermediateCertificate_.size(); i++) {
+                output.writeBytes(3, intermediateCertificate_.get(i));
+            }
+            if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                output.writeEnum(4, signatureAlgorithm_);
+            }
+            if (((bitField0_ & 0x00000008) == 0x00000008)) {
+                output.writeBytes(5, senderNonce_);
+            }
+            if (((bitField0_ & 0x00000010) == 0x00000010)) {
+                output.writeEnum(6, hashAlgorithm_);
+            }
+            if (((bitField0_ & 0x00000020) == 0x00000020)) {
+                output.writeBytes(7, crl_);
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @Override
+        public int getSerializedSize() {
+            int size = memoizedSerializedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeBytesSize(1, signature_);
+            }
+            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeBytesSize(2, clientAuthCertificate_);
+            }
+            {
+                int dataSize = 0;
+                for (int i = 0; i < intermediateCertificate_.size(); i++) {
+                    dataSize += com.google.protobuf.CodedOutputStream
+                            .computeBytesSizeNoTag(intermediateCertificate_.get(i));
+                }
+                size += dataSize;
+                size += 1 * getIntermediateCertificateList().size();
+            }
+            if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeEnumSize(4, signatureAlgorithm_);
+            }
+            if (((bitField0_ & 0x00000008) == 0x00000008)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeBytesSize(5, senderNonce_);
+            }
+            if (((bitField0_ & 0x00000010) == 0x00000010)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeEnumSize(6, hashAlgorithm_);
+            }
+            if (((bitField0_ & 0x00000020) == 0x00000020)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeBytesSize(7, crl_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSerializedSize = size;
+            return size;
+        }
+
+        public static CastChannelProto.AuthResponse parseFrom(
+                java.nio.ByteBuffer data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, data);
+        }
+        public static CastChannelProto.AuthResponse parseFrom(
+                java.nio.ByteBuffer data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, data, extensionRegistry);
+        }
+        public static CastChannelProto.AuthResponse parseFrom(
+                com.google.protobuf.ByteString data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, data);
+        }
+        public static CastChannelProto.AuthResponse parseFrom(
+                com.google.protobuf.ByteString data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, data, extensionRegistry);
+        }
+        public static CastChannelProto.AuthResponse parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, data);
+        }
+        public static CastChannelProto.AuthResponse parseFrom(
+                byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, data, extensionRegistry);
+        }
+        public static CastChannelProto.AuthResponse parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, input);
+        }
+        public static CastChannelProto.AuthResponse parseFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, input, extensionRegistry);
+        }
+        public static CastChannelProto.AuthResponse parseDelimitedFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+        }
+        public static CastChannelProto.AuthResponse parseDelimitedFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+        }
+        public static CastChannelProto.AuthResponse parseFrom(
+                com.google.protobuf.CodedInputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, input);
+        }
+        public static CastChannelProto.AuthResponse parseFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, input, extensionRegistry);
+        }
+
+        public static Builder newBuilder() {
+            return (Builder) DEFAULT_INSTANCE.createBuilder();
+        }
+        public static Builder newBuilder(CastChannelProto.AuthResponse prototype) {
+            return DEFAULT_INSTANCE.createBuilder(prototype);
+        }
+
+        /**
+         * Protobuf type {@code extensions.api.cast_channel.AuthResponse}
+         */
+        public static final class Builder extends
+                com.google.protobuf.GeneratedMessageLite.Builder<
+                        CastChannelProto.AuthResponse, Builder> implements
+                // @@protoc_insertion_point(builder_implements:extensions.api.cast_channel.AuthResponse)
+                CastChannelProto.AuthResponseOrBuilder {
+            // Construct using extensions.api.cast_channel.CastChannelProto.AuthResponse.newBuilder()
+            private Builder() {
+                super(DEFAULT_INSTANCE);
+            }
+
+
+            /**
+             * <code>required bytes signature = 1;</code>
+             */
+            @Override
+            public boolean hasSignature() {
+                return instance.hasSignature();
+            }
+            /**
+             * <code>required bytes signature = 1;</code>
+             */
+            @Override
+            public com.google.protobuf.ByteString getSignature() {
+                return instance.getSignature();
+            }
+            /**
+             * <code>required bytes signature = 1;</code>
+             */
+            public Builder setSignature(com.google.protobuf.ByteString value) {
+                copyOnWrite();
+                instance.setSignature(value);
+                return this;
+            }
+            /**
+             * <code>required bytes signature = 1;</code>
+             */
+            public Builder clearSignature() {
+                copyOnWrite();
+                instance.clearSignature();
+                return this;
+            }
+
+            /**
+             * <code>required bytes client_auth_certificate = 2;</code>
+             */
+            @Override
+            public boolean hasClientAuthCertificate() {
+                return instance.hasClientAuthCertificate();
+            }
+            /**
+             * <code>required bytes client_auth_certificate = 2;</code>
+             */
+            @Override
+            public com.google.protobuf.ByteString getClientAuthCertificate() {
+                return instance.getClientAuthCertificate();
+            }
+            /**
+             * <code>required bytes client_auth_certificate = 2;</code>
+             */
+            public Builder setClientAuthCertificate(com.google.protobuf.ByteString value) {
+                copyOnWrite();
+                instance.setClientAuthCertificate(value);
+                return this;
+            }
+            /**
+             * <code>required bytes client_auth_certificate = 2;</code>
+             */
+            public Builder clearClientAuthCertificate() {
+                copyOnWrite();
+                instance.clearClientAuthCertificate();
+                return this;
+            }
+
+            /**
+             * <code>repeated bytes intermediate_certificate = 3;</code>
+             */
+            @Override
+            public java.util.List<com.google.protobuf.ByteString>
+            getIntermediateCertificateList() {
+                return java.util.Collections.unmodifiableList(
+                        instance.getIntermediateCertificateList());
+            }
+            /**
+             * <code>repeated bytes intermediate_certificate = 3;</code>
+             */
+            @Override
+            public int getIntermediateCertificateCount() {
+                return instance.getIntermediateCertificateCount();
+            }
+            /**
+             * <code>repeated bytes intermediate_certificate = 3;</code>
+             */
+            @Override
+            public com.google.protobuf.ByteString getIntermediateCertificate(int index) {
+                return instance.getIntermediateCertificate(index);
+            }
+            /**
+             * <code>repeated bytes intermediate_certificate = 3;</code>
+             */
+            public Builder setIntermediateCertificate(
+                    int index, com.google.protobuf.ByteString value) {
+                copyOnWrite();
+                instance.setIntermediateCertificate(index, value);
+                return this;
+            }
+            /**
+             * <code>repeated bytes intermediate_certificate = 3;</code>
+             */
+            public Builder addIntermediateCertificate(com.google.protobuf.ByteString value) {
+                copyOnWrite();
+                instance.addIntermediateCertificate(value);
+                return this;
+            }
+            /**
+             * <code>repeated bytes intermediate_certificate = 3;</code>
+             */
+            public Builder addAllIntermediateCertificate(
+                    Iterable<? extends com.google.protobuf.ByteString> values) {
+                copyOnWrite();
+                instance.addAllIntermediateCertificate(values);
+                return this;
+            }
+            /**
+             * <code>repeated bytes intermediate_certificate = 3;</code>
+             */
+            public Builder clearIntermediateCertificate() {
+                copyOnWrite();
+                instance.clearIntermediateCertificate();
+                return this;
+            }
+
+            /**
+             * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 4 [default = RSASSA_PKCS1v15];</code>
+             */
+            @Override
+            public boolean hasSignatureAlgorithm() {
+                return instance.hasSignatureAlgorithm();
+            }
+            /**
+             * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 4 [default = RSASSA_PKCS1v15];</code>
+             */
+            @Override
+            public CastChannelProto.SignatureAlgorithm getSignatureAlgorithm() {
+                return instance.getSignatureAlgorithm();
+            }
+            /**
+             * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 4 [default = RSASSA_PKCS1v15];</code>
+             */
+            public Builder setSignatureAlgorithm(CastChannelProto.SignatureAlgorithm value) {
+                copyOnWrite();
+                instance.setSignatureAlgorithm(value);
+                return this;
+            }
+            /**
+             * <code>optional .extensions.api.cast_channel.SignatureAlgorithm signature_algorithm = 4 [default = RSASSA_PKCS1v15];</code>
+             */
+            public Builder clearSignatureAlgorithm() {
+                copyOnWrite();
+                instance.clearSignatureAlgorithm();
+                return this;
+            }
+
+            /**
+             * <code>optional bytes sender_nonce = 5;</code>
+             */
+            @Override
+            public boolean hasSenderNonce() {
+                return instance.hasSenderNonce();
+            }
+            /**
+             * <code>optional bytes sender_nonce = 5;</code>
+             */
+            @Override
+            public com.google.protobuf.ByteString getSenderNonce() {
+                return instance.getSenderNonce();
+            }
+            /**
+             * <code>optional bytes sender_nonce = 5;</code>
+             */
+            public Builder setSenderNonce(com.google.protobuf.ByteString value) {
+                copyOnWrite();
+                instance.setSenderNonce(value);
+                return this;
+            }
+            /**
+             * <code>optional bytes sender_nonce = 5;</code>
+             */
+            public Builder clearSenderNonce() {
+                copyOnWrite();
+                instance.clearSenderNonce();
+                return this;
+            }
+
+            /**
+             * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 6 [default = SHA1];</code>
+             */
+            @Override
+            public boolean hasHashAlgorithm() {
+                return instance.hasHashAlgorithm();
+            }
+            /**
+             * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 6 [default = SHA1];</code>
+             */
+            @Override
+            public CastChannelProto.HashAlgorithm getHashAlgorithm() {
+                return instance.getHashAlgorithm();
+            }
+            /**
+             * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 6 [default = SHA1];</code>
+             */
+            public Builder setHashAlgorithm(CastChannelProto.HashAlgorithm value) {
+                copyOnWrite();
+                instance.setHashAlgorithm(value);
+                return this;
+            }
+            /**
+             * <code>optional .extensions.api.cast_channel.HashAlgorithm hash_algorithm = 6 [default = SHA1];</code>
+             */
+            public Builder clearHashAlgorithm() {
+                copyOnWrite();
+                instance.clearHashAlgorithm();
+                return this;
+            }
+
+            /**
+             * <code>optional bytes crl = 7;</code>
+             */
+            @Override
+            public boolean hasCrl() {
+                return instance.hasCrl();
+            }
+            /**
+             * <code>optional bytes crl = 7;</code>
+             */
+            @Override
+            public com.google.protobuf.ByteString getCrl() {
+                return instance.getCrl();
+            }
+            /**
+             * <code>optional bytes crl = 7;</code>
+             */
+            public Builder setCrl(com.google.protobuf.ByteString value) {
+                copyOnWrite();
+                instance.setCrl(value);
+                return this;
+            }
+            /**
+             * <code>optional bytes crl = 7;</code>
+             */
+            public Builder clearCrl() {
+                copyOnWrite();
+                instance.clearCrl();
+                return this;
+            }
+
+            // @@protoc_insertion_point(builder_scope:extensions.api.cast_channel.AuthResponse)
+        }
+        private byte memoizedIsInitialized = 2;
+        @Override
+        @SuppressWarnings({"unchecked", "fallthrough"})
+        protected final Object dynamicMethod(
+                com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+                Object arg0, Object arg1) {
+            switch (method) {
+                case NEW_MUTABLE_INSTANCE: {
+                    return new CastChannelProto.AuthResponse();
+                }
+                case NEW_BUILDER: {
+                    return new Builder();
+                }
+                case IS_INITIALIZED: {
+                    byte isInitialized = memoizedIsInitialized;
+                    if (isInitialized == 1) return DEFAULT_INSTANCE;
+                    if (isInitialized == 0) return null;
+
+                    boolean shouldMemoize = ((Boolean) arg0).booleanValue();
+                    if (!hasSignature()) {
+                        return null;
+                    }
+                    if (!hasClientAuthCertificate()) {
+                        return null;
+                    }
+                    return DEFAULT_INSTANCE;
+
+                }
+                case MAKE_IMMUTABLE: {
+                    intermediateCertificate_.makeImmutable();
+                    return null;
+                }
+                case VISIT: {
+                    Visitor visitor = (Visitor) arg0;
+                    CastChannelProto.AuthResponse other = (CastChannelProto.AuthResponse) arg1;
+                    signature_ = visitor.visitByteString(
+                            hasSignature(), signature_,
+                            other.hasSignature(), other.signature_);
+                    clientAuthCertificate_ = visitor.visitByteString(
+                            hasClientAuthCertificate(), clientAuthCertificate_,
+                            other.hasClientAuthCertificate(), other.clientAuthCertificate_);
+                    intermediateCertificate_= visitor.visitList(intermediateCertificate_, other.intermediateCertificate_);
+                    signatureAlgorithm_ = visitor.visitInt(hasSignatureAlgorithm(), signatureAlgorithm_,
+                            other.hasSignatureAlgorithm(), other.signatureAlgorithm_);
+                    senderNonce_ = visitor.visitByteString(
+                            hasSenderNonce(), senderNonce_,
+                            other.hasSenderNonce(), other.senderNonce_);
+                    hashAlgorithm_ = visitor.visitInt(hasHashAlgorithm(), hashAlgorithm_,
+                            other.hasHashAlgorithm(), other.hashAlgorithm_);
+                    crl_ = visitor.visitByteString(
+                            hasCrl(), crl_,
+                            other.hasCrl(), other.crl_);
+                    if (visitor == com.google.protobuf.GeneratedMessageLite.MergeFromVisitor
+                            .INSTANCE) {
+                        bitField0_ |= other.bitField0_;
+                    }
+                    return this;
+                }
+                case MERGE_FROM_STREAM: {
+                    com.google.protobuf.CodedInputStream input =
+                            (com.google.protobuf.CodedInputStream) arg0;
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry =
+                            (com.google.protobuf.ExtensionRegistryLite) arg1;
+                    if (extensionRegistry == null) {
+                        throw new NullPointerException();
+                    }
+                    try {
+                        boolean done = false;
+                        while (!done) {
+                            int tag = input.readTag();
+                            switch (tag) {
+                                case 0:
+                                    done = true;
+                                    break;
+                                case 10: {
+                                    bitField0_ |= 0x00000001;
+                                    signature_ = input.readBytes();
+                                    break;
+                                }
+                                case 18: {
+                                    bitField0_ |= 0x00000002;
+                                    clientAuthCertificate_ = input.readBytes();
+                                    break;
+                                }
+                                case 26: {
+                                    if (!intermediateCertificate_.isModifiable()) {
+                                        intermediateCertificate_ =
+                                                com.google.protobuf.GeneratedMessageLite.mutableCopy(intermediateCertificate_);
+                                    }
+                                    intermediateCertificate_.add(input.readBytes());
+                                    break;
+                                }
+                                case 32: {
+                                    int rawValue = input.readEnum();
+                                    CastChannelProto.SignatureAlgorithm value = CastChannelProto.SignatureAlgorithm.forNumber(rawValue);
+                                    if (value == null) {
+                                        super.mergeVarintField(4, rawValue);
+                                    } else {
+                                        bitField0_ |= 0x00000004;
+                                        signatureAlgorithm_ = rawValue;
+                                    }
+                                    break;
+                                }
+                                case 42: {
+                                    bitField0_ |= 0x00000008;
+                                    senderNonce_ = input.readBytes();
+                                    break;
+                                }
+                                case 48: {
+                                    int rawValue = input.readEnum();
+                                    CastChannelProto.HashAlgorithm value = CastChannelProto.HashAlgorithm.forNumber(rawValue);
+                                    if (value == null) {
+                                        super.mergeVarintField(6, rawValue);
+                                    } else {
+                                        bitField0_ |= 0x00000010;
+                                        hashAlgorithm_ = rawValue;
+                                    }
+                                    break;
+                                }
+                                case 58: {
+                                    bitField0_ |= 0x00000020;
+                                    crl_ = input.readBytes();
+                                    break;
+                                }
+                                default: {
+                                    if (!parseUnknownField(tag, input)) {
+                                        done = true;
+                                    }
+                                    break;
+                                }
+                            }
+                        }
+                    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                        throw new RuntimeException(e.setUnfinishedMessage(this));
+                    } catch (java.io.IOException e) {
+                        throw new RuntimeException(
+                                new com.google.protobuf.InvalidProtocolBufferException(
+                                        e.getMessage()).setUnfinishedMessage(this));
+                    } finally {
+                    }
+                }
+                // fall through
+                case GET_DEFAULT_INSTANCE: {
+                    return DEFAULT_INSTANCE;
+                }
+                case GET_PARSER: {
+                    com.google.protobuf.Parser<CastChannelProto.AuthResponse> parser = PARSER;
+                    if (parser == null) {
+                        synchronized (CastChannelProto.AuthResponse.class) {
+                            parser = PARSER;
+                            if (parser == null) {
+                                parser = new DefaultInstanceBasedParser(DEFAULT_INSTANCE);
+                                PARSER = parser;
+                            }
+                        }
+                    }
+                    return parser;
+                }
+                case GET_MEMOIZED_IS_INITIALIZED: {
+                    return memoizedIsInitialized;
+                }
+                case SET_MEMOIZED_IS_INITIALIZED: {
+                    memoizedIsInitialized = (byte) (arg0 == null ? 0 : 1);
+                    return null;
+                }
+            }
+            throw new UnsupportedOperationException();
+        }
+
+
+        // @@protoc_insertion_point(class_scope:extensions.api.cast_channel.AuthResponse)
+        private static final CastChannelProto.AuthResponse DEFAULT_INSTANCE;
+        static {
+            // New instances are implicitly immutable so no need to make
+            // immutable.
+            DEFAULT_INSTANCE = new AuthResponse();
+        }
+
+        public static CastChannelProto.AuthResponse getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static volatile com.google.protobuf.Parser<AuthResponse> PARSER;
+
+        public static com.google.protobuf.Parser<AuthResponse> parser() {
+            return DEFAULT_INSTANCE.getParserForType();
+        }
     }
 
-    private int bitField0_;
-    public static final int ERROR_TYPE_FIELD_NUMBER = 1;
-    private int errorType_;
-    /**
-     * <code>required .extensions.api.cast_channel.AuthError.ErrorType error_type = 1;</code>
-     */
-    @Override
-    public boolean hasErrorType() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>required .extensions.api.cast_channel.AuthError.ErrorType error_type = 1;</code>
-     */
-    @Override
-    public CastChannelProto.AuthError.ErrorType getErrorType() {
-      CastChannelProto.AuthError.ErrorType result = CastChannelProto.AuthError.ErrorType.forNumber(errorType_);
-      return result == null ? CastChannelProto.AuthError.ErrorType.INTERNAL_ERROR : result;
-    }
-    /**
-     * <code>required .extensions.api.cast_channel.AuthError.ErrorType error_type = 1;</code>
-     */
-    private void setErrorType(CastChannelProto.AuthError.ErrorType value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      bitField0_ |= 0x00000001;
-      errorType_ = value.getNumber();
-    }
-    /**
-     * <code>required .extensions.api.cast_channel.AuthError.ErrorType error_type = 1;</code>
-     */
-    private void clearErrorType() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      errorType_ = 0;
-    }
+    public interface AuthErrorOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:extensions.api.cast_channel.AuthError)
+            com.google.protobuf.MessageLiteOrBuilder {
 
-    @Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeEnum(1, errorType_);
-      }
-      unknownFields.writeTo(output);
+        /**
+         * <code>required .extensions.api.cast_channel.AuthError.ErrorType error_type = 1;</code>
+         */
+        boolean hasErrorType();
+        /**
+         * <code>required .extensions.api.cast_channel.AuthError.ErrorType error_type = 1;</code>
+         */
+        CastChannelProto.AuthError.ErrorType getErrorType();
     }
-
-    @Override
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, errorType_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    public static CastChannelProto.AuthError parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static CastChannelProto.AuthError parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static CastChannelProto.AuthError parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static CastChannelProto.AuthError parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static CastChannelProto.AuthError parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static CastChannelProto.AuthError parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static CastChannelProto.AuthError parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static CastChannelProto.AuthError parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static CastChannelProto.AuthError parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
-    }
-    public static CastChannelProto.AuthError parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static CastChannelProto.AuthError parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static CastChannelProto.AuthError parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() {
-      return (Builder) DEFAULT_INSTANCE.createBuilder();
-    }
-    public static Builder newBuilder(CastChannelProto.AuthError prototype) {
-      return DEFAULT_INSTANCE.createBuilder(prototype);
-    }
-
     /**
      * Protobuf type {@code extensions.api.cast_channel.AuthError}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageLite.Builder<
-          CastChannelProto.AuthError, Builder> implements
-        // @@protoc_insertion_point(builder_implements:extensions.api.cast_channel.AuthError)
-        CastChannelProto.AuthErrorOrBuilder {
-      // Construct using extensions.api.cast_channel.CastChannelProto.AuthError.newBuilder()
-      private Builder() {
-        super(DEFAULT_INSTANCE);
-      }
+    public  static final class AuthError extends
+            com.google.protobuf.GeneratedMessageLite<
+                    AuthError, AuthError.Builder> implements
+            // @@protoc_insertion_point(message_implements:extensions.api.cast_channel.AuthError)
+            AuthErrorOrBuilder {
+        private AuthError() {
+        }
+        /**
+         * Protobuf enum {@code extensions.api.cast_channel.AuthError.ErrorType}
+         */
+        public enum ErrorType
+                implements com.google.protobuf.Internal.EnumLite {
+            /**
+             * <code>INTERNAL_ERROR = 0;</code>
+             */
+            INTERNAL_ERROR(0),
+            /**
+             * <pre>
+             * The underlying connection is not TLS
+             * </pre>
+             *
+             * <code>NO_TLS = 1;</code>
+             */
+            NO_TLS(1),
+            /**
+             * <code>SIGNATURE_ALGORITHM_UNAVAILABLE = 2;</code>
+             */
+            SIGNATURE_ALGORITHM_UNAVAILABLE(2),
+            ;
+
+            /**
+             * <code>INTERNAL_ERROR = 0;</code>
+             */
+            public static final int INTERNAL_ERROR_VALUE = 0;
+            /**
+             * <pre>
+             * The underlying connection is not TLS
+             * </pre>
+             *
+             * <code>NO_TLS = 1;</code>
+             */
+            public static final int NO_TLS_VALUE = 1;
+            /**
+             * <code>SIGNATURE_ALGORITHM_UNAVAILABLE = 2;</code>
+             */
+            public static final int SIGNATURE_ALGORITHM_UNAVAILABLE_VALUE = 2;
 
 
-      /**
-       * <code>required .extensions.api.cast_channel.AuthError.ErrorType error_type = 1;</code>
-       */
-      @Override
-      public boolean hasErrorType() {
-        return instance.hasErrorType();
-      }
-      /**
-       * <code>required .extensions.api.cast_channel.AuthError.ErrorType error_type = 1;</code>
-       */
-      @Override
-      public CastChannelProto.AuthError.ErrorType getErrorType() {
-        return instance.getErrorType();
-      }
-      /**
-       * <code>required .extensions.api.cast_channel.AuthError.ErrorType error_type = 1;</code>
-       */
-      public Builder setErrorType(CastChannelProto.AuthError.ErrorType value) {
-        copyOnWrite();
-        instance.setErrorType(value);
-        return this;
-      }
-      /**
-       * <code>required .extensions.api.cast_channel.AuthError.ErrorType error_type = 1;</code>
-       */
-      public Builder clearErrorType() {
-        copyOnWrite();
-        instance.clearErrorType();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:extensions.api.cast_channel.AuthError)
-    }
-    private byte memoizedIsInitialized = 2;
-    @Override
-    @SuppressWarnings({"unchecked", "fallthrough"})
-    protected final Object dynamicMethod(
-        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
-        Object arg0, Object arg1) {
-      switch (method) {
-        case NEW_MUTABLE_INSTANCE: {
-          return new CastChannelProto.AuthError();
-        }
-        case NEW_BUILDER: {
-          return new Builder();
-        }
-        case IS_INITIALIZED: {
-          byte isInitialized = memoizedIsInitialized;
-          if (isInitialized == 1) return DEFAULT_INSTANCE;
-          if (isInitialized == 0) return null;
-
-          boolean shouldMemoize = ((Boolean) arg0).booleanValue();
-          if (!hasErrorType()) {
-            return null;
-          }
-          return DEFAULT_INSTANCE;
-
-        }
-        case MAKE_IMMUTABLE: {
-          return null;
-        }
-        case VISIT: {
-          Visitor visitor = (Visitor) arg0;
-          CastChannelProto.AuthError other = (CastChannelProto.AuthError) arg1;
-          errorType_ = visitor.visitInt(hasErrorType(), errorType_,
-              other.hasErrorType(), other.errorType_);
-          if (visitor == com.google.protobuf.GeneratedMessageLite.MergeFromVisitor
-              .INSTANCE) {
-            bitField0_ |= other.bitField0_;
-          }
-          return this;
-        }
-        case MERGE_FROM_STREAM: {
-          com.google.protobuf.CodedInputStream input =
-              (com.google.protobuf.CodedInputStream) arg0;
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry =
-              (com.google.protobuf.ExtensionRegistryLite) arg1;
-          if (extensionRegistry == null) {
-            throw new NullPointerException();
-          }
-          try {
-            boolean done = false;
-            while (!done) {
-              int tag = input.readTag();
-              switch (tag) {
-                case 0:
-                  done = true;
-                  break;
-                case 8: {
-                  int rawValue = input.readEnum();
-                  CastChannelProto.AuthError.ErrorType value = CastChannelProto.AuthError.ErrorType.forNumber(rawValue);
-                  if (value == null) {
-                    super.mergeVarintField(1, rawValue);
-                  } else {
-                    bitField0_ |= 0x00000001;
-                    errorType_ = rawValue;
-                  }
-                  break;
-                }
-                default: {
-                  if (!parseUnknownField(tag, input)) {
-                    done = true;
-                  }
-                  break;
-                }
-              }
+            @Override
+            public final int getNumber() {
+                return value;
             }
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw new RuntimeException(e.setUnfinishedMessage(this));
-          } catch (java.io.IOException e) {
-            throw new RuntimeException(
-                new com.google.protobuf.InvalidProtocolBufferException(
-                    e.getMessage()).setUnfinishedMessage(this));
-          } finally {
-          }
-        }
-        // fall through
-        case GET_DEFAULT_INSTANCE: {
-          return DEFAULT_INSTANCE;
-        }
-        case GET_PARSER: {
-          com.google.protobuf.Parser<CastChannelProto.AuthError> parser = PARSER;
-          if (parser == null) {
-            synchronized (CastChannelProto.AuthError.class) {
-              parser = PARSER;
-              if (parser == null) {
-                parser = new DefaultInstanceBasedParser(DEFAULT_INSTANCE);
-                PARSER = parser;
-              }
+
+            /**
+             * @deprecated Use {@link #forNumber(int)} instead.
+             */
+            @Deprecated
+            public static ErrorType valueOf(int value) {
+                return forNumber(value);
             }
-          }
-          return parser;
-      }
-      case GET_MEMOIZED_IS_INITIALIZED: {
-        return memoizedIsInitialized;
-      }
-      case SET_MEMOIZED_IS_INITIALIZED: {
-        memoizedIsInitialized = (byte) (arg0 == null ? 0 : 1);
-        return null;
-      }
-      }
-      throw new UnsupportedOperationException();
-    }
+
+            public static ErrorType forNumber(int value) {
+                switch (value) {
+                    case 0: return INTERNAL_ERROR;
+                    case 1: return NO_TLS;
+                    case 2: return SIGNATURE_ALGORITHM_UNAVAILABLE;
+                    default: return null;
+                }
+            }
+
+            public static com.google.protobuf.Internal.EnumLiteMap<ErrorType>
+            internalGetValueMap() {
+                return internalValueMap;
+            }
+            private static final com.google.protobuf.Internal.EnumLiteMap<
+                    ErrorType> internalValueMap =
+                    new com.google.protobuf.Internal.EnumLiteMap<ErrorType>() {
+                        @Override
+                        public ErrorType findValueByNumber(int number) {
+                            return ErrorType.forNumber(number);
+                        }
+                    };
+
+            private final int value;
+
+            ErrorType(int value) {
+                this.value = value;
+            }
+
+            // @@protoc_insertion_point(enum_scope:extensions.api.cast_channel.AuthError.ErrorType)
+        }
+
+        private int bitField0_;
+        public static final int ERROR_TYPE_FIELD_NUMBER = 1;
+        private int errorType_;
+        /**
+         * <code>required .extensions.api.cast_channel.AuthError.ErrorType error_type = 1;</code>
+         */
+        @Override
+        public boolean hasErrorType() {
+            return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>required .extensions.api.cast_channel.AuthError.ErrorType error_type = 1;</code>
+         */
+        @Override
+        public CastChannelProto.AuthError.ErrorType getErrorType() {
+            CastChannelProto.AuthError.ErrorType result = CastChannelProto.AuthError.ErrorType.forNumber(errorType_);
+            return result == null ? CastChannelProto.AuthError.ErrorType.INTERNAL_ERROR : result;
+        }
+        /**
+         * <code>required .extensions.api.cast_channel.AuthError.ErrorType error_type = 1;</code>
+         */
+        private void setErrorType(CastChannelProto.AuthError.ErrorType value) {
+            if (value == null) {
+                throw new NullPointerException();
+            }
+            bitField0_ |= 0x00000001;
+            errorType_ = value.getNumber();
+        }
+        /**
+         * <code>required .extensions.api.cast_channel.AuthError.ErrorType error_type = 1;</code>
+         */
+        private void clearErrorType() {
+            bitField0_ = (bitField0_ & ~0x00000001);
+            errorType_ = 0;
+        }
+
+        @Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                throws java.io.IOException {
+            if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                output.writeEnum(1, errorType_);
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @Override
+        public int getSerializedSize() {
+            int size = memoizedSerializedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeEnumSize(1, errorType_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSerializedSize = size;
+            return size;
+        }
+
+        public static CastChannelProto.AuthError parseFrom(
+                java.nio.ByteBuffer data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, data);
+        }
+        public static CastChannelProto.AuthError parseFrom(
+                java.nio.ByteBuffer data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, data, extensionRegistry);
+        }
+        public static CastChannelProto.AuthError parseFrom(
+                com.google.protobuf.ByteString data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, data);
+        }
+        public static CastChannelProto.AuthError parseFrom(
+                com.google.protobuf.ByteString data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, data, extensionRegistry);
+        }
+        public static CastChannelProto.AuthError parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, data);
+        }
+        public static CastChannelProto.AuthError parseFrom(
+                byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, data, extensionRegistry);
+        }
+        public static CastChannelProto.AuthError parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, input);
+        }
+        public static CastChannelProto.AuthError parseFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, input, extensionRegistry);
+        }
+        public static CastChannelProto.AuthError parseDelimitedFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+        }
+        public static CastChannelProto.AuthError parseDelimitedFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+        }
+        public static CastChannelProto.AuthError parseFrom(
+                com.google.protobuf.CodedInputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, input);
+        }
+        public static CastChannelProto.AuthError parseFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, input, extensionRegistry);
+        }
+
+        public static Builder newBuilder() {
+            return (Builder) DEFAULT_INSTANCE.createBuilder();
+        }
+        public static Builder newBuilder(CastChannelProto.AuthError prototype) {
+            return DEFAULT_INSTANCE.createBuilder(prototype);
+        }
+
+        /**
+         * Protobuf type {@code extensions.api.cast_channel.AuthError}
+         */
+        public static final class Builder extends
+                com.google.protobuf.GeneratedMessageLite.Builder<
+                        CastChannelProto.AuthError, Builder> implements
+                // @@protoc_insertion_point(builder_implements:extensions.api.cast_channel.AuthError)
+                CastChannelProto.AuthErrorOrBuilder {
+            // Construct using extensions.api.cast_channel.CastChannelProto.AuthError.newBuilder()
+            private Builder() {
+                super(DEFAULT_INSTANCE);
+            }
 
 
-    // @@protoc_insertion_point(class_scope:extensions.api.cast_channel.AuthError)
-    private static final CastChannelProto.AuthError DEFAULT_INSTANCE;
-    static {
-      // New instances are implicitly immutable so no need to make
-      // immutable.
-      DEFAULT_INSTANCE = new AuthError();
+            /**
+             * <code>required .extensions.api.cast_channel.AuthError.ErrorType error_type = 1;</code>
+             */
+            @Override
+            public boolean hasErrorType() {
+                return instance.hasErrorType();
+            }
+            /**
+             * <code>required .extensions.api.cast_channel.AuthError.ErrorType error_type = 1;</code>
+             */
+            @Override
+            public CastChannelProto.AuthError.ErrorType getErrorType() {
+                return instance.getErrorType();
+            }
+            /**
+             * <code>required .extensions.api.cast_channel.AuthError.ErrorType error_type = 1;</code>
+             */
+            public Builder setErrorType(CastChannelProto.AuthError.ErrorType value) {
+                copyOnWrite();
+                instance.setErrorType(value);
+                return this;
+            }
+            /**
+             * <code>required .extensions.api.cast_channel.AuthError.ErrorType error_type = 1;</code>
+             */
+            public Builder clearErrorType() {
+                copyOnWrite();
+                instance.clearErrorType();
+                return this;
+            }
+
+            // @@protoc_insertion_point(builder_scope:extensions.api.cast_channel.AuthError)
+        }
+        private byte memoizedIsInitialized = 2;
+        @Override
+        @SuppressWarnings({"unchecked", "fallthrough"})
+        protected final Object dynamicMethod(
+                com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+                Object arg0, Object arg1) {
+            switch (method) {
+                case NEW_MUTABLE_INSTANCE: {
+                    return new CastChannelProto.AuthError();
+                }
+                case NEW_BUILDER: {
+                    return new Builder();
+                }
+                case IS_INITIALIZED: {
+                    byte isInitialized = memoizedIsInitialized;
+                    if (isInitialized == 1) return DEFAULT_INSTANCE;
+                    if (isInitialized == 0) return null;
+
+                    boolean shouldMemoize = ((Boolean) arg0).booleanValue();
+                    if (!hasErrorType()) {
+                        return null;
+                    }
+                    return DEFAULT_INSTANCE;
+
+                }
+                case MAKE_IMMUTABLE: {
+                    return null;
+                }
+                case VISIT: {
+                    Visitor visitor = (Visitor) arg0;
+                    CastChannelProto.AuthError other = (CastChannelProto.AuthError) arg1;
+                    errorType_ = visitor.visitInt(hasErrorType(), errorType_,
+                            other.hasErrorType(), other.errorType_);
+                    if (visitor == com.google.protobuf.GeneratedMessageLite.MergeFromVisitor
+                            .INSTANCE) {
+                        bitField0_ |= other.bitField0_;
+                    }
+                    return this;
+                }
+                case MERGE_FROM_STREAM: {
+                    com.google.protobuf.CodedInputStream input =
+                            (com.google.protobuf.CodedInputStream) arg0;
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry =
+                            (com.google.protobuf.ExtensionRegistryLite) arg1;
+                    if (extensionRegistry == null) {
+                        throw new NullPointerException();
+                    }
+                    try {
+                        boolean done = false;
+                        while (!done) {
+                            int tag = input.readTag();
+                            switch (tag) {
+                                case 0:
+                                    done = true;
+                                    break;
+                                case 8: {
+                                    int rawValue = input.readEnum();
+                                    CastChannelProto.AuthError.ErrorType value = CastChannelProto.AuthError.ErrorType.forNumber(rawValue);
+                                    if (value == null) {
+                                        super.mergeVarintField(1, rawValue);
+                                    } else {
+                                        bitField0_ |= 0x00000001;
+                                        errorType_ = rawValue;
+                                    }
+                                    break;
+                                }
+                                default: {
+                                    if (!parseUnknownField(tag, input)) {
+                                        done = true;
+                                    }
+                                    break;
+                                }
+                            }
+                        }
+                    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                        throw new RuntimeException(e.setUnfinishedMessage(this));
+                    } catch (java.io.IOException e) {
+                        throw new RuntimeException(
+                                new com.google.protobuf.InvalidProtocolBufferException(
+                                        e.getMessage()).setUnfinishedMessage(this));
+                    } finally {
+                    }
+                }
+                // fall through
+                case GET_DEFAULT_INSTANCE: {
+                    return DEFAULT_INSTANCE;
+                }
+                case GET_PARSER: {
+                    com.google.protobuf.Parser<CastChannelProto.AuthError> parser = PARSER;
+                    if (parser == null) {
+                        synchronized (CastChannelProto.AuthError.class) {
+                            parser = PARSER;
+                            if (parser == null) {
+                                parser = new DefaultInstanceBasedParser(DEFAULT_INSTANCE);
+                                PARSER = parser;
+                            }
+                        }
+                    }
+                    return parser;
+                }
+                case GET_MEMOIZED_IS_INITIALIZED: {
+                    return memoizedIsInitialized;
+                }
+                case SET_MEMOIZED_IS_INITIALIZED: {
+                    memoizedIsInitialized = (byte) (arg0 == null ? 0 : 1);
+                    return null;
+                }
+            }
+            throw new UnsupportedOperationException();
+        }
+
+
+        // @@protoc_insertion_point(class_scope:extensions.api.cast_channel.AuthError)
+        private static final CastChannelProto.AuthError DEFAULT_INSTANCE;
+        static {
+            // New instances are implicitly immutable so no need to make
+            // immutable.
+            DEFAULT_INSTANCE = new AuthError();
+        }
+
+        public static CastChannelProto.AuthError getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static volatile com.google.protobuf.Parser<AuthError> PARSER;
+
+        public static com.google.protobuf.Parser<AuthError> parser() {
+            return DEFAULT_INSTANCE.getParserForType();
+        }
     }
 
-    public static CastChannelProto.AuthError getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
+    public interface DeviceAuthMessageOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:extensions.api.cast_channel.DeviceAuthMessage)
+            com.google.protobuf.MessageLiteOrBuilder {
 
-    private static volatile com.google.protobuf.Parser<AuthError> PARSER;
+        /**
+         * <pre>
+         * Request fields
+         * </pre>
+         *
+         * <code>optional .extensions.api.cast_channel.AuthChallenge challenge = 1;</code>
+         */
+        boolean hasChallenge();
+        /**
+         * <pre>
+         * Request fields
+         * </pre>
+         *
+         * <code>optional .extensions.api.cast_channel.AuthChallenge challenge = 1;</code>
+         */
+        CastChannelProto.AuthChallenge getChallenge();
 
-    public static com.google.protobuf.Parser<AuthError> parser() {
-      return DEFAULT_INSTANCE.getParserForType();
-    }
-  }
+        /**
+         * <pre>
+         * Response fields
+         * </pre>
+         *
+         * <code>optional .extensions.api.cast_channel.AuthResponse response = 2;</code>
+         */
+        boolean hasResponse();
+        /**
+         * <pre>
+         * Response fields
+         * </pre>
+         *
+         * <code>optional .extensions.api.cast_channel.AuthResponse response = 2;</code>
+         */
+        CastChannelProto.AuthResponse getResponse();
 
-  public interface DeviceAuthMessageOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:extensions.api.cast_channel.DeviceAuthMessage)
-      com.google.protobuf.MessageLiteOrBuilder {
-
-    /**
-     * <pre>
-     * Request fields
-     * </pre>
-     *
-     * <code>optional .extensions.api.cast_channel.AuthChallenge challenge = 1;</code>
-     */
-    boolean hasChallenge();
-    /**
-     * <pre>
-     * Request fields
-     * </pre>
-     *
-     * <code>optional .extensions.api.cast_channel.AuthChallenge challenge = 1;</code>
-     */
-    CastChannelProto.AuthChallenge getChallenge();
-
-    /**
-     * <pre>
-     * Response fields
-     * </pre>
-     *
-     * <code>optional .extensions.api.cast_channel.AuthResponse response = 2;</code>
-     */
-    boolean hasResponse();
-    /**
-     * <pre>
-     * Response fields
-     * </pre>
-     *
-     * <code>optional .extensions.api.cast_channel.AuthResponse response = 2;</code>
-     */
-    CastChannelProto.AuthResponse getResponse();
-
-    /**
-     * <code>optional .extensions.api.cast_channel.AuthError error = 3;</code>
-     */
-    boolean hasError();
-    /**
-     * <code>optional .extensions.api.cast_channel.AuthError error = 3;</code>
-     */
-    CastChannelProto.AuthError getError();
-  }
-  /**
-   * Protobuf type {@code extensions.api.cast_channel.DeviceAuthMessage}
-   */
-  public  static final class DeviceAuthMessage extends
-      com.google.protobuf.GeneratedMessageLite<
-          DeviceAuthMessage, DeviceAuthMessage.Builder> implements
-      // @@protoc_insertion_point(message_implements:extensions.api.cast_channel.DeviceAuthMessage)
-      DeviceAuthMessageOrBuilder {
-    private DeviceAuthMessage() {
+        /**
+         * <code>optional .extensions.api.cast_channel.AuthError error = 3;</code>
+         */
+        boolean hasError();
+        /**
+         * <code>optional .extensions.api.cast_channel.AuthError error = 3;</code>
+         */
+        CastChannelProto.AuthError getError();
     }
-    private int bitField0_;
-    public static final int CHALLENGE_FIELD_NUMBER = 1;
-    private CastChannelProto.AuthChallenge challenge_;
-    /**
-     * <pre>
-     * Request fields
-     * </pre>
-     *
-     * <code>optional .extensions.api.cast_channel.AuthChallenge challenge = 1;</code>
-     */
-    @Override
-    public boolean hasChallenge() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <pre>
-     * Request fields
-     * </pre>
-     *
-     * <code>optional .extensions.api.cast_channel.AuthChallenge challenge = 1;</code>
-     */
-    @Override
-    public CastChannelProto.AuthChallenge getChallenge() {
-      return challenge_ == null ? CastChannelProto.AuthChallenge.getDefaultInstance() : challenge_;
-    }
-    /**
-     * <pre>
-     * Request fields
-     * </pre>
-     *
-     * <code>optional .extensions.api.cast_channel.AuthChallenge challenge = 1;</code>
-     */
-    private void setChallenge(CastChannelProto.AuthChallenge value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      challenge_ = value;
-      bitField0_ |= 0x00000001;
-      }
-    /**
-     * <pre>
-     * Request fields
-     * </pre>
-     *
-     * <code>optional .extensions.api.cast_channel.AuthChallenge challenge = 1;</code>
-     */
-    private void setChallenge(
-        CastChannelProto.AuthChallenge.Builder builderForValue) {
-      challenge_ = builderForValue.build();
-      bitField0_ |= 0x00000001;
-    }
-    /**
-     * <pre>
-     * Request fields
-     * </pre>
-     *
-     * <code>optional .extensions.api.cast_channel.AuthChallenge challenge = 1;</code>
-     */
-    @SuppressWarnings({"ReferenceEquality"})
-    private void mergeChallenge(CastChannelProto.AuthChallenge value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      if (challenge_ != null &&
-          challenge_ != CastChannelProto.AuthChallenge.getDefaultInstance()) {
-        challenge_ =
-          CastChannelProto.AuthChallenge.newBuilder(challenge_).mergeFrom(value).buildPartial();
-      } else {
-        challenge_ = value;
-      }
-      bitField0_ |= 0x00000001;
-    }
-    /**
-     * <pre>
-     * Request fields
-     * </pre>
-     *
-     * <code>optional .extensions.api.cast_channel.AuthChallenge challenge = 1;</code>
-     */
-    private void clearChallenge() {  challenge_ = null;
-      bitField0_ = (bitField0_ & ~0x00000001);
-    }
-
-    public static final int RESPONSE_FIELD_NUMBER = 2;
-    private CastChannelProto.AuthResponse response_;
-    /**
-     * <pre>
-     * Response fields
-     * </pre>
-     *
-     * <code>optional .extensions.api.cast_channel.AuthResponse response = 2;</code>
-     */
-    @Override
-    public boolean hasResponse() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <pre>
-     * Response fields
-     * </pre>
-     *
-     * <code>optional .extensions.api.cast_channel.AuthResponse response = 2;</code>
-     */
-    @Override
-    public CastChannelProto.AuthResponse getResponse() {
-      return response_ == null ? CastChannelProto.AuthResponse.getDefaultInstance() : response_;
-    }
-    /**
-     * <pre>
-     * Response fields
-     * </pre>
-     *
-     * <code>optional .extensions.api.cast_channel.AuthResponse response = 2;</code>
-     */
-    private void setResponse(CastChannelProto.AuthResponse value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      response_ = value;
-      bitField0_ |= 0x00000002;
-      }
-    /**
-     * <pre>
-     * Response fields
-     * </pre>
-     *
-     * <code>optional .extensions.api.cast_channel.AuthResponse response = 2;</code>
-     */
-    private void setResponse(
-        CastChannelProto.AuthResponse.Builder builderForValue) {
-      response_ = builderForValue.build();
-      bitField0_ |= 0x00000002;
-    }
-    /**
-     * <pre>
-     * Response fields
-     * </pre>
-     *
-     * <code>optional .extensions.api.cast_channel.AuthResponse response = 2;</code>
-     */
-    @SuppressWarnings({"ReferenceEquality"})
-    private void mergeResponse(CastChannelProto.AuthResponse value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      if (response_ != null &&
-          response_ != CastChannelProto.AuthResponse.getDefaultInstance()) {
-        response_ =
-          CastChannelProto.AuthResponse.newBuilder(response_).mergeFrom(value).buildPartial();
-      } else {
-        response_ = value;
-      }
-      bitField0_ |= 0x00000002;
-    }
-    /**
-     * <pre>
-     * Response fields
-     * </pre>
-     *
-     * <code>optional .extensions.api.cast_channel.AuthResponse response = 2;</code>
-     */
-    private void clearResponse() {  response_ = null;
-      bitField0_ = (bitField0_ & ~0x00000002);
-    }
-
-    public static final int ERROR_FIELD_NUMBER = 3;
-    private CastChannelProto.AuthError error_;
-    /**
-     * <code>optional .extensions.api.cast_channel.AuthError error = 3;</code>
-     */
-    @Override
-    public boolean hasError() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
-    }
-    /**
-     * <code>optional .extensions.api.cast_channel.AuthError error = 3;</code>
-     */
-    @Override
-    public CastChannelProto.AuthError getError() {
-      return error_ == null ? CastChannelProto.AuthError.getDefaultInstance() : error_;
-    }
-    /**
-     * <code>optional .extensions.api.cast_channel.AuthError error = 3;</code>
-     */
-    private void setError(CastChannelProto.AuthError value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      error_ = value;
-      bitField0_ |= 0x00000004;
-      }
-    /**
-     * <code>optional .extensions.api.cast_channel.AuthError error = 3;</code>
-     */
-    private void setError(
-        CastChannelProto.AuthError.Builder builderForValue) {
-      error_ = builderForValue.build();
-      bitField0_ |= 0x00000004;
-    }
-    /**
-     * <code>optional .extensions.api.cast_channel.AuthError error = 3;</code>
-     */
-    @SuppressWarnings({"ReferenceEquality"})
-    private void mergeError(CastChannelProto.AuthError value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      if (error_ != null &&
-          error_ != CastChannelProto.AuthError.getDefaultInstance()) {
-        error_ =
-          CastChannelProto.AuthError.newBuilder(error_).mergeFrom(value).buildPartial();
-      } else {
-        error_ = value;
-      }
-      bitField0_ |= 0x00000004;
-    }
-    /**
-     * <code>optional .extensions.api.cast_channel.AuthError error = 3;</code>
-     */
-    private void clearError() {  error_ = null;
-      bitField0_ = (bitField0_ & ~0x00000004);
-    }
-
-    @Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeMessage(1, getChallenge());
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeMessage(2, getResponse());
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeMessage(3, getError());
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @Override
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getChallenge());
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getResponse());
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getError());
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    public static CastChannelProto.DeviceAuthMessage parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static CastChannelProto.DeviceAuthMessage parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static CastChannelProto.DeviceAuthMessage parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static CastChannelProto.DeviceAuthMessage parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static CastChannelProto.DeviceAuthMessage parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static CastChannelProto.DeviceAuthMessage parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static CastChannelProto.DeviceAuthMessage parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static CastChannelProto.DeviceAuthMessage parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static CastChannelProto.DeviceAuthMessage parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
-    }
-    public static CastChannelProto.DeviceAuthMessage parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static CastChannelProto.DeviceAuthMessage parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static CastChannelProto.DeviceAuthMessage parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() {
-      return (Builder) DEFAULT_INSTANCE.createBuilder();
-    }
-    public static Builder newBuilder(CastChannelProto.DeviceAuthMessage prototype) {
-      return DEFAULT_INSTANCE.createBuilder(prototype);
-    }
-
     /**
      * Protobuf type {@code extensions.api.cast_channel.DeviceAuthMessage}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageLite.Builder<
-          CastChannelProto.DeviceAuthMessage, Builder> implements
-        // @@protoc_insertion_point(builder_implements:extensions.api.cast_channel.DeviceAuthMessage)
-        CastChannelProto.DeviceAuthMessageOrBuilder {
-      // Construct using extensions.api.cast_channel.CastChannelProto.DeviceAuthMessage.newBuilder()
-      private Builder() {
-        super(DEFAULT_INSTANCE);
-      }
-
-
-      /**
-       * <pre>
-       * Request fields
-       * </pre>
-       *
-       * <code>optional .extensions.api.cast_channel.AuthChallenge challenge = 1;</code>
-       */
-      @Override
-      public boolean hasChallenge() {
-        return instance.hasChallenge();
-      }
-      /**
-       * <pre>
-       * Request fields
-       * </pre>
-       *
-       * <code>optional .extensions.api.cast_channel.AuthChallenge challenge = 1;</code>
-       */
-      @Override
-      public CastChannelProto.AuthChallenge getChallenge() {
-        return instance.getChallenge();
-      }
-      /**
-       * <pre>
-       * Request fields
-       * </pre>
-       *
-       * <code>optional .extensions.api.cast_channel.AuthChallenge challenge = 1;</code>
-       */
-      public Builder setChallenge(CastChannelProto.AuthChallenge value) {
-        copyOnWrite();
-        instance.setChallenge(value);
-        return this;
+    public  static final class DeviceAuthMessage extends
+            com.google.protobuf.GeneratedMessageLite<
+                    DeviceAuthMessage, DeviceAuthMessage.Builder> implements
+            // @@protoc_insertion_point(message_implements:extensions.api.cast_channel.DeviceAuthMessage)
+            DeviceAuthMessageOrBuilder {
+        private DeviceAuthMessage() {
         }
-      /**
-       * <pre>
-       * Request fields
-       * </pre>
-       *
-       * <code>optional .extensions.api.cast_channel.AuthChallenge challenge = 1;</code>
-       */
-      public Builder setChallenge(
-          CastChannelProto.AuthChallenge.Builder builderForValue) {
-        copyOnWrite();
-        instance.setChallenge(builderForValue);
-        return this;
-      }
-      /**
-       * <pre>
-       * Request fields
-       * </pre>
-       *
-       * <code>optional .extensions.api.cast_channel.AuthChallenge challenge = 1;</code>
-       */
-      public Builder mergeChallenge(CastChannelProto.AuthChallenge value) {
-        copyOnWrite();
-        instance.mergeChallenge(value);
-        return this;
-      }
-      /**
-       * <pre>
-       * Request fields
-       * </pre>
-       *
-       * <code>optional .extensions.api.cast_channel.AuthChallenge challenge = 1;</code>
-       */
-      public Builder clearChallenge() {  copyOnWrite();
-        instance.clearChallenge();
-        return this;
-      }
-
-      /**
-       * <pre>
-       * Response fields
-       * </pre>
-       *
-       * <code>optional .extensions.api.cast_channel.AuthResponse response = 2;</code>
-       */
-      @Override
-      public boolean hasResponse() {
-        return instance.hasResponse();
-      }
-      /**
-       * <pre>
-       * Response fields
-       * </pre>
-       *
-       * <code>optional .extensions.api.cast_channel.AuthResponse response = 2;</code>
-       */
-      @Override
-      public CastChannelProto.AuthResponse getResponse() {
-        return instance.getResponse();
-      }
-      /**
-       * <pre>
-       * Response fields
-       * </pre>
-       *
-       * <code>optional .extensions.api.cast_channel.AuthResponse response = 2;</code>
-       */
-      public Builder setResponse(CastChannelProto.AuthResponse value) {
-        copyOnWrite();
-        instance.setResponse(value);
-        return this;
+        private int bitField0_;
+        public static final int CHALLENGE_FIELD_NUMBER = 1;
+        private CastChannelProto.AuthChallenge challenge_;
+        /**
+         * <pre>
+         * Request fields
+         * </pre>
+         *
+         * <code>optional .extensions.api.cast_channel.AuthChallenge challenge = 1;</code>
+         */
+        @Override
+        public boolean hasChallenge() {
+            return ((bitField0_ & 0x00000001) == 0x00000001);
         }
-      /**
-       * <pre>
-       * Response fields
-       * </pre>
-       *
-       * <code>optional .extensions.api.cast_channel.AuthResponse response = 2;</code>
-       */
-      public Builder setResponse(
-          CastChannelProto.AuthResponse.Builder builderForValue) {
-        copyOnWrite();
-        instance.setResponse(builderForValue);
-        return this;
-      }
-      /**
-       * <pre>
-       * Response fields
-       * </pre>
-       *
-       * <code>optional .extensions.api.cast_channel.AuthResponse response = 2;</code>
-       */
-      public Builder mergeResponse(CastChannelProto.AuthResponse value) {
-        copyOnWrite();
-        instance.mergeResponse(value);
-        return this;
-      }
-      /**
-       * <pre>
-       * Response fields
-       * </pre>
-       *
-       * <code>optional .extensions.api.cast_channel.AuthResponse response = 2;</code>
-       */
-      public Builder clearResponse() {  copyOnWrite();
-        instance.clearResponse();
-        return this;
-      }
-
-      /**
-       * <code>optional .extensions.api.cast_channel.AuthError error = 3;</code>
-       */
-      @Override
-      public boolean hasError() {
-        return instance.hasError();
-      }
-      /**
-       * <code>optional .extensions.api.cast_channel.AuthError error = 3;</code>
-       */
-      @Override
-      public CastChannelProto.AuthError getError() {
-        return instance.getError();
-      }
-      /**
-       * <code>optional .extensions.api.cast_channel.AuthError error = 3;</code>
-       */
-      public Builder setError(CastChannelProto.AuthError value) {
-        copyOnWrite();
-        instance.setError(value);
-        return this;
+        /**
+         * <pre>
+         * Request fields
+         * </pre>
+         *
+         * <code>optional .extensions.api.cast_channel.AuthChallenge challenge = 1;</code>
+         */
+        @Override
+        public CastChannelProto.AuthChallenge getChallenge() {
+            return challenge_ == null ? CastChannelProto.AuthChallenge.getDefaultInstance() : challenge_;
         }
-      /**
-       * <code>optional .extensions.api.cast_channel.AuthError error = 3;</code>
-       */
-      public Builder setError(
-          CastChannelProto.AuthError.Builder builderForValue) {
-        copyOnWrite();
-        instance.setError(builderForValue);
-        return this;
-      }
-      /**
-       * <code>optional .extensions.api.cast_channel.AuthError error = 3;</code>
-       */
-      public Builder mergeError(CastChannelProto.AuthError value) {
-        copyOnWrite();
-        instance.mergeError(value);
-        return this;
-      }
-      /**
-       * <code>optional .extensions.api.cast_channel.AuthError error = 3;</code>
-       */
-      public Builder clearError() {  copyOnWrite();
-        instance.clearError();
-        return this;
-      }
+        /**
+         * <pre>
+         * Request fields
+         * </pre>
+         *
+         * <code>optional .extensions.api.cast_channel.AuthChallenge challenge = 1;</code>
+         */
+        private void setChallenge(CastChannelProto.AuthChallenge value) {
+            if (value == null) {
+                throw new NullPointerException();
+            }
+            challenge_ = value;
+            bitField0_ |= 0x00000001;
+        }
+        /**
+         * <pre>
+         * Request fields
+         * </pre>
+         *
+         * <code>optional .extensions.api.cast_channel.AuthChallenge challenge = 1;</code>
+         */
+        private void setChallenge(
+                CastChannelProto.AuthChallenge.Builder builderForValue) {
+            challenge_ = builderForValue.build();
+            bitField0_ |= 0x00000001;
+        }
+        /**
+         * <pre>
+         * Request fields
+         * </pre>
+         *
+         * <code>optional .extensions.api.cast_channel.AuthChallenge challenge = 1;</code>
+         */
+        @SuppressWarnings({"ReferenceEquality"})
+        private void mergeChallenge(CastChannelProto.AuthChallenge value) {
+            if (value == null) {
+                throw new NullPointerException();
+            }
+            if (challenge_ != null &&
+                    challenge_ != CastChannelProto.AuthChallenge.getDefaultInstance()) {
+                challenge_ =
+                        CastChannelProto.AuthChallenge.newBuilder(challenge_).mergeFrom(value).buildPartial();
+            } else {
+                challenge_ = value;
+            }
+            bitField0_ |= 0x00000001;
+        }
+        /**
+         * <pre>
+         * Request fields
+         * </pre>
+         *
+         * <code>optional .extensions.api.cast_channel.AuthChallenge challenge = 1;</code>
+         */
+        private void clearChallenge() {  challenge_ = null;
+            bitField0_ = (bitField0_ & ~0x00000001);
+        }
 
-      // @@protoc_insertion_point(builder_scope:extensions.api.cast_channel.DeviceAuthMessage)
+        public static final int RESPONSE_FIELD_NUMBER = 2;
+        private CastChannelProto.AuthResponse response_;
+        /**
+         * <pre>
+         * Response fields
+         * </pre>
+         *
+         * <code>optional .extensions.api.cast_channel.AuthResponse response = 2;</code>
+         */
+        @Override
+        public boolean hasResponse() {
+            return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+        /**
+         * <pre>
+         * Response fields
+         * </pre>
+         *
+         * <code>optional .extensions.api.cast_channel.AuthResponse response = 2;</code>
+         */
+        @Override
+        public CastChannelProto.AuthResponse getResponse() {
+            return response_ == null ? CastChannelProto.AuthResponse.getDefaultInstance() : response_;
+        }
+        /**
+         * <pre>
+         * Response fields
+         * </pre>
+         *
+         * <code>optional .extensions.api.cast_channel.AuthResponse response = 2;</code>
+         */
+        private void setResponse(CastChannelProto.AuthResponse value) {
+            if (value == null) {
+                throw new NullPointerException();
+            }
+            response_ = value;
+            bitField0_ |= 0x00000002;
+        }
+        /**
+         * <pre>
+         * Response fields
+         * </pre>
+         *
+         * <code>optional .extensions.api.cast_channel.AuthResponse response = 2;</code>
+         */
+        private void setResponse(
+                CastChannelProto.AuthResponse.Builder builderForValue) {
+            response_ = builderForValue.build();
+            bitField0_ |= 0x00000002;
+        }
+        /**
+         * <pre>
+         * Response fields
+         * </pre>
+         *
+         * <code>optional .extensions.api.cast_channel.AuthResponse response = 2;</code>
+         */
+        @SuppressWarnings({"ReferenceEquality"})
+        private void mergeResponse(CastChannelProto.AuthResponse value) {
+            if (value == null) {
+                throw new NullPointerException();
+            }
+            if (response_ != null &&
+                    response_ != CastChannelProto.AuthResponse.getDefaultInstance()) {
+                response_ =
+                        CastChannelProto.AuthResponse.newBuilder(response_).mergeFrom(value).buildPartial();
+            } else {
+                response_ = value;
+            }
+            bitField0_ |= 0x00000002;
+        }
+        /**
+         * <pre>
+         * Response fields
+         * </pre>
+         *
+         * <code>optional .extensions.api.cast_channel.AuthResponse response = 2;</code>
+         */
+        private void clearResponse() {  response_ = null;
+            bitField0_ = (bitField0_ & ~0x00000002);
+        }
+
+        public static final int ERROR_FIELD_NUMBER = 3;
+        private CastChannelProto.AuthError error_;
+        /**
+         * <code>optional .extensions.api.cast_channel.AuthError error = 3;</code>
+         */
+        @Override
+        public boolean hasError() {
+            return ((bitField0_ & 0x00000004) == 0x00000004);
+        }
+        /**
+         * <code>optional .extensions.api.cast_channel.AuthError error = 3;</code>
+         */
+        @Override
+        public CastChannelProto.AuthError getError() {
+            return error_ == null ? CastChannelProto.AuthError.getDefaultInstance() : error_;
+        }
+        /**
+         * <code>optional .extensions.api.cast_channel.AuthError error = 3;</code>
+         */
+        private void setError(CastChannelProto.AuthError value) {
+            if (value == null) {
+                throw new NullPointerException();
+            }
+            error_ = value;
+            bitField0_ |= 0x00000004;
+        }
+        /**
+         * <code>optional .extensions.api.cast_channel.AuthError error = 3;</code>
+         */
+        private void setError(
+                CastChannelProto.AuthError.Builder builderForValue) {
+            error_ = builderForValue.build();
+            bitField0_ |= 0x00000004;
+        }
+        /**
+         * <code>optional .extensions.api.cast_channel.AuthError error = 3;</code>
+         */
+        @SuppressWarnings({"ReferenceEquality"})
+        private void mergeError(CastChannelProto.AuthError value) {
+            if (value == null) {
+                throw new NullPointerException();
+            }
+            if (error_ != null &&
+                    error_ != CastChannelProto.AuthError.getDefaultInstance()) {
+                error_ =
+                        CastChannelProto.AuthError.newBuilder(error_).mergeFrom(value).buildPartial();
+            } else {
+                error_ = value;
+            }
+            bitField0_ |= 0x00000004;
+        }
+        /**
+         * <code>optional .extensions.api.cast_channel.AuthError error = 3;</code>
+         */
+        private void clearError() {  error_ = null;
+            bitField0_ = (bitField0_ & ~0x00000004);
+        }
+
+        @Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                throws java.io.IOException {
+            if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                output.writeMessage(1, getChallenge());
+            }
+            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                output.writeMessage(2, getResponse());
+            }
+            if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                output.writeMessage(3, getError());
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @Override
+        public int getSerializedSize() {
+            int size = memoizedSerializedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeMessageSize(1, getChallenge());
+            }
+            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeMessageSize(2, getResponse());
+            }
+            if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                size += com.google.protobuf.CodedOutputStream
+                        .computeMessageSize(3, getError());
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSerializedSize = size;
+            return size;
+        }
+
+        public static CastChannelProto.DeviceAuthMessage parseFrom(
+                java.nio.ByteBuffer data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, data);
+        }
+        public static CastChannelProto.DeviceAuthMessage parseFrom(
+                java.nio.ByteBuffer data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, data, extensionRegistry);
+        }
+        public static CastChannelProto.DeviceAuthMessage parseFrom(
+                com.google.protobuf.ByteString data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, data);
+        }
+        public static CastChannelProto.DeviceAuthMessage parseFrom(
+                com.google.protobuf.ByteString data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, data, extensionRegistry);
+        }
+        public static CastChannelProto.DeviceAuthMessage parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, data);
+        }
+        public static CastChannelProto.DeviceAuthMessage parseFrom(
+                byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, data, extensionRegistry);
+        }
+        public static CastChannelProto.DeviceAuthMessage parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, input);
+        }
+        public static CastChannelProto.DeviceAuthMessage parseFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, input, extensionRegistry);
+        }
+        public static CastChannelProto.DeviceAuthMessage parseDelimitedFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+        }
+        public static CastChannelProto.DeviceAuthMessage parseDelimitedFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+        }
+        public static CastChannelProto.DeviceAuthMessage parseFrom(
+                com.google.protobuf.CodedInputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, input);
+        }
+        public static CastChannelProto.DeviceAuthMessage parseFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageLite.parseFrom(
+                    DEFAULT_INSTANCE, input, extensionRegistry);
+        }
+
+        public static Builder newBuilder() {
+            return (Builder) DEFAULT_INSTANCE.createBuilder();
+        }
+        public static Builder newBuilder(CastChannelProto.DeviceAuthMessage prototype) {
+            return DEFAULT_INSTANCE.createBuilder(prototype);
+        }
+
+        /**
+         * Protobuf type {@code extensions.api.cast_channel.DeviceAuthMessage}
+         */
+        public static final class Builder extends
+                com.google.protobuf.GeneratedMessageLite.Builder<
+                        CastChannelProto.DeviceAuthMessage, Builder> implements
+                // @@protoc_insertion_point(builder_implements:extensions.api.cast_channel.DeviceAuthMessage)
+                CastChannelProto.DeviceAuthMessageOrBuilder {
+            // Construct using extensions.api.cast_channel.CastChannelProto.DeviceAuthMessage.newBuilder()
+            private Builder() {
+                super(DEFAULT_INSTANCE);
+            }
+
+
+            /**
+             * <pre>
+             * Request fields
+             * </pre>
+             *
+             * <code>optional .extensions.api.cast_channel.AuthChallenge challenge = 1;</code>
+             */
+            @Override
+            public boolean hasChallenge() {
+                return instance.hasChallenge();
+            }
+            /**
+             * <pre>
+             * Request fields
+             * </pre>
+             *
+             * <code>optional .extensions.api.cast_channel.AuthChallenge challenge = 1;</code>
+             */
+            @Override
+            public CastChannelProto.AuthChallenge getChallenge() {
+                return instance.getChallenge();
+            }
+            /**
+             * <pre>
+             * Request fields
+             * </pre>
+             *
+             * <code>optional .extensions.api.cast_channel.AuthChallenge challenge = 1;</code>
+             */
+            public Builder setChallenge(CastChannelProto.AuthChallenge value) {
+                copyOnWrite();
+                instance.setChallenge(value);
+                return this;
+            }
+            /**
+             * <pre>
+             * Request fields
+             * </pre>
+             *
+             * <code>optional .extensions.api.cast_channel.AuthChallenge challenge = 1;</code>
+             */
+            public Builder setChallenge(
+                    CastChannelProto.AuthChallenge.Builder builderForValue) {
+                copyOnWrite();
+                instance.setChallenge(builderForValue);
+                return this;
+            }
+            /**
+             * <pre>
+             * Request fields
+             * </pre>
+             *
+             * <code>optional .extensions.api.cast_channel.AuthChallenge challenge = 1;</code>
+             */
+            public Builder mergeChallenge(CastChannelProto.AuthChallenge value) {
+                copyOnWrite();
+                instance.mergeChallenge(value);
+                return this;
+            }
+            /**
+             * <pre>
+             * Request fields
+             * </pre>
+             *
+             * <code>optional .extensions.api.cast_channel.AuthChallenge challenge = 1;</code>
+             */
+            public Builder clearChallenge() {  copyOnWrite();
+                instance.clearChallenge();
+                return this;
+            }
+
+            /**
+             * <pre>
+             * Response fields
+             * </pre>
+             *
+             * <code>optional .extensions.api.cast_channel.AuthResponse response = 2;</code>
+             */
+            @Override
+            public boolean hasResponse() {
+                return instance.hasResponse();
+            }
+            /**
+             * <pre>
+             * Response fields
+             * </pre>
+             *
+             * <code>optional .extensions.api.cast_channel.AuthResponse response = 2;</code>
+             */
+            @Override
+            public CastChannelProto.AuthResponse getResponse() {
+                return instance.getResponse();
+            }
+            /**
+             * <pre>
+             * Response fields
+             * </pre>
+             *
+             * <code>optional .extensions.api.cast_channel.AuthResponse response = 2;</code>
+             */
+            public Builder setResponse(CastChannelProto.AuthResponse value) {
+                copyOnWrite();
+                instance.setResponse(value);
+                return this;
+            }
+            /**
+             * <pre>
+             * Response fields
+             * </pre>
+             *
+             * <code>optional .extensions.api.cast_channel.AuthResponse response = 2;</code>
+             */
+            public Builder setResponse(
+                    CastChannelProto.AuthResponse.Builder builderForValue) {
+                copyOnWrite();
+                instance.setResponse(builderForValue);
+                return this;
+            }
+            /**
+             * <pre>
+             * Response fields
+             * </pre>
+             *
+             * <code>optional .extensions.api.cast_channel.AuthResponse response = 2;</code>
+             */
+            public Builder mergeResponse(CastChannelProto.AuthResponse value) {
+                copyOnWrite();
+                instance.mergeResponse(value);
+                return this;
+            }
+            /**
+             * <pre>
+             * Response fields
+             * </pre>
+             *
+             * <code>optional .extensions.api.cast_channel.AuthResponse response = 2;</code>
+             */
+            public Builder clearResponse() {  copyOnWrite();
+                instance.clearResponse();
+                return this;
+            }
+
+            /**
+             * <code>optional .extensions.api.cast_channel.AuthError error = 3;</code>
+             */
+            @Override
+            public boolean hasError() {
+                return instance.hasError();
+            }
+            /**
+             * <code>optional .extensions.api.cast_channel.AuthError error = 3;</code>
+             */
+            @Override
+            public CastChannelProto.AuthError getError() {
+                return instance.getError();
+            }
+            /**
+             * <code>optional .extensions.api.cast_channel.AuthError error = 3;</code>
+             */
+            public Builder setError(CastChannelProto.AuthError value) {
+                copyOnWrite();
+                instance.setError(value);
+                return this;
+            }
+            /**
+             * <code>optional .extensions.api.cast_channel.AuthError error = 3;</code>
+             */
+            public Builder setError(
+                    CastChannelProto.AuthError.Builder builderForValue) {
+                copyOnWrite();
+                instance.setError(builderForValue);
+                return this;
+            }
+            /**
+             * <code>optional .extensions.api.cast_channel.AuthError error = 3;</code>
+             */
+            public Builder mergeError(CastChannelProto.AuthError value) {
+                copyOnWrite();
+                instance.mergeError(value);
+                return this;
+            }
+            /**
+             * <code>optional .extensions.api.cast_channel.AuthError error = 3;</code>
+             */
+            public Builder clearError() {  copyOnWrite();
+                instance.clearError();
+                return this;
+            }
+
+            // @@protoc_insertion_point(builder_scope:extensions.api.cast_channel.DeviceAuthMessage)
+        }
+        private byte memoizedIsInitialized = 2;
+        @Override
+        @SuppressWarnings({"unchecked", "fallthrough"})
+        protected final Object dynamicMethod(
+                com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+                Object arg0, Object arg1) {
+            switch (method) {
+                case NEW_MUTABLE_INSTANCE: {
+                    return new CastChannelProto.DeviceAuthMessage();
+                }
+                case NEW_BUILDER: {
+                    return new Builder();
+                }
+                case IS_INITIALIZED: {
+                    byte isInitialized = memoizedIsInitialized;
+                    if (isInitialized == 1) return DEFAULT_INSTANCE;
+                    if (isInitialized == 0) return null;
+
+                    boolean shouldMemoize = ((Boolean) arg0).booleanValue();
+                    if (hasResponse()) {
+                        if (!getResponse().isInitialized()) {
+                            return null;
+                        }
+                    }
+                    if (hasError()) {
+                        if (!getError().isInitialized()) {
+                            return null;
+                        }
+                    }
+                    return DEFAULT_INSTANCE;
+
+                }
+                case MAKE_IMMUTABLE: {
+                    return null;
+                }
+                case VISIT: {
+                    Visitor visitor = (Visitor) arg0;
+                    CastChannelProto.DeviceAuthMessage other = (CastChannelProto.DeviceAuthMessage) arg1;
+                    challenge_ = visitor.visitMessage(challenge_, other.challenge_);
+                    response_ = visitor.visitMessage(response_, other.response_);
+                    error_ = visitor.visitMessage(error_, other.error_);
+                    if (visitor == com.google.protobuf.GeneratedMessageLite.MergeFromVisitor
+                            .INSTANCE) {
+                        bitField0_ |= other.bitField0_;
+                    }
+                    return this;
+                }
+                case MERGE_FROM_STREAM: {
+                    com.google.protobuf.CodedInputStream input =
+                            (com.google.protobuf.CodedInputStream) arg0;
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry =
+                            (com.google.protobuf.ExtensionRegistryLite) arg1;
+                    if (extensionRegistry == null) {
+                        throw new NullPointerException();
+                    }
+                    try {
+                        boolean done = false;
+                        while (!done) {
+                            int tag = input.readTag();
+                            switch (tag) {
+                                case 0:
+                                    done = true;
+                                    break;
+                                case 10: {
+                                    CastChannelProto.AuthChallenge.Builder subBuilder = null;
+                                    if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                                        subBuilder = challenge_.toBuilder();
+                                    }
+                                    challenge_ = input.readMessage(CastChannelProto.AuthChallenge.parser(), extensionRegistry);
+                                    if (subBuilder != null) {
+                                        subBuilder.mergeFrom(challenge_);
+                                        challenge_ = subBuilder.buildPartial();
+                                    }
+                                    bitField0_ |= 0x00000001;
+                                    break;
+                                }
+                                case 18: {
+                                    CastChannelProto.AuthResponse.Builder subBuilder = null;
+                                    if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                                        subBuilder = response_.toBuilder();
+                                    }
+                                    response_ = input.readMessage(CastChannelProto.AuthResponse.parser(), extensionRegistry);
+                                    if (subBuilder != null) {
+                                        subBuilder.mergeFrom(response_);
+                                        response_ = subBuilder.buildPartial();
+                                    }
+                                    bitField0_ |= 0x00000002;
+                                    break;
+                                }
+                                case 26: {
+                                    CastChannelProto.AuthError.Builder subBuilder = null;
+                                    if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                                        subBuilder = error_.toBuilder();
+                                    }
+                                    error_ = input.readMessage(CastChannelProto.AuthError.parser(), extensionRegistry);
+                                    if (subBuilder != null) {
+                                        subBuilder.mergeFrom(error_);
+                                        error_ = subBuilder.buildPartial();
+                                    }
+                                    bitField0_ |= 0x00000004;
+                                    break;
+                                }
+                                default: {
+                                    if (!parseUnknownField(tag, input)) {
+                                        done = true;
+                                    }
+                                    break;
+                                }
+                            }
+                        }
+                    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                        throw new RuntimeException(e.setUnfinishedMessage(this));
+                    } catch (java.io.IOException e) {
+                        throw new RuntimeException(
+                                new com.google.protobuf.InvalidProtocolBufferException(
+                                        e.getMessage()).setUnfinishedMessage(this));
+                    } finally {
+                    }
+                }
+                // fall through
+                case GET_DEFAULT_INSTANCE: {
+                    return DEFAULT_INSTANCE;
+                }
+                case GET_PARSER: {
+                    com.google.protobuf.Parser<CastChannelProto.DeviceAuthMessage> parser = PARSER;
+                    if (parser == null) {
+                        synchronized (CastChannelProto.DeviceAuthMessage.class) {
+                            parser = PARSER;
+                            if (parser == null) {
+                                parser = new DefaultInstanceBasedParser(DEFAULT_INSTANCE);
+                                PARSER = parser;
+                            }
+                        }
+                    }
+                    return parser;
+                }
+                case GET_MEMOIZED_IS_INITIALIZED: {
+                    return memoizedIsInitialized;
+                }
+                case SET_MEMOIZED_IS_INITIALIZED: {
+                    memoizedIsInitialized = (byte) (arg0 == null ? 0 : 1);
+                    return null;
+                }
+            }
+            throw new UnsupportedOperationException();
+        }
+
+
+        // @@protoc_insertion_point(class_scope:extensions.api.cast_channel.DeviceAuthMessage)
+        private static final CastChannelProto.DeviceAuthMessage DEFAULT_INSTANCE;
+        static {
+            // New instances are implicitly immutable so no need to make
+            // immutable.
+            DEFAULT_INSTANCE = new DeviceAuthMessage();
+        }
+
+        public static CastChannelProto.DeviceAuthMessage getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        private static volatile com.google.protobuf.Parser<DeviceAuthMessage> PARSER;
+
+        public static com.google.protobuf.Parser<DeviceAuthMessage> parser() {
+            return DEFAULT_INSTANCE.getParserForType();
+        }
     }
-    private byte memoizedIsInitialized = 2;
-    @Override
-    @SuppressWarnings({"unchecked", "fallthrough"})
-    protected final Object dynamicMethod(
-        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
-        Object arg0, Object arg1) {
-      switch (method) {
-        case NEW_MUTABLE_INSTANCE: {
-          return new CastChannelProto.DeviceAuthMessage();
-        }
-        case NEW_BUILDER: {
-          return new Builder();
-        }
-        case IS_INITIALIZED: {
-          byte isInitialized = memoizedIsInitialized;
-          if (isInitialized == 1) return DEFAULT_INSTANCE;
-          if (isInitialized == 0) return null;
-
-          boolean shouldMemoize = ((Boolean) arg0).booleanValue();
-          if (hasResponse()) {
-            if (!getResponse().isInitialized()) {
-              return null;
-            }
-          }
-          if (hasError()) {
-            if (!getError().isInitialized()) {
-              return null;
-            }
-          }
-          return DEFAULT_INSTANCE;
-
-        }
-        case MAKE_IMMUTABLE: {
-          return null;
-        }
-        case VISIT: {
-          Visitor visitor = (Visitor) arg0;
-          CastChannelProto.DeviceAuthMessage other = (CastChannelProto.DeviceAuthMessage) arg1;
-          challenge_ = visitor.visitMessage(challenge_, other.challenge_);
-          response_ = visitor.visitMessage(response_, other.response_);
-          error_ = visitor.visitMessage(error_, other.error_);
-          if (visitor == com.google.protobuf.GeneratedMessageLite.MergeFromVisitor
-              .INSTANCE) {
-            bitField0_ |= other.bitField0_;
-          }
-          return this;
-        }
-        case MERGE_FROM_STREAM: {
-          com.google.protobuf.CodedInputStream input =
-              (com.google.protobuf.CodedInputStream) arg0;
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry =
-              (com.google.protobuf.ExtensionRegistryLite) arg1;
-          if (extensionRegistry == null) {
-            throw new NullPointerException();
-          }
-          try {
-            boolean done = false;
-            while (!done) {
-              int tag = input.readTag();
-              switch (tag) {
-                case 0:
-                  done = true;
-                  break;
-                case 10: {
-                  CastChannelProto.AuthChallenge.Builder subBuilder = null;
-                  if (((bitField0_ & 0x00000001) == 0x00000001)) {
-                    subBuilder = challenge_.toBuilder();
-                  }
-                  challenge_ = input.readMessage(CastChannelProto.AuthChallenge.parser(), extensionRegistry);
-                  if (subBuilder != null) {
-                    subBuilder.mergeFrom(challenge_);
-                    challenge_ = subBuilder.buildPartial();
-                  }
-                  bitField0_ |= 0x00000001;
-                  break;
-                }
-                case 18: {
-                  CastChannelProto.AuthResponse.Builder subBuilder = null;
-                  if (((bitField0_ & 0x00000002) == 0x00000002)) {
-                    subBuilder = response_.toBuilder();
-                  }
-                  response_ = input.readMessage(CastChannelProto.AuthResponse.parser(), extensionRegistry);
-                  if (subBuilder != null) {
-                    subBuilder.mergeFrom(response_);
-                    response_ = subBuilder.buildPartial();
-                  }
-                  bitField0_ |= 0x00000002;
-                  break;
-                }
-                case 26: {
-                  CastChannelProto.AuthError.Builder subBuilder = null;
-                  if (((bitField0_ & 0x00000004) == 0x00000004)) {
-                    subBuilder = error_.toBuilder();
-                  }
-                  error_ = input.readMessage(CastChannelProto.AuthError.parser(), extensionRegistry);
-                  if (subBuilder != null) {
-                    subBuilder.mergeFrom(error_);
-                    error_ = subBuilder.buildPartial();
-                  }
-                  bitField0_ |= 0x00000004;
-                  break;
-                }
-                default: {
-                  if (!parseUnknownField(tag, input)) {
-                    done = true;
-                  }
-                  break;
-                }
-              }
-            }
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw new RuntimeException(e.setUnfinishedMessage(this));
-          } catch (java.io.IOException e) {
-            throw new RuntimeException(
-                new com.google.protobuf.InvalidProtocolBufferException(
-                    e.getMessage()).setUnfinishedMessage(this));
-          } finally {
-          }
-        }
-        // fall through
-        case GET_DEFAULT_INSTANCE: {
-          return DEFAULT_INSTANCE;
-        }
-        case GET_PARSER: {
-          com.google.protobuf.Parser<CastChannelProto.DeviceAuthMessage> parser = PARSER;
-          if (parser == null) {
-            synchronized (CastChannelProto.DeviceAuthMessage.class) {
-              parser = PARSER;
-              if (parser == null) {
-                parser = new DefaultInstanceBasedParser(DEFAULT_INSTANCE);
-                PARSER = parser;
-              }
-            }
-          }
-          return parser;
-      }
-      case GET_MEMOIZED_IS_INITIALIZED: {
-        return memoizedIsInitialized;
-      }
-      case SET_MEMOIZED_IS_INITIALIZED: {
-        memoizedIsInitialized = (byte) (arg0 == null ? 0 : 1);
-        return null;
-      }
-      }
-      throw new UnsupportedOperationException();
-    }
 
 
-    // @@protoc_insertion_point(class_scope:extensions.api.cast_channel.DeviceAuthMessage)
-    private static final CastChannelProto.DeviceAuthMessage DEFAULT_INSTANCE;
     static {
-      // New instances are implicitly immutable so no need to make
-      // immutable.
-      DEFAULT_INSTANCE = new DeviceAuthMessage();
     }
 
-    public static CastChannelProto.DeviceAuthMessage getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static volatile com.google.protobuf.Parser<DeviceAuthMessage> PARSER;
-
-    public static com.google.protobuf.Parser<DeviceAuthMessage> parser() {
-      return DEFAULT_INSTANCE.getParserForType();
-    }
-  }
-
-
-  static {
-  }
-
-  // @@protoc_insertion_point(outer_class_scope)
+    // @@protoc_insertion_point(outer_class_scope)
 }
