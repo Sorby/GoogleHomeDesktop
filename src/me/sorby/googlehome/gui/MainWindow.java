@@ -10,16 +10,19 @@ import org.slf4j.LoggerFactory;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 
-public class MainWindow extends JFrame implements ListSelectionListener, ReceiverMessageListener, MediaMessageListener {
+public class MainWindow extends JFrame implements ListSelectionListener, ReceiverMessageListener, MediaMessageListener, ActionListener, ChangeListener {
     private JPanel mainPanel;
     private JSplitPane mainSplitPane;
     private JList<CastDevice> devicesList;
@@ -35,6 +38,8 @@ public class MainWindow extends JFrame implements ListSelectionListener, Receive
     private JLabel mediaAlbum;
     private JLabel mediaImage;
     private final static Logger logger = LoggerFactory.getLogger(MainWindow.class);
+    private JButton toggleMute;
+    private JSlider volumeLevel;
 
     public MainWindow() {
         initFrame();
@@ -82,32 +87,57 @@ public class MainWindow extends JFrame implements ListSelectionListener, Receive
         actionPanel = new JPanel();
         actionPanel.setLayout(new GridBagLayout());
         actionPanel.setBackground(Color.WHITE);
+
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.anchor = GridBagConstraints.PAGE_START;
         gbc.gridy = 0;
         deviceName = new JLabel("Seleziona un dispositivo");
         deviceName.setFont(getFont("Calibri", Font.BOLD, 24, deviceName.getFont()));
         actionPanel.add(deviceName, gbc);
+
         deviceAddress = new JLabel("");
         deviceAddress.setFont(getFont("Calibri", Font.PLAIN, 12, deviceAddress.getFont()));
         gbc.gridy++;
         gbc.fill = GridBagConstraints.NORTH;
         gbc.weighty = 0.15;
         actionPanel.add(deviceAddress, gbc);
+
         gbc.weighty = 0;
         gbc.fill = GridBagConstraints.NONE;
         gbc.gridy++;
         appPicLab = new JLabel("");
         appPicLab.setVisible(false);
         actionPanel.add(appPicLab, gbc);
+
+        gbc.gridy++;
+        gbc.weighty = 0.5;
         statusText = new JLabel("");
         statusText.setFont(getFont("Calibri", Font.ITALIC, 14, statusText.getFont()));
-        gbc.gridy++;
-        gbc.weighty = 1;
         actionPanel.add(statusText, gbc);
+
+        gbc.gridy++;
+        gbc.weighty = 0;
+        gbc.fill = GridBagConstraints.FIRST_LINE_START;
+        toggleMute = new JButton();
+        toggleMute.setBackground(Color.WHITE);
+        toggleMute.addActionListener(this);
+        toggleMute.setVisible(false);
+        actionPanel.add(toggleMute, gbc);
+
+
+        gbc.weighty = 0.3;
+        gbc.gridy++;
+        volumeLevel = new JSlider();
+        volumeLevel.setMinimum(0);
+        volumeLevel.setMaximum(100);
+        volumeLevel.addChangeListener(this);
+        volumeLevel.setVisible(false);
+        actionPanel.add(volumeLevel, gbc);
+
         gbc.gridy++;
         initMediaControlPanel();
         actionPanel.add(mediaControlPanel, gbc);
+
         mainSplitPane.add(actionPanel);
     }
 
@@ -221,6 +251,15 @@ public class MainWindow extends JFrame implements ListSelectionListener, Receive
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            try {
+                toggleMute.setIcon(new ImageIcon(ImageIO.read(getClass().getClassLoader().getResourceAsStream("resources/"+ "volume_" + (receiver.isMuted() ? "off" : "on") + ".png"))));
+                toggleMute.setVisible(true);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            volumeLevel.setValue(Math.round(receiver.getVolumeLevel()*100f));
+            volumeLevel.setValueIsAdjusting(false);
+            volumeLevel.setVisible(true);
             if (!receiver.isAppRunning()) //if there isn't any app running, hide the media control panel
                 mediaControlPanel.setVisible(false);
             if (deviceConnection.getMedia() != null) //If we have a media connection, we can add a listener for Media info fields
@@ -247,6 +286,26 @@ public class MainWindow extends JFrame implements ListSelectionListener, Receive
             } catch (IOException e) {
                 mediaImage.setVisible(false); //Hide image if load failed
                 logger.debug("No event listener for namespace " + type); //Just as debug, because it could happend and it isn't a problem
+            }
+        }
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if(e.getSource() == toggleMute){
+            deviceConnection.getReceiver().toggleMute();
+        }
+
+    }
+
+    @Override
+    public void stateChanged(ChangeEvent e) {
+        if(e.getSource() == volumeLevel && !volumeLevel.getValueIsAdjusting()){
+            int currentVolume = Math.round(deviceConnection.getReceiver().getVolumeLevel()*100f);
+            if(Math.abs(currentVolume-volumeLevel.getValue()) > 3){
+                float value = volumeLevel.getValue()/100f;
+                volumeLevel.setValueIsAdjusting(true);
+                deviceConnection.getReceiver().setVolumeLevel(value);
             }
         }
     }

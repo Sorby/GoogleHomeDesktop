@@ -30,8 +30,25 @@ public class Receiver implements ContextualChannelMessageListener {
     public void requestStatus() {
         JSONObject msg = new JSONObject();
         msg.put("type", "GET_STATUS");
-        msg.put("requestId", ++msgId);
-        channel.send(namespace, msg);
+        sendChannelMessage(msg);
+    }
+
+    public void toggleMute(){
+        JSONObject msg = new JSONObject();
+        msg.put("type", "SET_VOLUME");
+        JSONObject msgVolume = new JSONObject();
+        msgVolume.put("muted", !muted);
+        msg.put("volume", msgVolume);
+        sendChannelMessage(msg);
+    }
+
+    public void setVolumeLevel(float volumeLevel){
+        JSONObject msg = new JSONObject();
+        msg.put("type", "SET_VOLUME");
+        JSONObject msgVolume = new JSONObject();
+        msgVolume.put("level", volumeLevel);
+        msg.put("volume", msgVolume);
+        sendChannelMessage(msg);
     }
 
     public void close() {
@@ -57,6 +74,11 @@ public class Receiver implements ContextualChannelMessageListener {
 
     public boolean isAppRunning() {
         return appRunning;
+    }
+
+    private void sendChannelMessage(JSONObject payload){
+        payload.put("requestId", ++msgId);
+        channel.send(namespace, payload);
     }
 
     @Override
