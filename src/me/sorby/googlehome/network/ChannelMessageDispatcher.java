@@ -72,8 +72,12 @@ public class ChannelMessageDispatcher {
                     }
                     dispatch(CastChannelProto.CastMessage.parseFrom(buffer)); //dispatch parsed protobuf message
                 } catch (IOException e) {
-                    socket.close();
-                    logger.error("IO error: ", e);
+                    if(socket.isClosed()) //TODO: check when closed by error or by device changing
+                        logger.debug("IO error: ", e);
+                    else {
+                        logger.debug("IO error: ", e);
+                        socket.close();
+                    }
                 }
             }
         }).start();

@@ -96,15 +96,10 @@ public class MainWindow extends JFrame implements ListSelectionListener, Receive
         actionPanel.add(deviceAddress, gbc);
         gbc.weighty = 0;
         gbc.fill = GridBagConstraints.NONE;
-        try {
-            gbc.gridy++;
-            BufferedImage appPic = ImageIO.read(new File("resources/unknown.png"));
-            appPicLab = new JLabel(getScaledImageIcon(new ImageIcon(appPic), 64, 64));
-            appPicLab.setVisible(false);
-            actionPanel.add(appPicLab, gbc);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        gbc.gridy++;
+        appPicLab = new JLabel("");
+        appPicLab.setVisible(false);
+        actionPanel.add(appPicLab, gbc);
         statusText = new JLabel("");
         statusText.setFont(getFont("Calibri", Font.ITALIC, 14, statusText.getFont()));
         gbc.gridy++;

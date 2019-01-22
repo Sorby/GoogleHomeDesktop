@@ -2,9 +2,13 @@ package me.sorby.googlehome.devices;
 
 import me.sorby.googlehome.exceptions.DeviceNotSupported;
 import net.straylightlabs.hola.sd.Instance;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
-import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 
 public abstract class CastDevice {
     String deviceName;
@@ -12,6 +16,7 @@ public abstract class CastDevice {
     int port;
     String name;
     private ImageIcon flagIcon;
+    private final static Logger logger = LoggerFactory.getLogger(CastDevice.class);
 
     public CastDevice(String deviceName, String ip, int port) {
         this.deviceName = deviceName;
@@ -81,11 +86,17 @@ public abstract class CastDevice {
     //Icons are inside resources folder, named as the device class with png extensions
     public ImageIcon getIcon() {
         if (flagIcon == null) {
-            File img = new File("resources/"+getType() + ".png");
-            if (img.exists())
-                flagIcon = new ImageIcon(img.getPath());
-            else
-                flagIcon = new ImageIcon("resources/unknown.png");
+            try {
+                InputStream imgStream = getClass().getClassLoader().getResourceAsStream("resources/" + getType() + ".png");
+                if (imgStream != null) {
+                    flagIcon = new ImageIcon(ImageIO.read(imgStream));
+                }else {
+                    imgStream = getClass().getClassLoader().getResourceAsStream("resources/" + "unknown"+ ".png");
+                    flagIcon = new ImageIcon(ImageIO.read(imgStream));
+                }
+            } catch (IOException e) {
+                logger.error("Cannot load resource : "+e);
+            }
         }
 
         return flagIcon;

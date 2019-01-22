@@ -74,8 +74,10 @@ public class Receiver implements ContextualChannelMessageListener {
             if (appRunning) {
                 JSONArray applicationsJSON = (JSONArray) statusJSON.get("applications");
                 JSONObject appJSON = (JSONObject) applicationsJSON.get(0);
-                statusText = (appJSON.containsKey("statusText") ? appJSON.get("statusText").toString() : "");
-                appIconUrl = (appJSON.containsKey("iconUrl") ? appJSON.get("iconUrl").toString() : "https://lh3.googleusercontent.com/LB5CRdhftEGo2emsHOyHz6NWSfLVD5NC45y6auOqYoyrv7BC5mdDm66vPDCEAJjcDA=w360");
+                statusText = (appJSON.containsKey("statusText") && !appJSON.get("statusText").equals("") ? appJSON.get("statusText").toString() : (appJSON.containsKey("displayName") ? appJSON.get("displayName").toString() : ""));
+                appIconUrl = (appJSON.containsKey("iconUrl") && !appJSON.get("iconUrl").equals("") ? appJSON.get("iconUrl").toString() : "https://lh3.googleusercontent.com/LB5CRdhftEGo2emsHOyHz6NWSfLVD5NC45y6auOqYoyrv7BC5mdDm66vPDCEAJjcDA=w360");
+                if(statusText.equals("Backdrop"))
+                    appRunning = false;
             } else {
                 statusText = "Ready to cast";
                 appIconUrl = "https://lh3.googleusercontent.com/LB5CRdhftEGo2emsHOyHz6NWSfLVD5NC45y6auOqYoyrv7BC5mdDm66vPDCEAJjcDA=w360";
